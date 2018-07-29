@@ -8,6 +8,9 @@ class WorkExperience extends Component {
             <div className="work-experience-container resume-builder-section">
                 <h1 className="resume-builder-section-title">Work Experience</h1>
                 
+                <div className="resume-builder-section-inner-container">
+
+                </div>
             </div>
         )
     }
