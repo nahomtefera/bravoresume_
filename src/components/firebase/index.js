@@ -1,7 +1,7 @@
 import * as firebase from './firebase';
-import * as db from './db.js';
+import * as database from './db.js';
 
 export {
   firebase,
-  db
+  database
 };

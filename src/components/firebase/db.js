@@ -1,4 +1,4 @@
-import { db } from '../firebase';
+import { database } from '../firebase';
 
 // User API
 
@@ -6,7 +6,7 @@ import { db } from '../firebase';
 
   // Create User
   export const doCreateUser = (id, name, email, photoURL) =>
-    db.ref(`users/${id}`).set({
+    database.ref(`users/${id}`).set({
       name,
       email,
       photoURL,
@@ -18,13 +18,13 @@ import { db } from '../firebase';
 
   // Get all users
   export const onceGetUsers = () =>
-    db.ref('users').once('value');
+    database.ref('users').once('value');
 
 // Events
 
   // Create Events
   export const doCreateEvent = (id, uid, title, location, date, time, description, imageURL, members) =>
-  db.ref(`events/${id}`).set({
+  database.ref(`events/${id}`).set({
     id,
     uid,
     title,
@@ -38,8 +38,8 @@ import { db } from '../firebase';
 
   // Get all Events
   export const onceGetEvents = () =>
-  db.ref('events').once('value');
+  database.ref('events').once('value');
 
   // All child events
   export const getChildEvents = () =>
-  db.ref().child("events");
+  database.ref().child("events");

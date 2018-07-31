@@ -4,12 +4,12 @@ import 'firebase/auth'
 
 // Firebase dev config
 const config = {
-    apiKey: "AIzaSyDIH_j22ZUecvp9M2JuvkbqXtPfS_cYWp8",
-    authDomain: "auth-router-boilerplate.firebaseapp.com",
-    databaseURL: "https://auth-router-boilerplate.firebaseio.com",
-    projectId: "auth-router-boilerplate",
+    apiKey: "AIzaSyCvjHARFYpefm_TIVTco_iPO4RRr_ONhsk",
+    authDomain: "bravoresume-80917.firebaseapp.com",
+    databaseURL: "https://bravoresume-80917.firebaseio.com",
+    projectId: "bravoresume-80917",
     storageBucket: "",
-    messagingSenderId: "783069520328"
+    messagingSenderId: "563995630309"
 };
 
 // Initialize Firebase
@@ -18,9 +18,9 @@ if (!firebase.apps.length) {
 }
 
 // Firebase database call
-const db = firebase.database();
+const database = firebase.database();
 
 
 export {
-    db,
+    database,
 };
