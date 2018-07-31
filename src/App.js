@@ -13,16 +13,17 @@ class App extends Component {
   componentWillMount(){
 
 
-        // firebase.database().ref('users/nahom').set({
-        //   "user_info": [{
+        // firebase.database().ref('users/nahom').update({
+        //   "user_info": {
         //     name: "Nahom",
         //     last_name: "Endale",
         //     email: " ",
         //     phone: " ",
         //     location: " "
-        //   }],
+        //   },
         //   "work_exp":[
         //     {
+        //         id: Date.now(),
         //         company: " ", 
         //         title: " ",
         //         location: " ",
@@ -32,6 +33,7 @@ class App extends Component {
         //   ],
         //   "education": [
         //       {
+        //           id: Date.now(),
         //           degree: "",
         //           school: "",
         //           date: "",
