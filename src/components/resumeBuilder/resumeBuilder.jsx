@@ -13,6 +13,7 @@ class ResumeBuilder extends Component {
         super(props);
 
         this.state = {
+            loading: true,
             user_info: [],
             work_exp: [],
             education: []
@@ -21,34 +22,48 @@ class ResumeBuilder extends Component {
 
     componentWillMount() {
         let db = {};
+        let self = this;
 
-        firebase.database().ref('users/nahom/user_info').on("child_added", (snap)=>{
-            db["user_info"] = snap.val()
+
+        firebase.database().ref('users/nahom/').once("value").then(snap=>{
+            db = snap.val()
+            console.log("value snap: ", db)
+        }).then(()=>{
+            self.setState({
+                loading: false,
+                user_info: db.user_info,
+                work_exp: db.work_exp,
+                education: db.education
+            })
         })
 
-        firebase.database().ref('users/nahom/work_exp').on("child_added", (snap)=>{
-            db["work_exp"] = snap.val()
-        })
+    }
 
-        firebase.database().ref('users/nahom/education').on("child_added", (snap)=>{
-            db["education"] = snap.val()
-        })
+    componentDidMount() {
+        let db = {};
+        let self = this;
 
-        this.setState({
-            user_info: db.user_info,
-            work_exp: db.work_exp,
-            education: db.education
+        firebase.database().ref('users/nahom/').on("child_changed", (snap)=>{
+            // console.log('sometin happn')
         })
     }
 
     render() {
+        
         return(
-            <div className="resume-builder-container">
-                <h1 className="resume-builder-title">Resume Builder</h1>
-                <UserInfo user_info={this.state.user_info}/>
-                <WorkExperience work_exp={this.state.work_exp}/>
-                <Education education={this.state.education}/>
-            </div>
+            this.state.loading === true
+             ? 
+                <div className="loader-container">
+                    <div className="loader">Loading...</div>
+                </div>
+             : 
+                <div className="resume-builder-container">
+                    <h1 className="resume-builder-title">Resume Builder</h1>
+                    <UserInfo user_info={this.state.user_info}/>
+                    <WorkExperience work_exp={this.state.work_exp}/>
+                    <Education education={this.state.education}/>
+                </div>
+            
         )
     }
 
