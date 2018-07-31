@@ -4,6 +4,22 @@
     margin: 2em auto;
     -webkit-box-shadow: 0 0 1px hsla(0,0%,63%,.54);
     box-shadow: 0 0 1px hsla(0,0%,63%,.54);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.resume-builder-title {
+    font-family: Lato;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 2.4em;
+    /* background: #fcfcfc; */
+    color: #92b2bf;
+    /* padding: 15px 30px; */
+    /* border-bottom: 1px solid #eeeeee; */
+    text-align: center;
 }
 
 .resume-builder-section-title {
@@ -13,7 +29,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0;
-    background: #fbfbfb;
+    background: #f6fafd;
     color: #5f5f5f;
     padding: 15px 30px;
     border-bottom: 1px solid #eeeeee;
@@ -25,6 +41,10 @@
     box-sizing: border-box;
 }
 
+.job-container {
+    padding-bottom: 0;
+}
+
 .section-input-container {
     font-family: Lato;
     display: inline-block;
@@ -32,7 +52,7 @@
 }
 
 .section-input-label {
-    color: #4f4f4f;
+    color: #868686;
 }
 
 .section-input {
@@ -43,5 +63,31 @@
     border: 1px solid #dfdfdf;
     border-radius: 3px;
     outline: none;
+    color: #2f80b3;
+}
+
+.work-experience-bullet-list {
+    list-style: none;
+}
+
+li {
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+  
+li::before {
+    content: "• ";
     color: #3f3f3f;
+    vertical-align: top;}
+
+.bullet-list-item {
+    width: 80%;
+    box-sizing: border-box;
+    margin-bottom: 13px;
+}
+
+.bullet-list-item {
+    border: none;
+    padding: 0;
+    resize: none;
 }
