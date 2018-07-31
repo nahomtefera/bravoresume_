@@ -5,25 +5,21 @@ import ResumeBuilder from './components/resumeBuilder/resumeBuilder'
 // Firebase 
 import firebase from 'firebase/app';
 import './components/firebase/';
-import { database } from './components/firebase/';
+// import { database } from './components/firebase/';
 
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-  
   componentWillMount(){
-    firebase.database().ref('users/' + "nahom").set({
-      user_info: {
+    firebase.database().ref('users/nahom/').set({
+      "user_info": [{
         name: "Nahom",
         last_name: "Endale",
         email: " ",
         phone: " ",
         location: " "
-      },
-      work_exp:[
+      }],
+      "work_exp":[
         {
             company: " ", 
             title: " ",
@@ -32,7 +28,7 @@ class App extends Component {
             bullet_points: [" ", " "]
         }
       ],
-      education: [
+      "education": [
           {
               degree: "",
               school: "",

@@ -3,6 +3,14 @@ import './userInfo.css';
 
 class UserInfo extends Component {
 
+    constructor(props) {
+        super(props)
+
+        let user_info = this.props.user_info;
+        console.log('user info:', user_info)
+        this.state ={}
+    }
+
     render() {
         return(
             <div className="user-info-container resume-builder-section">
