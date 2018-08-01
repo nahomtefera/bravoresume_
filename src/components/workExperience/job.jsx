@@ -18,8 +18,9 @@ class Job extends Component {
             bullet_points: job_info.bullet_points
         }
         this.handleChange = this.handleChange.bind(this);
-        this.addDescription = this.addDescription.bind(this);
+        this.addBullet = this.addBullet.bind(this);
         this.changeBulletPoint = this.changeBulletPoint.bind(this);
+        this.deleteBullet = this.deleteBullet.bind(this)
     }
 
     componentWillMount() {
@@ -35,15 +36,40 @@ class Job extends Component {
         })
     }
 
-    addDescription(){
+    deleteBullet(el) {
+        let id = el.target.parentNode.id;
+        let prevBulletPoints = this.state.bullet_points;
+        let newBulletPoints = this.state.bullet_points;
+
+        for(let i=0; i<this.state.bullet_points.length; i++) {
+
+            if(prevBulletPoints[i].id == id) {
+                console.log("match", id, newBulletPoints[i])
+                newBulletPoints.splice(i, 1)
+                console.log(newBulletPoints)
+            } 
+
+        }
+        firebase.database().ref().child('/users/nahom/work_exp/' + this.state.id + "/bullet_points/" + id).remove()
+        this.props.update()
+        
+        this.setState({
+            bullet_points: newBulletPoints
+        })
+ 
+    }
+
+    addBullet(){
         let prevDescription = this.state.bullet_points;
         let timestamp = Date.now()
 
-        prevDescription.push(" ");
         let newJob = {
             id: timestamp,
             description: ""
         }
+
+        prevDescription.push(newJob);
+
 
         firebase.database().ref().child('/users/nahom/work_exp/' + this.state.id + "/bullet_points/" + timestamp)
         .update(newJob);
@@ -121,6 +147,7 @@ class Job extends Component {
                         this.state.bullet_points.length > 0
                             ? this.state.bullet_points.map((bullet_point)=>{
                                 return <li id={bullet_point.id} key={bullet_point.id}>
+                                            <button onClick={this.deleteBullet} style={{verticalAlign: "top"}}>Delete bullet</button>
                                             <textarea name=""className="section-input bullet-list-item" 
                                                 onChange={this.changeBulletPoint}
                                                 value={bullet_point.description}
@@ -132,7 +159,7 @@ class Job extends Component {
                     }
                 </ul>
 
-                <div style={{textAlign: "right", paddingRight: "5em"}}><button onClick={this.addDescription}>Add Bullet</button></div>
+                <div style={{textAlign: "right", paddingRight: "5em"}}><button onClick={this.addBullet}>Add Bullet</button></div>
                 
             </div>
         )
