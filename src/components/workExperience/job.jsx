@@ -18,6 +18,63 @@ class Job extends Component {
             bullet_points: job_info.bullet_points
         }
         this.handleChange = this.handleChange.bind(this);
+        this.addDescription = this.addDescription.bind(this);
+        this.changeBulletPoint = this.changeBulletPoint.bind(this);
+    }
+
+    componentWillMount() {
+        let bullet_points = this.state.bullet_points;
+        let newBullet_points = []
+        // loop through jobs and push them to array
+        for(var id in bullet_points) {
+            newBullet_points.push(bullet_points[id])
+        }
+
+        this.setState({
+            bullet_points: newBullet_points
+        })
+    }
+
+    addDescription(){
+        let prevDescription = this.state.bullet_points;
+        let timestamp = Date.now()
+
+        prevDescription.push(" ");
+        let newJob = {
+            id: timestamp,
+            description: ""
+        }
+
+        firebase.database().ref().child('/users/nahom/work_exp/' + this.state.id + "/bullet_points/" + timestamp)
+        .update(newJob);
+
+        this.props.update()
+        this.setState({
+            bullet_points: prevDescription
+        })
+    }
+
+    changeBulletPoint(el){
+        let id = el.target.parentNode.id;
+        let prevBulletPoints = this.state.bullet_points;
+        let value = el.target.value;
+
+        for(var key in prevBulletPoints) {
+            if(id == prevBulletPoints[key].id) {
+                prevBulletPoints[key].description = value;
+            }
+        }
+
+        let update = {}
+        update['description'] = value;
+
+        firebase.database().ref(`users/nahom/work_exp/${this.state.id}/bullet_points/${id}`).update(update)
+
+        this.props.update()
+
+        this.setState({
+            bullet_points: prevBulletPoints
+        })
     }
 
     handleChange(el){
@@ -60,12 +117,23 @@ class Job extends Component {
                 </div>
 
                 <ul className="work-experience-bullet-list">
-                    <li>
-                        <textarea name=""className="section-input bullet-list-item" 
-                        placeholder="Brief description of a task you performed, be specific."  id="" cols="30" rows="2"></textarea>
-                    </li>
+                    {
+                        this.state.bullet_points.length > 0
+                            ? this.state.bullet_points.map((bullet_point)=>{
+                                return <li id={bullet_point.id} key={bullet_point.id}>
+                                            <textarea name=""className="section-input bullet-list-item" 
+                                                onChange={this.changeBulletPoint}
+                                                value={bullet_point.description}
+                                                placeholder="Brief description of a task you performed, be specific."  
+                                                id="" cols="30" rows="2"></textarea>
+                                    </li>
+                                })
+                            : "Add a description"
+                    }
                 </ul>
 
+                <div style={{textAlign: "right", paddingRight: "5em"}}><button onClick={this.addDescription}>Add Bullet</button></div>
+                
             </div>
         )
     }
