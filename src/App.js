@@ -24,11 +24,11 @@ class App extends Component {
         //   "work_exp":[
         //     {
         //         id: Date.now(),
-        //         company: " ", 
-        //         title: " ",
-        //         location: " ",
-        //         date: " ",
-        //         bullet_points: [" ", " "]
+                // company: " ", 
+                // title: " ",
+                // location: " ",
+                // date: " ",
+                // bullet_points: [" ", " "]
         //     }
         //   ],
         //   "education": [

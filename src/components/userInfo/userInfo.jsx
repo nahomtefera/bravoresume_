@@ -28,10 +28,11 @@ class UserInfo extends Component {
 
         firebase.database().ref(`users/nahom/user_info/`).update(update)
 
+        this.props.update()
+
         this.setState({
             [id]: val
         })
-
     }
 
     render() {

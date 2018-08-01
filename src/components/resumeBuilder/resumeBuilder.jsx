@@ -18,12 +18,13 @@ class ResumeBuilder extends Component {
             work_exp: [],
             education: []
         }
+
+        this.update = this.update.bind(this)
     }
 
     componentWillMount() {
         let db = {};
         let self = this;
-
 
         firebase.database().ref('users/nahom/').once("value").then(snap=>{
             db = snap.val()
@@ -39,12 +40,19 @@ class ResumeBuilder extends Component {
 
     }
 
-    componentDidMount() {
-        let db = {};
+    update() {
+        let db;
         let self = this;
 
-        firebase.database().ref('users/nahom/').on("child_changed", (snap)=>{
-            // console.log('sometin happn')
+        firebase.database().ref('users/nahom/').once("value").then(snap=>{
+            db = snap.val()
+            console.log("value snap: ", db)
+        }).then(()=>{
+            this.setState({
+                user_info: db.user_info,
+                work_exp: db.work_exp,
+                education: db.education
+            })
         })
     }
 
@@ -59,9 +67,9 @@ class ResumeBuilder extends Component {
              : 
                 <div className="resume-builder-container">
                     <h1 className="resume-builder-title">Resume Builder</h1>
-                    <UserInfo user_info={this.state.user_info}/>
-                    <WorkExperience work_exp={this.state.work_exp}/>
-                    <Education education={this.state.education}/>
+                    <UserInfo update={this.update} user_info={this.state.user_info}/>
+                    <WorkExperience update={this.update} work_exp={this.state.work_exp}/>
+                    <Education update={this.update} education={this.state.education}/>
                 </div>
             
         )
