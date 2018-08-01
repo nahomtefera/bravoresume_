@@ -37,17 +37,17 @@ class Education extends Component {
 
         prevDegrees.push({
             id: timestamp,
-            degree: " ", 
-            school: " ",
-            date: " ",
+            degree: "", 
+            school: "",
+            date: "",
         })
 
         firebase.database().ref().child('/users/nahom/education/' + timestamp)
         .update({
             id: timestamp,
-            degree: " ", 
-            school: " ",
-            date: " ",
+            degree: "", 
+            school: "",
+            date: "",
         });
 
         this.props.update()

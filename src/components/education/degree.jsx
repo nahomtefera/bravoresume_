@@ -1,7 +1,38 @@
 import React, {Component} from 'react';
 import './education.css';
+// Firebase
+import firebase from 'firebase'
 
 class Degree extends Component {
+    
+    constructor(props){
+        super(props);
+        let degree_info = this.props.degree_info;
+
+        this.state = {
+            id: degree_info.id,
+            date: degree_info.date,
+            degree: degree_info.degree,
+            school: degree_info.school
+        }
+
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange(el){
+        let val = el.target.value;
+        let id = el.target.id;
+        let update = {}
+        update[id] = val;
+
+        firebase.database().ref(`users/nahom/education/${this.state.id}`).update(update)
+
+        this.props.update()
+        this.setState({
+            [id]: val
+        })
+
+    }
 
     render() {
         return(
@@ -9,17 +40,17 @@ class Degree extends Component {
                 {/* Degree*/}
                 <div className="education-degree section-input-container">
                     <label className="section-input-label" htmlFor="education-degree">Degree</label>
-                    <input className="section-input" placeholder="Computer Science" type="name"/>
+                    <input className="section-input" id="degree" onChange={this.handleChange} value={this.state.degree} placeholder="Computer Science" type="name"/>
                 </div>
                 {/* Last Name */}
                 <div className="education-school section-input-container">
                     <label className="section-input-label" htmlFor="user-last-name">School</label>
-                    <input className="section-input" placeholder="Stanford" type="education-school"/>
+                    <input className="section-input" id="school" onChange={this.handleChange} value={this.state.school} placeholder="Stanford" type="education-school"/>
                 </div>
                 {/* Date */}
                 <div className="education-date section-input-container">
                     <label className="section-input-label" htmlFor="education-date">Date</label>
-                    <input className="section-input" placeholder="Year" type="text"/>
+                    <input className="section-input" id="date" onChange={this.handleChange} value={this.state.date} placeholder="Year" type="text"/>
                 </div>
                 
             </div>

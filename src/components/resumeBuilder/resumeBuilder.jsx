@@ -28,7 +28,7 @@ class ResumeBuilder extends Component {
 
         firebase.database().ref('users/nahom/').once("value").then(snap=>{
             db = snap.val()
-            console.log("value snap: ", db)
+            // console.log("value snap: ", db)
         }).then(()=>{
             self.setState({
                 loading: false,
@@ -46,7 +46,7 @@ class ResumeBuilder extends Component {
 
         firebase.database().ref('users/nahom/').once("value").then(snap=>{
             db = snap.val()
-            console.log("value snap: ", db)
+            // console.log("value snap: ", db)
         }).then(()=>{
             this.setState({
                 user_info: db.user_info,
