@@ -15,7 +15,8 @@ class WorkExperience extends Component {
             jobs: work_exp || []
         }
 
-        this.addJob = this.addJob.bind(this)
+        this.addJob = this.addJob.bind(this);
+        this.remJob = this.remJob.bind(this);
     }
     
     componentWillMount(){
@@ -60,6 +61,27 @@ class WorkExperience extends Component {
         })
     }
     
+    remJob(el) {
+        let id = el.target.parentNode.id;
+        let prevJobs = this.state.jobs;
+        let newJobs = this.state.jobs;
+
+        for(let i=0; i<this.state.jobs.length; i++) {
+
+            if(prevJobs[i].id == id) {
+                newJobs.splice(i, 1)
+            } 
+
+        }
+        firebase.database().ref().child('/users/nahom/work_exp/' + id).remove()
+        this.props.update()
+        
+        this.setState({
+            jobs: newJobs
+        })
+ 
+    }
+
     render() {
         return(
             <div className="work-experience-container resume-builder-section">
@@ -68,7 +90,10 @@ class WorkExperience extends Component {
                 {
                     this.state.jobs.length > 0 
                         ? this.state.jobs.map((job)=>{
-                            return <Job update={this.props.update} job_info={job} key={job.id}/>
+                            return <div key={job.id} id={job.id}>
+                                <button onClick={this.remJob}>Remove Job</button>
+                                <Job update={this.props.update} job_info={job}/>
+                            </div>
                           })
                         : "No Jobs"  
                 }
