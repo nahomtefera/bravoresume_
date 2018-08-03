@@ -38,21 +38,21 @@ class WorkExperience extends Component {
 
         prevJobs.push({
             id: timestamp,
-            company: " ", 
-            title: " ",
-            location: " ",
-            date: " ",
-            bullet_points: [" "]
+            company: "", 
+            title: "",
+            location: "",
+            date: "",
+            bullet_points: []
         })
 
         firebase.database().ref().child('/users/nahom/work_exp/' + timestamp)
         .update({
             id: timestamp,
-            company: " ", 
-            title: " ",
-            location: " ",
-            date: " ",
-            bullet_points: [" "]
+            company: "", 
+            title: "",
+            location: "",
+            date: "",
+            bullet_points: []
         });
 
         this.props.update()
@@ -90,15 +90,19 @@ class WorkExperience extends Component {
                 {
                     this.state.jobs.length > 0 
                         ? this.state.jobs.map((job)=>{
-                            return <div key={job.id} id={job.id}>
-                                <button onClick={this.remJob}>Remove Job</button>
+                            return <div className="job-outer-container" key={job.id} id={job.id}>
+                                <button className="rem-button" onClick={this.remJob}>Remove Job</button>
                                 <Job update={this.props.update} job_info={job}/>
                             </div>
                           })
-                        : "No Jobs"  
+                        : <button className="add-info" onClick={this.addJob}>Add</button>  
                 }
-
-                <button onClick={this.addJob}>Add Job</button>
+                {
+                    this.state.jobs.length > 0 
+                        ? <button className="add-info" onClick={this.addJob}>Add</button>
+                        : ""
+                }
+                
             </div>
         )
     }

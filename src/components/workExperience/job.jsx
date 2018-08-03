@@ -52,7 +52,7 @@ class Job extends Component {
         }
         firebase.database().ref().child('/users/nahom/work_exp/' + this.state.id + "/bullet_points/" + id).remove()
         this.props.update()
-        
+
         this.setState({
             bullet_points: newBulletPoints
         })
@@ -147,19 +147,24 @@ class Job extends Component {
                         this.state.bullet_points.length > 0
                             ? this.state.bullet_points.map((bullet_point)=>{
                                 return <li id={bullet_point.id} key={bullet_point.id}>
-                                            <button onClick={this.deleteBullet} style={{verticalAlign: "top"}}>Delete bullet</button>
                                             <textarea name=""className="section-input bullet-list-item" 
                                                 onChange={this.changeBulletPoint}
                                                 value={bullet_point.description}
-                                                placeholder="Brief description of a task you performed, be specific."  
+                                                placeholder="Enhanced skills for future success and created own personal brand shared with 12 area employers..."  
                                                 id="" cols="30" rows="2"></textarea>
+
+                                            <button className="rem-button" onClick={this.deleteBullet} style={{verticalAlign: "top", color: "tomato"}}>x</button>
                                     </li>
                                 })
-                            : "Add a description"
+                            : <div style={{textAlign:'right'}}><button className="add-bullet-point"  onClick={this.addBullet}>Add Description</button></div>
                     }
                 </ul>
-
-                <div style={{textAlign: "right", paddingRight: "5em"}}><button onClick={this.addBullet}>Add Bullet</button></div>
+                    {
+                        this.state.bullet_points.length > 0
+                            ? <div style={{textAlign:'right'}}><button className="add-bullet-point"  onClick={this.addBullet}>Add Description</button></div>
+                            : ""
+                    }
+                
                 
             </div>
         )

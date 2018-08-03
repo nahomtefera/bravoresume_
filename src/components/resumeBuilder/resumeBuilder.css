@@ -8,18 +8,24 @@
     overflow: hidden;
 }
 
+.resume-builder-section:hover {
+    -webkit-box-shadow: 0 0 1px hsla(0, 0%, 15%, 0.54);
+    box-shadow: 0 0 1px hsla(0, 0%, 15%, 0.54);
+}
+
 .resume-builder-title {
     font-family: Lato;
     font-size: 1.5em;
-    font-weight: 400;
-    text-transform: uppercase;
+    font-weight: 300;
     letter-spacing: 3px;
     padding: 2.4em;
-    /* background: #fcfcfc; */
-    color: #92b2bf;
-    /* padding: 15px 30px; */
-    /* border-bottom: 1px solid #eeeeee; */
+    color: #949494;
     text-align: center;
+    letter-spacing: 5px;
+}
+
+.resume-builder-title:hover {
+    color: #63b5f7;
 }
 
 .resume-builder-section-title {
@@ -29,7 +35,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0;
-    background: #f6fafd;
+    background: #fafafa30;
     color: #5f5f5f;
     padding: 15px 30px;
     border-bottom: 1px solid #eeeeee;
@@ -41,8 +47,13 @@
     box-sizing: border-box;
 }
 
+.job-outer-container {
+    padding-top: 1.5em;
+}
+
 .job-container {
     padding-bottom: 0;
+    padding-top: 0;
 }
 
 .section-input-container {
@@ -53,6 +64,8 @@
 
 .section-input-label {
     color: #868686;
+    width: 75px;
+    display: inline-block;
 }
 
 .section-input {
@@ -68,6 +81,7 @@
 
 .work-experience-bullet-list {
     list-style: none;
+    margin-bottom: 0;
 }
 
 li {
@@ -90,4 +104,48 @@ li::before {
     border: none;
     padding: 0;
     resize: none;
+}
+
+.rem-button {
+    border: none;
+    font-family: Lato;
+    font-weight: 400;
+    color: #d44848;
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 10px;
+    padding-left: 1em;
+    letter-spacing: 0.3px;
+}
+
+.add-bullet-point {
+    text-align: right;
+    padding-right: 5em;
+    border: none;
+    font-size: 15px;
+    color: #3d8e80;
+    cursor: pointer;
+}
+
+.add-info {
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Roboto;
+    color: #7f97ab;
+    margin: 1em 2em;
+    border: 2px solid #a0b4c5;
+    padding: 3px 8px;
+    border-radius: 7px;
+}
+
+.add-info:hover {
+    color: #66a29d;
+    border: 2px solid #94b9b6;
+}
+
+button{
+    outline: none;
+    background: none;
 }

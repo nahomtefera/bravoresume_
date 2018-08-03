@@ -88,15 +88,19 @@ class Education extends Component {
                         this.state.degrees.length > 0
                             ? this.state.degrees.map((degree)=>{
                                 return <div key={degree.id}  id={degree.id}>
-                                    <button onClick={this.remDegree}>Remove Degree</button>
+                                    <button className="rem-button" onClick={this.remDegree}>Remove Degree</button>
                                     <Degree update={this.props.update} degree_info={degree} />
                                 </div>
                               })
-                            : 'No degrees'
+                            : <button style={{marginLeft: "1em"}} className="add-info" onClick={this.addDegree}>Add</button>
                    }
                 </div>
-
-                <button onClick={this.addDegree}>Add Degree</button>
+                   {
+                        this.state.degrees.length > 0
+                            ? <button className="add-info" onClick={this.addDegree}>Add</button>
+                            : ""
+                   }
+                
             </div>
         )
     }
