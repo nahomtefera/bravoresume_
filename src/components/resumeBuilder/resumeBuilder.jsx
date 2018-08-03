@@ -70,6 +70,7 @@ class ResumeBuilder extends Component {
                     <UserInfo update={this.update} user_info={this.state.user_info}/>
                     <WorkExperience update={this.update} work_exp={this.state.work_exp}/>
                     <Education update={this.update} education={this.state.education}/>
+                    <div className="download-button-container"><button className="download-button">Download</button></div>
                 </div>
             
         )

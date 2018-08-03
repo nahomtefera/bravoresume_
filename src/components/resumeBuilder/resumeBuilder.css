@@ -25,7 +25,7 @@
 }
 
 .resume-builder-title:hover {
-    color: #63b5f7;
+    color: #d47979;
 }
 
 .resume-builder-section-title {
@@ -148,4 +148,26 @@ li::before {
 button{
     outline: none;
     background: none;
+}
+
+.download-button-container{
+    text-align: center;   
+}
+
+.download-button {
+    cursor: pointer;
+    font-family: Lato;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 8px;
+    color: #ca8c8c;
+    border: 2px solid #d2a0a0;
+    margin: 1em 2em;
+    border-radius: 3px;
+}
+
+.download-button:hover {
+    color: #d47979;
+    border: 2px solid #de9898;
 }
