@@ -44,27 +44,27 @@ class UserInfo extends Component {
                     {/* User Name */}
                     <div className="user-info-name section-input-container">
                         <label className="section-input-label" htmlFor="user-name">Name</label>
-                        <input className="section-input" id="name" placeholder="Jane" onChange={this.handleChange} value={this.state.name} type="name"/>
+                        <input autoComplete="off" className="section-input" id="name" placeholder="Jane" onChange={this.handleChange} value={this.state.name} type="name"/>
                     </div>
                     {/* Last Name */}
                     <div className="user-info-name section-input-container">
                         <label className="section-input-label" htmlFor="user-last-name">Last Name</label>
-                        <input className="section-input" id="last_name" placeholder="Doe" onChange={this.handleChange} value={this.state.last_name} type="last-name"/>
+                        <input autoComplete="off" className="section-input" id="last_name" placeholder="Doe" onChange={this.handleChange} value={this.state.last_name} type="last-name"/>
                     </div>
                     {/* Email */}
                     <div className="user-info-name section-input-container">
                         <label className="section-input-label" htmlFor="user-email">Email</label>
-                        <input className="section-input" id="email" placeholder="Email" onChange={this.handleChange} value={this.state.email} type="email"/>
+                        <input autoComplete="off" className="section-input" id="email" placeholder="Email" onChange={this.handleChange} value={this.state.email} type="email"/>
                     </div>
                     {/* Phone */}
                     <div className="user-info-name section-input-container">
                         <label className="section-input-label" htmlFor="user-phone">Phone</label>
-                        <input className="section-input" id="phone" placeholder="000-000-0000" onChange={this.handleChange} value={this.state.phone} type="telephone"/>
+                        <input autoComplete="off" className="section-input" id="phone" placeholder="000-000-0000" onChange={this.handleChange} value={this.state.phone} type="telephone"/>
                     </div>
                     {/* Address */}
                     <div className="user-info-name section-input-container">
                         <label className="section-input-label" htmlFor="user-address">Location</label>
-                        <input className="section-input" id="location" placeholder="City, State, PC" onChange={this.handleChange} value={this.state.location} type="location"/>
+                        <input autoComplete="off" className="section-input" id="location" placeholder="City, State, PC" onChange={this.handleChange} value={this.state.location} type="location"/>
                     </div>
                 </div>
             </div>

@@ -40,17 +40,17 @@ class Degree extends Component {
                 {/* Degree*/}
                 <div className="education-degree section-input-container">
                     <label className="section-input-label" htmlFor="education-degree">Degree</label>
-                    <input className="section-input" id="degree" onChange={this.handleChange} value={this.state.degree} placeholder="Computer Science" type="name"/>
+                    <input autoComplete="off" className="section-input" id="degree" onChange={this.handleChange} value={this.state.degree} placeholder="Computer Science" type="name"/>
                 </div>
                 {/* Last Name */}
                 <div className="education-school section-input-container">
                     <label className="section-input-label" htmlFor="user-last-name">School</label>
-                    <input className="section-input" id="school" onChange={this.handleChange} value={this.state.school} placeholder="Stanford" type="education-school"/>
+                    <input autoComplete="off" className="section-input" id="school" onChange={this.handleChange} value={this.state.school} placeholder="Stanford" type="education-school"/>
                 </div>
                 {/* Date */}
                 <div className="education-date section-input-container">
                     <label className="section-input-label" htmlFor="education-date">Date</label>
-                    <input className="section-input" id="date" onChange={this.handleChange} value={this.state.date} placeholder="Year" type="text"/>
+                    <input autoComplete="off" className="section-input" id="date" onChange={this.handleChange} value={this.state.date} placeholder="Year" type="text"/>
                 </div>
                 
             </div>

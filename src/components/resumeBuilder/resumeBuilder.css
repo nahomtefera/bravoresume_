@@ -187,4 +187,10 @@ button{
     width: 150px;
     margin: 35px;
     border-radius: 4px;
+    /* border: 1px solid #efefef; */
+    padding: 5px;
+}
+
+.resume-template-img:hover {
+    box-shadow: 0 0 4px hsla(0,0%,63%,.34);
 }

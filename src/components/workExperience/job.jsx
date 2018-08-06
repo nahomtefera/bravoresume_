@@ -124,22 +124,22 @@ class Job extends Component {
                 {/* Company */}
                 <div className="work-experience-company section-input-container">
                     <label className="section-input-label" htmlFor="user-address">Company</label>
-                    <input className="section-input" onChange={this.handleChange} id="company" value={this.state.company} placeholder="Company" type="location"/>
+                    <input autoComplete="off" className="section-input" onChange={this.handleChange} id="company" value={this.state.company} placeholder="Company" type="location"/>
                 </div>
                 {/* Job Title */}
                 <div className="work-experience-title section-input-container">
                     <label className="section-input-label" htmlFor="user-name">Title</label>
-                    <input className="section-input" onChange={this.handleChange} id="title" value={this.state.title} placeholder="Title" type="name"/>
+                    <input autoComplete="off" className="section-input" onChange={this.handleChange} id="title" value={this.state.title} placeholder="Title" type="name"/>
                 </div>
                 {/* Location */}
                 <div className="work-experience-location section-input-container">
                     <label className="section-input-label" htmlFor="user-last-name">Location</label>
-                    <input className="section-input" onChange={this.handleChange} id="location" value={this.state.location} placeholder="City" type="last-name"/>
+                    <input autoComplete="off" className="section-input" onChange={this.handleChange} id="location" value={this.state.location} placeholder="City" type="last-name"/>
                 </div>
                 {/* Dates */}
                 <div className="work-experience-date section-input-container">
                     <label className="section-input-label" htmlFor="user-email">Date</label>
-                    <input className="section-input" onChange={this.handleChange} id="date" value={this.state.date} placeholder="Jan 2016 - Jun 2018" type="email"/>
+                    <input autoComplete="off" className="section-input" onChange={this.handleChange} id="date" value={this.state.date} placeholder="Jan 2016 - Jun 2018" type="email"/>
                 </div>
 
                 <ul className="work-experience-bullet-list">
