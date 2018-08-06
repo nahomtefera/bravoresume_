@@ -171,3 +171,20 @@ button{
     color: #d47979;
     border: 2px solid #de9898;
 }
+
+.template-section {
+    overflow-x: scroll;
+}
+
+.template-section-container {
+    width: 130%;
+}
+
+.resume-template-img {
+    display: inline-block;
+    cursor: pointer;
+    overflow-x: scroll;
+    width: 150px;
+    margin: 35px;
+    border-radius: 4px;
+}

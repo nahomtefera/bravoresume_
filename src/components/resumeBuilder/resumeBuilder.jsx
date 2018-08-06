@@ -16,10 +16,12 @@ class ResumeBuilder extends Component {
             loading: true,
             user_info: [],
             work_exp: [],
-            education: []
+            education: [],
+            showResumeTemplates: false
         }
 
         this.update = this.update.bind(this)
+        this.toggleResumeTemplates = this.toggleResumeTemplates.bind(this)
     }
 
     componentWillMount() {
@@ -56,6 +58,12 @@ class ResumeBuilder extends Component {
         })
     }
 
+    toggleResumeTemplates(){
+        this.setState({
+            showResumeTemplates: !this.state.showResumeTemplates
+        })
+    }
+
     render() {
         
         return(
@@ -70,7 +78,24 @@ class ResumeBuilder extends Component {
                     <UserInfo update={this.update} user_info={this.state.user_info}/>
                     <WorkExperience update={this.update} work_exp={this.state.work_exp}/>
                     <Education update={this.update} education={this.state.education}/>
-                    <div className="download-button-container"><button className="download-button">Download</button></div>
+                    
+                    {
+                        this.state.showResumeTemplates === true
+                            ?
+                                <div className="resume-builder-section template-section">
+                                    <div style={{paddingTop: "10px", paddingLeft: "25px", paddingBottom: "15px", position: "absolute"}}><span style={{color: "tomato", cursor: "pointer"}} onClick={this.toggleResumeTemplates}>X</span></div>
+                                    <div className="template-section-container">
+                                        <img className="resume-template-img" src="http://bravoresume.com/static/media/beautiful_resume.e96c3ee8.JPG" alt="beautiful resume"/>
+                                        <img className="resume-template-img" src="http://bravoresume.com/static/media/clean_resume.78baf65b.JPG" alt=""/>
+                                        <img className="resume-template-img" src="http://bravoresume.com/static/media/fancy_resume.fd52a836.JPG" alt=""/>
+                                        <img className="resume-template-img" src="http://bravoresume.com/static/media/leftbar_resume.a21cef82.JPG" alt=""/>
+                                        <img className="resume-template-img" src="http://bravoresume.com/static/media/structured_resume.f756cce5.JPG" alt=""/>
+                                    </div>
+                                </div>
+                            
+                            : <div className="download-button-container"><button onClick={this.toggleResumeTemplates} className="download-button">Download</button></div>
+
+                    }
                 </div>
             
         )
