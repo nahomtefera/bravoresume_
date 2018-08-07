@@ -42,7 +42,7 @@ class Education extends Component {
             date: "",
         })
 
-        firebase.database().ref().child('/users/nahom/education/' + timestamp)
+        firebase.database().ref().child(`/users/${this.props.userId}/education/` + timestamp)
         .update({
             id: timestamp,
             degree: "", 
@@ -68,7 +68,7 @@ class Education extends Component {
             } 
 
         }
-        firebase.database().ref().child('/users/nahom/education/' + id).remove()
+        firebase.database().ref().child(`/users/${this.props.userId}/education/` + id).remove()
 
         this.props.update()
         
@@ -89,7 +89,7 @@ class Education extends Component {
                             ? this.state.degrees.map((degree)=>{
                                 return <div key={degree.id}  id={degree.id}>
                                     <button className="rem-button" onClick={this.remDegree}>Remove Degree</button>
-                                    <Degree update={this.props.update} degree_info={degree} />
+                                    <Degree userId={this.props.userId} update={this.props.update} degree_info={degree} />
                                 </div>
                               })
                             : <button style={{marginLeft: "1em"}} className="add-info" onClick={this.addDegree}>Add</button>

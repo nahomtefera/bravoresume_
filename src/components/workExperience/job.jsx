@@ -50,7 +50,7 @@ class Job extends Component {
             } 
 
         }
-        firebase.database().ref().child('/users/nahom/work_exp/' + this.state.id + "/bullet_points/" + id).remove()
+        firebase.database().ref().child(`/users/${this.props.userId}/work_exp/` + this.state.id + "/bullet_points/" + id).remove()
         this.props.update()
 
         this.setState({
@@ -71,7 +71,7 @@ class Job extends Component {
         prevDescription.push(newJob);
 
 
-        firebase.database().ref().child('/users/nahom/work_exp/' + this.state.id + "/bullet_points/" + timestamp)
+        firebase.database().ref().child(`users/${this.props.userId}/work_exp/` + this.state.id + "/bullet_points/" + timestamp)
         .update(newJob);
 
         this.props.update()
@@ -94,7 +94,7 @@ class Job extends Component {
         let update = {}
         update['description'] = value;
 
-        firebase.database().ref(`users/nahom/work_exp/${this.state.id}/bullet_points/${id}`).update(update)
+        firebase.database().ref(`users/${this.props.userId}/work_exp/${this.state.id}/bullet_points/${id}`).update(update)
 
         this.props.update()
 
@@ -109,7 +109,7 @@ class Job extends Component {
         let update = {}
         update[id] = val;
 
-        firebase.database().ref(`users/nahom/work_exp/${this.state.id}`).update(update)
+        firebase.database().ref(`users/${this.props.userId}/work_exp/${this.state.id}`).update(update)
 
         this.props.update()
         this.setState({

@@ -28,7 +28,7 @@ class ResumeBuilder extends Component {
         let db = {};
         let self = this;
 
-        firebase.database().ref('users/nahom/').once("value").then(snap=>{
+        firebase.database().ref(`users/${this.props.userId}/`).once("value").then(snap=>{
             db = snap.val()
             // console.log("value snap: ", db)
         }).then(()=>{
@@ -46,7 +46,7 @@ class ResumeBuilder extends Component {
         let db;
         let self = this;
 
-        firebase.database().ref('users/nahom/').once("value").then(snap=>{
+        firebase.database().ref(`users/${this.props.userId}/`).once("value").then(snap=>{
             db = snap.val()
             // console.log("value snap: ", db)
         }).then(()=>{
@@ -75,9 +75,9 @@ class ResumeBuilder extends Component {
              : 
                 <div className="resume-builder-container">
                     <h1 className="resume-builder-title">bravoresume</h1>
-                    <UserInfo update={this.update} user_info={this.state.user_info}/>
-                    <WorkExperience update={this.update} work_exp={this.state.work_exp}/>
-                    <Education update={this.update} education={this.state.education}/>
+                    <UserInfo update={this.update} userId={this.props.userId} user_info={this.state.user_info}/>
+                    <WorkExperience update={this.update} userId={this.props.userId} work_exp={this.state.work_exp}/>
+                    <Education update={this.update} userId={this.props.userId} education={this.state.education}/>
                     
                     {
                         this.state.showResumeTemplates === true

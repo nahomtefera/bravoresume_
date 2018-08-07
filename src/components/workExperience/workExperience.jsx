@@ -45,7 +45,7 @@ class WorkExperience extends Component {
             bullet_points: []
         })
 
-        firebase.database().ref().child('/users/nahom/work_exp/' + timestamp)
+        firebase.database().ref().child(`users/${this.props.userId}/work_exp/` + timestamp)
         .update({
             id: timestamp,
             company: "", 
@@ -73,7 +73,7 @@ class WorkExperience extends Component {
             } 
 
         }
-        firebase.database().ref().child('/users/nahom/work_exp/' + id).remove()
+        firebase.database().ref().child(`users/${this.props.userId}/work_exp/` + id).remove()
         this.props.update()
         
         this.setState({
@@ -92,7 +92,7 @@ class WorkExperience extends Component {
                         ? this.state.jobs.map((job)=>{
                             return <div className="job-outer-container" key={job.id} id={job.id}>
                                 <button className="rem-button" onClick={this.remJob}>Remove Job</button>
-                                <Job update={this.props.update} job_info={job}/>
+                                <Job userId={this.props.userId} update={this.props.update} job_info={job}/>
                             </div>
                           })
                         : <button className="add-info" onClick={this.addJob}>Add</button>  

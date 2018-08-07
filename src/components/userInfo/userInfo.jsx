@@ -26,7 +26,7 @@ class UserInfo extends Component {
         let update = {}
         update[id] = val;
 
-        firebase.database().ref(`users/nahom/user_info/`).update(update)
+        firebase.database().ref(`users/${this.props.userId}/user_info/`).update(update)
 
         this.props.update()
 

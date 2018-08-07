@@ -25,7 +25,7 @@ class Degree extends Component {
         let update = {}
         update[id] = val;
 
-        firebase.database().ref(`users/nahom/education/${this.state.id}`).update(update)
+        firebase.database().ref(`users/${this.props.userId}/education/${this.state.id}`).update(update)
 
         this.props.update()
         this.setState({
