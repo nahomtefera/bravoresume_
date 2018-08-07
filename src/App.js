@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 // COMPONENTS
 import ResumeBuilder from './components/resumeBuilder/resumeBuilder'
 // Firebase 
@@ -9,7 +8,8 @@ import { database } from './components/firebase/';
 // Firebase auth ui
 import StyledFriebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 // react-router
-import { BrowserRouter, Redirect, Route } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Link } from 'react-router-dom';
+import './App.css';
 
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
 
     this.state= {
       // Loader
-      loading: "false",
+      loading: true,
       // SignedUser
       authUser: null,
       userInfo: null,
@@ -28,9 +28,9 @@ class App extends Component {
     this.uiConfig = {
       signInOptions: [
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
         // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-        // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+        firebase.auth.GithubAuthProvider.PROVIDER_ID,
         // firebase.auth.EmailAuthProvider.PROVIDER_ID,
       ],
       callbacks: {
@@ -68,8 +68,18 @@ class App extends Component {
     }
 
   }
+  
+  componentWillMount(){
+    // Loader
+    var self = this;
+    setTimeout(function(){ 
+      self.setState({loading:false}, ()=>{console.log(self.state)})
+    }, 1500);
+    console.log(this.state)
+  }
 
   componentDidMount() {
+    console.log(this.state)
     // Everytime user signs-in or out
     // We will update the state
     // Set it to null if users signs-out
@@ -87,60 +97,86 @@ class App extends Component {
     });
   }
   
-  render() {
+  render() { 
     return (
-      <BrowserRouter>
-        <div className="App">
-          {/* Main Page that users and guests will see without signing-in */}
-          <Route  
-            exact path="/"
-            render={() => 
-              <div>
-                {/* <Navbar isLandingPage={true} authUser={this.state.authUser}/> */}
-                <h1 className="resume-builder-title">bravoresume</h1>
-              </div>
-              
-            }
-          />
-          {/* Sign-in page */}
-          <Route
-            exact path="/sign-in"
-            render={(props) => {
-              // If user has already signed-in
-              // Going to /sign-in page will redirect to landing page
-              if (this.state.authUser !== null) {
-                return <Redirect to='/resume-builder' />
-              }
-              return (
-                // Only show sign-in if user is not authenticized
-                this.state.authUser ? ""
+      this.state.loading === true
+      ? 
+        <div> 
+          <h1 className="resume-builder-title">bravoresume</h1>
+          <div className="loader-container">
+              <div className="loader">Loading...</div>
+          </div>
+        </div>
+        
+      :
+        <BrowserRouter>
+          <div className="App">
+            {
+              this.state.authUser !== null 
+                ?
+                  <span className="sign-out-button">
+                    <button type="button" onClick={()=>{firebase.auth().signOut()}} >
+                        Sign-Out
+                    </button>
+                  </span>
                 : 
-                <div> 
-                  {/* <Navbar authUser={this.state.authUser}/> */}
-                  <StyledFriebaseAuth {...props} uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
-                </div>
-              )
+                  <span className="sign-in-button" >
+                    <Link to="sign-in"> 
+                        Sign-In
+                    </Link>
+                  </span>
             }
-              
-          }/>
-          {/* Resume-Builder */}
-          <Route  
-            exact path="/resume-builder"
-            render={() =>{
-              // Going to /home page will redirect to landing page
-              if (this.state.authUser === null) {
-                return <Redirect to='/' />
-              }
-              return(
+            {/* Main Page that users and guests will see without signing-in */}
+            <Route  
+              exact path="/"
+              render={() => 
                 <div>
                   {/* <Navbar isLandingPage={true} authUser={this.state.authUser}/> */}
-                  <ResumeBuilder userId={this.state.authUser.uid} />
+                  <h1 className="resume-builder-title">bravoresume</h1>
                 </div>
-              )}
-            }
-          />
-        </div>
-      </BrowserRouter>
+                
+              }
+            />
+            {/* Sign-in page */}
+            <Route
+              exact path="/sign-in"
+              render={(props) => {
+                // If user has already signed-in
+                // Going to /sign-in page will redirect to landing page
+                if (this.state.authUser !== null) {
+                  return <Redirect to='/resume-builder' />
+                }
+                return (
+                  // Only show sign-in if user is not authenticized
+                  this.state.authUser ? ""
+                  : 
+                  <div className="sign-in-container"> 
+                    {/* <Navbar authUser={this.state.authUser}/> */}
+                    <StyledFriebaseAuth {...props} uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
+                  </div>
+                )
+              }
+                
+            }/>
+            {/* Resume-Builder */}
+            <Route  
+              exact path="/resume-builder"
+              render={() =>{
+                // Going to /home page will redirect to landing page
+                if (this.state.authUser === null) {
+                  console.log(this.state)
+                  return <Redirect to='/' />
+                }
+                return(
+                  <div>
+                    {/* <Navbar isLandingPage={true} authUser={this.state.authUser}/> */}
+                    <ResumeBuilder userId={this.state.authUser.uid} />
+                  </div>
+                )}
+              }
+            />
+          </div>
+        </BrowserRouter>
     );
   }
 }
