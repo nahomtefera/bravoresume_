@@ -5,15 +5,10 @@ import { database } from '../firebase';
 // Users
 
   // Create User
-  export const doCreateUser = (id, name, email, photoURL) =>
+  export const doCreateUser = (id, name, email) =>
     database.ref(`users/${id}`).set({
       name,
       email,
-      photoURL,
-      eventsGoing: [""],
-      username: "",
-      bio: "",
-      gender: "",
     });
 
   // Get all users
