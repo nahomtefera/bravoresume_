@@ -159,6 +159,7 @@ class Job extends Component {
                             : <div style={{textAlign:'right'}}><button className="add-bullet-point"  onClick={this.addBullet}>Add Description</button></div>
                     }
                 </ul>
+                
                     {
                         this.state.bullet_points.length > 0
                             ? <div style={{textAlign:'right'}}><button className="add-bullet-point"  onClick={this.addBullet}>Add Description</button></div>

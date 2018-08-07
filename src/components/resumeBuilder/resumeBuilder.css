@@ -174,10 +174,13 @@ button{
 
 .template-section {
     overflow-x: scroll;
+
 }
 
 .template-section-container {
-    width: 130%;
+    width: 1170px;
+    animation: fadeIn .5s;
+
 }
 
 .resume-template-img {
@@ -187,10 +190,20 @@ button{
     width: 150px;
     margin: 35px;
     border-radius: 4px;
-    /* border: 1px solid #efefef; */
     padding: 5px;
 }
 
 .resume-template-img:hover {
     box-shadow: 0 0 4px hsla(0,0%,63%,.34);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        height: 0;
+    } 
+    100% {
+        opacity: 1;
+        height: 300px;
+    }
 }
