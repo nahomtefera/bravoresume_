@@ -23,6 +23,7 @@ class App extends Component {
       // SignedUser
       authUser: null,
       userInfo: null,
+      toggleSignIn: false
     }
 
     // Config for firebaseAuthUi - Authentification
@@ -65,9 +66,9 @@ class App extends Component {
           alert(error)
         }
       },
-      signInFlow: "redirect"
+      signInFlow: "popup"
     }
-
+    this.toggleSignIn = this.toggleSignIn.bind(this)
   }
   
   componentWillMount(){
@@ -98,6 +99,19 @@ class App extends Component {
     });
   }
   
+  toggleSignIn(){
+    console.log('you clicked me')
+    if(this.state.toggleSignIn == true) {
+      this.setState({
+        toggleSignIn: false
+      })
+      return
+    }
+    this.setState({
+      toggleSignIn: true,
+    })
+  }
+
   render() { 
     return (
       this.state.loading === true
@@ -121,11 +135,6 @@ class App extends Component {
                     </button>
                   </span>
                 : null
-                  // <span className="sign-in-button" >
-                  //   <Link to="sign-in"> 
-                  //       Sign-In
-                  //   </Link>
-                  // </span>
             }
             {/* Main Page that users and guests will see without signing-in */}
             <Route  
@@ -138,10 +147,18 @@ class App extends Component {
                     {/* <Navbar authUser={this.state.authUser}/> */}
                     {
                       this.state.authUser !== null
-                        ? <LandingPage/>
+                        ? <LandingPage userIsLogged={true}/>
                         : <div>
-                           <LandingPage/>
-                           <StyledFriebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
+                           <LandingPage userIsLogged={false} toggleSignIn={this.toggleSignIn} userIsLogged={false}/>
+                           {
+                              this.state.toggleSignIn === true
+                                ? 
+                                  <div>
+                                    <div onClick={this.toggleSignIn} className="firebase_ui-outer-container"></div>
+                                    <StyledFriebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
+                                  </div>
+                                : null
+                           }
                         </div>
                     }
                     

@@ -6,6 +6,9 @@ import WorkExperience from '../workExperience/workExperience';
 import Education from '../education/education';
 // Firebase
 import firebase from 'firebase/app';
+// React-router
+import {Link } from 'react-router-dom';
+
 
 class ResumeBuilder extends Component {
 
@@ -74,7 +77,7 @@ class ResumeBuilder extends Component {
                 </div>
              : 
                 <div className="resume-builder-container">
-                    <h1 className="resume-builder-title">bravoresume</h1>
+                    <Link to="/"><h1 className="resume-builder-title">bravoresume</h1></Link>
                     <UserInfo update={this.update} userId={this.props.userId} user_info={this.state.user_info}/>
                     <WorkExperience update={this.update} userId={this.props.userId} work_exp={this.state.work_exp}/>
                     <Education update={this.update} userId={this.props.userId} education={this.state.education}/>

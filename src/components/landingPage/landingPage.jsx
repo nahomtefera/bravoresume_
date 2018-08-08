@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './landingPage.css'
+// react-router
+import {Link } from 'react-router-dom';
 
 export default class LandingPage extends Component{
     constructor(props){
@@ -20,6 +22,16 @@ export default class LandingPage extends Component{
                             Bravoresume is a platform that gives you free unlimited access to a growing catalog of elegant resume templates. Sign-up and get started.
                         </p>
                 </p>
+                <div>
+                    {
+                        this.props.userIsLogged === true 
+                            ? 
+                                <Link to="/resume-builder"> 
+                                        <button className="intro-buttons">Resume Builder</button>
+                                </Link>
+                            : <button onClick={this.props.toggleSignIn} className="intro-buttons">Sign In</button>
+                    }
+                </div>
             </div>
         )
     }

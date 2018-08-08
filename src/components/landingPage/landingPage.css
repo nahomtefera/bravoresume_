@@ -16,7 +16,7 @@ svg {
 }
 
 .stripe-polygon {
-    fill: #000;
+    fill: #F44336;
 }
 
 .intro-text {
@@ -38,8 +38,29 @@ svg {
     max-width: 100%;
     word-spacing: 4px;
     font-size: 2em;
-    line-height: 37px;
+    line-height: 40px;
     letter-spacing: 1px;
+}
+
+.intro-buttons {
+    padding: 0.6em .7em;
+    color: #F44336;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 1.2em;
+    background: white;
+    border: 1px solid white;
+    border-radius: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.intro-buttons:focus {
+    outline: none;
+}
+
+button, a{
+    -webkit-tap-highlight-color: transparent;
 }
 
 .resume-builder-title {
