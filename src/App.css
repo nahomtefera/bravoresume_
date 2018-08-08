@@ -7,7 +7,10 @@
 /* Sign-in // Sign-out */
 
 .sign-in-container {
-  padding: 4em;
+  max-width: 100%!important;
+  box-sizing: border-box;
+  padding: 1em 4em;
+  text-align: center;
 }
 
 .sign-in-container li::before{
@@ -18,15 +21,15 @@
   margin-left: auto;
   color: #29a75e;
   position: absolute;
-  top: 3em;
-  right: 3em;
+  top: 1em;
+  left: 1em;
 }
 
 .sign-out-button {
   margin-left: auto;
   position: absolute;
-  top: 3em;
-  right: 3em;
+  top: 1em;
+  right: 1em;
 }
 
 .sign-in-button a{
@@ -186,6 +189,19 @@
 
   /* FIREBASE UI STYLES */
 
+  .sign-in-container #firebaseui_container {
+    width: 350px;
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 2em 0.4em;
+    -webkit-box-shadow: 0 0 1px #b1b1b1;
+    background: #fff;
+    -webkit-box-shadow: 0 0 2px #b3b3b3;
+    box-shadow: 0 0 1px #717171;
+  }
+
   .sign-in-container .firebaseui-idp-text {
     font-size: 17px;
     padding-left: 29px;
@@ -201,4 +217,9 @@
     padding: 8px 16px;
     text-align: left;
     width: 100%;
+  }
+
+  .sign-in-container .firebaseui-idp-button:hover {
+    -webkit-box-shadow:  0 0 1px #b1b1b1;
+    box-shadow: 0 0 1px #b1b1b1;
   }

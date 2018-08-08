@@ -1,0 +1,54 @@
+.stripe {
+    width: 100%;
+    background: linear-gradient(150deg,#141d2c 15%,#263349 70%,#5c5a67 94%);
+    background: #fff0;
+    margin-top: -5px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+svg {
+    width: 2000px;
+    height: 800px;
+}
+
+.stripe-polygon {
+    fill: #000;
+}
+
+.intro-text {
+    font-family: Lato;
+    color: white;
+    text-align: center;
+}
+
+.intro-text-title {
+    font-weight: 300;
+    font-size: 3.5em;
+}
+
+.intro-text-paragraph {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 100;
+    max-width: 100%;
+    word-spacing: 4px;
+    font-size: 2em;
+    line-height: 37px;
+    letter-spacing: 1px;
+}
+
+.resume-builder-title {
+    color: white;
+}
+
+@media all and (min-width: 50px)   {  body  { font-size:0.1em;  } }
+@media all and (min-width: 100px)  {  body  { font-size:0.2em;  } }
+@media all and (min-width: 200px)  {  body  { font-size:0.4em;  } }
+@media all and (min-width: 300px)  {  body  { font-size:0.6em;  } }
+@media all and (min-width: 400px)  {  body  { font-size:0.8em;  } }
+@media all and (min-width: 500px)  {  body  { font-size:1.0em;  } }
