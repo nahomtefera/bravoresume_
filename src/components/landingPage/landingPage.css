@@ -20,7 +20,7 @@ svg {
 }
 
 .intro-text {
-    font-family: Lato;
+    font-family: Roboto;
     color: white;
     text-align: center;
 }
@@ -31,28 +31,34 @@ svg {
 }
 
 .intro-text-paragraph {
-    width: 500px;
-    margin: 0 auto;
+    width: 900px;
+    margin: 1em auto;
+    margin-bottom: 2em;
     text-align: center;
     font-weight: 100;
     max-width: 100%;
     word-spacing: 4px;
     font-size: 2em;
     line-height: 40px;
-    letter-spacing: 1px;
+    letter-spacing: 1.4px;
 }
 
 .intro-buttons {
     padding: 0.6em .7em;
     color: #F44336;
     font-family: Lato;
-    font-weight: 400;
-    font-size: 1.2em;
+    font-weight: 300;
+    font-size: 1.25em;
     background: white;
     border: 1px solid white;
     border-radius: 14px;
     cursor: pointer;
     outline: none;
+    box-shadow: 0 0 2px 0 #e2e2e2
+}
+
+.intro-buttons:hover {
+    box-shadow: 0 0 1px 0 #d1d1d1
 }
 
 .intro-buttons:focus {

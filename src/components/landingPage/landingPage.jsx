@@ -17,7 +17,7 @@ export default class LandingPage extends Component{
                     </svg>
                 </div>
                 <p className="intro-text">
-                        <h1 className="intro-text-title">Your go-to Resume Builder</h1>
+                        {/* <h1 className="intro-text-title">Your go-to Resume Builder</h1> */}
                         <p className="intro-text-paragraph">
                             Bravoresume is a platform that gives you free unlimited access to a growing catalog of elegant resume templates. Sign-up and get started.
                         </p>
@@ -29,7 +29,7 @@ export default class LandingPage extends Component{
                                 <Link to="/resume-builder"> 
                                         <button className="intro-buttons">Resume Builder</button>
                                 </Link>
-                            : <button onClick={this.props.toggleSignIn} className="intro-buttons">Sign In</button>
+                            : <button onClick={this.props.toggleSignIn} className="intro-buttons">Sign-up / Sign-in</button>
                     }
                 </div>
             </div>

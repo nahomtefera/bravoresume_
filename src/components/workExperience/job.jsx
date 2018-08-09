@@ -151,7 +151,7 @@ class Job extends Component {
                                                 onChange={this.changeBulletPoint}
                                                 value={bullet_point.description}
                                                 placeholder="Enhanced skills for future success and created own personal brand shared with 12 area employers..."  
-                                                id="" cols="30" rows="2"></textarea>
+                                                id="" cols="30" rows="3"></textarea>
 
                                             <button className="rem-button" onClick={this.deleteBullet} style={{verticalAlign: "top", color: "tomato"}}>x</button>
                                     </li>

@@ -19,7 +19,7 @@ class App extends Component {
 
     this.state= {
       // Loader
-      loading: true,
+      loading: false,
       // SignedUser
       authUser: null,
       userInfo: null,
@@ -73,11 +73,10 @@ class App extends Component {
   
   componentWillMount(){
     // Loader
-    var self = this;
-    setTimeout(function(){ 
-      self.setState({loading:false}, ()=>{console.log(self.state)})
-    }, 1500);
-    console.log(this.state)
+    // var self = this;
+    // setTimeout(function(){ 
+    //   self.setState({loading:false}, ()=>{console.log(self.state)})
+    // }, 1500);
   }
 
   componentDidMount() {

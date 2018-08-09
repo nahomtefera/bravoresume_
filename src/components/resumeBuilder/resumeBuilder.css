@@ -83,6 +83,11 @@
 .work-experience-bullet-list {
     list-style: none;
     margin-bottom: 0;
+    padding-left: 1em;
+}
+
+.work-experience-bullet-list .rem-button {
+    padding: 0
 }
 
 li {
@@ -96,7 +101,7 @@ li::before {
     vertical-align: top;}
 
 .bullet-list-item {
-    width: 80%;
+    width: 85%;
     box-sizing: border-box;
     margin-bottom: 13px;
 }
