@@ -95,11 +95,11 @@ class WorkExperience extends Component {
                                 <Job userId={this.props.userId} update={this.props.update} job_info={job}/>
                             </div>
                           })
-                        : <button className="add-info" onClick={this.addJob}>Add</button>  
+                        : <button className="add-info" onClick={this.addJob}>Add new Job</button>  
                 }
                 {
                     this.state.jobs.length > 0 
-                        ? <button className="add-info" onClick={this.addJob}>Add</button>
+                        ? <button className="add-info" onClick={this.addJob}>Add new Job</button>
                         : ""
                 }
                 

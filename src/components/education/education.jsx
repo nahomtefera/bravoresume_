@@ -92,12 +92,12 @@ class Education extends Component {
                                     <Degree userId={this.props.userId} update={this.props.update} degree_info={degree} />
                                 </div>
                               })
-                            : <button style={{marginLeft: "1em"}} className="add-info" onClick={this.addDegree}>Add</button>
+                            : <button style={{marginLeft: "1em"}} className="add-info" onClick={this.addDegree}>Add Degree</button>
                    }
                 </div>
                    {
                         this.state.degrees.length > 0
-                            ? <button className="add-info" onClick={this.addDegree}>Add</button>
+                            ? <button className="add-info" onClick={this.addDegree}>Add new Degree</button>
                             : ""
                    }
                 
