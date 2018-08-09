@@ -9,7 +9,7 @@ export default (items) => {
     var user, work_exp, education;
 
     user = items.user_info;
-    work_exp = items.work_experience;
+    work_exp = items.work_exp;
     education = items.education;
     
     // We add new font OpenSans
@@ -77,7 +77,7 @@ export default (items) => {
             },
             // We pass the name inside
             {
-                text: (user.user_name || "Name") + " " + (user.user_last_name || "Last Name"),
+                text: (user.name || "Name") + " " + (user.last_name || "Last Name"),
                 fontSize: 50,
                 color: '#FFF',
                 font: 'DancingScript',
@@ -136,9 +136,9 @@ export default (items) => {
                                 body: [
                                     // We will First push CONTACT info and the EDUCATION
                                     [{text: "C O N T A C T", bold: true, fontSize:14, margin:[100, 60, 0, 5] }],
-                                    [{text: user.user_email_address || "youremail@domain.com", margin:[100, 0, 0, 0]}],
-                                    [{text: user.user_phone_number || "000-000-0000", margin:[100, 0, 0, 0] }],
-                                    [{text: user.user_home_address || "Home Address", margin:[100, 0, 0, 0] }],
+                                    [{text: user.email || "youremail@domain.com", margin:[100, 0, 0, 0]}],
+                                    [{text: user.phone || "000-000-0000", margin:[100, 0, 0, 0] }],
+                                    [{text: user.location || "Location", margin:[100, 0, 0, 0] }],
                                     // EDUCATION will be pushed here
                                     [{text: "E D U C A T I O N", bold: true, fontSize:14, margin:[100, 20, 0, 5] }]
                                 ]
@@ -185,8 +185,8 @@ export default (items) => {
             education.map((school)=>{
                 docDefinition.content[6].table.body[0][0].table.body.push(
                     [{text: school.degree || "Degree or Certificate", style: 'tableHeader',bold: true, margin:[100, 0, 0, 0]}],
-                    [{text: (school.school_name || "Institution"), margin:[100, 0, 0, 0]} ],
-                    [{text: school.year || "Year - Year", margin: [100, 0, 0, 15]}]
+                    [{text: (school.school || "Institution"), margin:[100, 0, 0, 0]} ],
+                    [{text: school.date || "Year - Year", margin: [100, 0, 0, 15]}]
                 )
             })
         }
@@ -207,14 +207,14 @@ export default (items) => {
         }else{
             work_exp.map((job)=>{
                 docDefinition.content[6].table.body[0][1].table.body.push(
-                    [{text: (job.job_title || "Degree or Certificate") + " - " + (job.job_company || "Institution"), style: 'tableHeader',bold: true, margin: [40, 0, 0, 0]}],
-                    [{text: (job.job_location || "Location") + "  " + (job.job_date || "Year - Year"), margin: [40, 0, 0, 0] }],
-                    [{text: job.job_description || "Describe your job responsibilities, accomplishments and technologies you have used. It's highly recommended that you use bullet points to describe your experience.", margin: [40, 0, 0, 15]}]
+                    [{text: (job.title || "Degree or Certificate") + " - " + (job.company || "Institution"), style: 'tableHeader',bold: true, margin: [40, 0, 0, 0]}],
+                    [{text: (job.location || "Location") + "  " + (job.date || "Year - Year"), margin: [40, 0, 0, 0] }],
+                    // [{text: job.job_description || "Describe your job responsibilities, accomplishments and technologies you have used. It's highly recommended that you use bullet points to describe your experience.", margin: [40, 0, 0, 15]}]
                 )
             })
         }
     }
 
     workColumn()
-    pdfMake.createPdf(docDefinition).download((user.user_last_name||"LastName") + "_" +(user.user_name||"Name") + ".pdf");    
+    pdfMake.createPdf(docDefinition).download((user.last_name||"LastName") + "_" +(user.name||"Name") + ".pdf");    
 }

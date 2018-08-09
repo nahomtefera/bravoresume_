@@ -8,7 +8,8 @@ import Education from '../education/education';
 import firebase from 'firebase/app';
 // React-router
 import {Link } from 'react-router-dom';
-
+// Resume Templates
+import beautiful_resume from '../resumes/beautiful_resume';
 
 class ResumeBuilder extends Component {
 
@@ -23,8 +24,28 @@ class ResumeBuilder extends Component {
             showResumeTemplates: false
         }
 
-        this.update = this.update.bind(this)
-        this.toggleResumeTemplates = this.toggleResumeTemplates.bind(this)
+        this.update = this.update.bind(this);
+        this.toggleResumeTemplates = this.toggleResumeTemplates.bind(this);
+        this.downloadResume = this.downloadResume.bind(this);
+    }
+
+    downloadResume(){
+        let work_exp = [];
+        let education = [];
+        for(var job in this.state.work_exp) {
+            work_exp.push(this.state.work_exp[job])
+        }
+        for(var degree in this.state.education) {
+            education.push(this.state.education[degree])
+        }
+
+        let resumeInfo = {
+            "user_info": this.state.user_info, 
+            "work_exp": work_exp,
+            "education": education
+        }
+        console.log(resumeInfo)
+        beautiful_resume(resumeInfo)
     }
 
     componentWillMount() {
@@ -42,7 +63,6 @@ class ResumeBuilder extends Component {
                 education: db.education
             })
         })
-
     }
 
     update() {
@@ -88,7 +108,7 @@ class ResumeBuilder extends Component {
                                 <div className="resume-builder-section template-section">
                                     <div style={{paddingTop: "10px", paddingLeft: "25px", paddingBottom: "15px", position: "absolute", right: "18px"}}><span style={{color: "tomato", cursor: "pointer"}} onClick={this.toggleResumeTemplates}>X</span></div>
                                     <div className="template-section-container">
-                                        <img className="resume-template-img" src="http://bravoresume.com/static/media/beautiful_resume.e96c3ee8.JPG" alt="beautiful resume"/>
+                                        <img onClick={this.downloadResume} className="resume-template-img" src="http://bravoresume.com/static/media/beautiful_resume.e96c3ee8.JPG" alt="beautiful resume"/>
                                         <img className="resume-template-img" src="http://bravoresume.com/static/media/structured_resume.f756cce5.JPG" alt=""/>
                                         <img className="resume-template-img" src="http://bravoresume.com/static/media/fancy_resume.fd52a836.JPG" alt=""/>
                                         <img className="resume-template-img" src="http://bravoresume.com/static/media/leftbar_resume.a21cef82.JPG" alt=""/>
