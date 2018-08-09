@@ -81,7 +81,7 @@ class Education extends Component {
     render() {
         return(
             <div className="education-container resume-builder-section">
-                <h1 className="resume-builder-section-title">Education</h1>
+                <h1 className="resume-builder-section-title"><object type="image/svg+xml" className="resume-builder-section-title-icon" data={require('../images/education.svg')}></object>Education</h1>
                 
                 <div className="resume-builder-section-inner-container">
                    {

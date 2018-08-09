@@ -38,7 +38,7 @@ class UserInfo extends Component {
     render() {
         return(
             <div className="user-info-container resume-builder-section">
-                <h1 className="resume-builder-section-title">Basic Info</h1>
+                <h1 className="resume-builder-section-title"> <object type="image/svg+xml" className="resume-builder-section-title-icon" data={require('../images/user.svg')}></object>Basic Info</h1>
                 
                 <div className="resume-builder-section-inner-container">
                     {/* User Name */}

@@ -85,7 +85,7 @@ class WorkExperience extends Component {
     render() {
         return(
             <div className="work-experience-container resume-builder-section">
-                <h1 className="resume-builder-section-title">Work Experience</h1>
+                <h1 className="resume-builder-section-title"> <object type="image/svg+xml" className="resume-builder-section-title-icon" data={require('../images/travel-case.svg')}></object> Work Experience</h1>
                 
                 {
                     this.state.jobs.length > 0 
