@@ -26,10 +26,10 @@ class ResumeBuilder extends Component {
 
         this.update = this.update.bind(this);
         this.toggleResumeTemplates = this.toggleResumeTemplates.bind(this);
-        this.downloadResume = this.downloadResume.bind(this);
+        this.previewResume = this.previewResume.bind(this);
     }
 
-    downloadResume(){
+    previewResume(){
         let work_exp = [];
         let education = [];
         for(var job in this.state.work_exp) {
@@ -108,7 +108,7 @@ class ResumeBuilder extends Component {
                                 <div className="resume-builder-section template-section">
                                     <div style={{paddingTop: "10px", paddingLeft: "25px", paddingBottom: "15px", position: "absolute", right: "18px"}}><span style={{color: "tomato", cursor: "pointer"}} onClick={this.toggleResumeTemplates}>X</span></div>
                                     <div className="template-section-container">
-                                        <img onClick={this.downloadResume} className="resume-template-img" src="http://bravoresume.com/static/media/beautiful_resume.e96c3ee8.JPG" alt="beautiful resume"/>
+                                        <img onClick={this.previewResume} className="resume-template-img" src="http://bravoresume.com/static/media/beautiful_resume.e96c3ee8.JPG" alt="beautiful resume"/>
                                         <img className="resume-template-img" src="http://bravoresume.com/static/media/structured_resume.f756cce5.JPG" alt=""/>
                                         <img className="resume-template-img" src="http://bravoresume.com/static/media/fancy_resume.fd52a836.JPG" alt=""/>
                                         <img className="resume-template-img" src="http://bravoresume.com/static/media/leftbar_resume.a21cef82.JPG" alt=""/>
@@ -119,6 +119,9 @@ class ResumeBuilder extends Component {
                             : <div className="download-button-container"><button onClick={this.toggleResumeTemplates} className="download-button">Download</button></div>
 
                     }
+
+                    < iframe id='pdfV'> </ iframe>
+
                 </div>
             
         )

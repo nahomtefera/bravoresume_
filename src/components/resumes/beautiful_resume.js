@@ -216,5 +216,8 @@ export default (items) => {
     }
 
     workColumn()
-    pdfMake.createPdf(docDefinition).download((user.last_name||"LastName") + "_" +(user.name||"Name") + ".pdf");    
+    pdfMake.createPdf(docDefinition).getDataUrl(function (outDoc) {
+        document.getElementById('pdfV').src = outDoc;
+    });
+    // .download((user.last_name||"LastName") + "_" +(user.name||"Name") + ".pdf");    
 }

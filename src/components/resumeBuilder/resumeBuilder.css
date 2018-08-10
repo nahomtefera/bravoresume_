@@ -97,7 +97,8 @@
 }
 
 .work-experience-bullet-list .rem-button {
-    padding: 0
+    padding: 0;
+    padding-left: 10px;
 }
 
 li {
@@ -132,6 +133,7 @@ li::before {
     margin-left: 10px;
     padding-left: 1em;
     letter-spacing: 0.3px;
+    display: inline-block;
 }
 
 .add-bullet-point {
@@ -220,6 +222,18 @@ button{
 
 .resume-template-img:hover {
     box-shadow: 0 0 4px hsla(0,0%,63%,.34);
+}
+
+/* Preview */
+
+#pdfV {
+    width: 808px;
+    max-width: 95%;
+    height: 1207px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 8em;
+    border: 1px solid #eee;
 }
 
 @keyframes fadeIn {

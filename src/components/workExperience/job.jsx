@@ -37,10 +37,10 @@ class Job extends Component {
     }
 
     deleteBullet(el) {
-        let id = el.target.parentNode.id;
+        let id = el.target.parentNode.parentNode.id;
         let prevBulletPoints = this.state.bullet_points;
         let newBulletPoints = this.state.bullet_points;
-
+        console.log(el.target)
         for(let i=0; i<this.state.bullet_points.length; i++) {
 
             if(prevBulletPoints[i].id == id) {
@@ -153,7 +153,7 @@ class Job extends Component {
                                                 placeholder="Enhanced skills for future success and created own personal brand shared with 12 area employers..."  
                                                 id="" cols="30" rows="3"></textarea>
 
-                                            <button className="rem-button" onClick={this.deleteBullet} style={{verticalAlign: "top", color: "tomato"}}>x</button>
+                                            <div className="rem-button" onClick={this.deleteBullet} style={{verticalAlign: "top", color: "tomato"}}> <img style={{width: "15px"}} src={require('../images/close.svg')}/> </div>
                                     </li>
                                 })
                             : <div style={{textAlign:'right'}}><button className="add-bullet-point"  onClick={this.addBullet}>Add Description</button></div>
