@@ -10,6 +10,10 @@ import firebase from 'firebase/app';
 import {Link } from 'react-router-dom';
 // Resume Templates
 import beautiful_resume from '../resumes/beautiful_resume';
+import structured_resume from '../resumes/structured_resume';
+import madrid_resume from '../resumes/madrid_resume';
+import tokyo_resume from '../resumes/tokyo_resume';
+
 
 class ResumeBuilder extends Component {
 
@@ -29,12 +33,13 @@ class ResumeBuilder extends Component {
         this.previewResume = this.previewResume.bind(this);
     }
 
-    previewResume(){
+    previewResume(resumeTemplate){
+
         let currentWorkExp = this.state.work_exp;
         let work_exp = [];
-        let bullet_points = [];
         let education = [];
         for(var job in currentWorkExp) {
+            // Object.values will convert the object into an array of objects
             currentWorkExp[job]['bullet_points'] = Object.values(currentWorkExp[job]['bullet_points']);
 
             console.log(currentWorkExp[job])
@@ -50,7 +55,7 @@ class ResumeBuilder extends Component {
             "education": education
         }
         console.log(resumeInfo)
-        beautiful_resume(resumeInfo)
+        resumeTemplate(resumeInfo)
     }
 
     componentWillMount() {
@@ -76,7 +81,6 @@ class ResumeBuilder extends Component {
 
         firebase.database().ref(`users/${this.props.userId}/`).once("value").then(snap=>{
             db = snap.val()
-            // console.log("value snap: ", db)
         }).then(()=>{
             this.setState({
                 user_info: db.user_info,
@@ -113,10 +117,10 @@ class ResumeBuilder extends Component {
                                 <div className="resume-builder-section template-section">
                                     <div style={{paddingTop: "10px", paddingLeft: "25px", paddingBottom: "15px", position: "absolute", right: "18px"}}><span style={{color: "tomato", cursor: "pointer"}} onClick={this.toggleResumeTemplates}>X</span></div>
                                     <div className="template-section-container">
-                                        <img onClick={this.previewResume} className="resume-template-img" src="http://bravoresume.com/static/media/beautiful_resume.e96c3ee8.JPG" alt="beautiful resume"/>
-                                        <img className="resume-template-img" src="http://bravoresume.com/static/media/structured_resume.f756cce5.JPG" alt=""/>
-                                        <img className="resume-template-img" src="http://bravoresume.com/static/media/fancy_resume.fd52a836.JPG" alt=""/>
-                                        <img className="resume-template-img" src="http://bravoresume.com/static/media/leftbar_resume.a21cef82.JPG" alt=""/>
+                                        <img onClick={()=>{this.previewResume(beautiful_resume)}} className="resume-template-img" src="http://bravoresume.com/static/media/beautiful_resume.e96c3ee8.JPG" alt="beautiful resume"/>
+                                        <img onClick={()=>{this.previewResume(structured_resume)}} className="resume-template-img" src="http://bravoresume.com/static/media/structured_resume.f756cce5.JPG" alt=""/>
+                                        <img onClick={()=>{this.previewResume(madrid_resume)}} className="resume-template-img" src="http://bravoresume.com/static/media/fancy_resume.fd52a836.JPG" alt=""/>
+                                        <img onClick={()=>{this.previewResume(tokyo_resume)}} className="resume-template-img" src="http://bravoresume.com/static/media/leftbar_resume.a21cef82.JPG" alt=""/>
                                         <img className="resume-template-img" src="http://bravoresume.com/static/media/clean_resume.78baf65b.JPG" alt=""/>
                                     </div>
                                 </div>
@@ -135,65 +139,3 @@ class ResumeBuilder extends Component {
 }
 
 export default ResumeBuilder
-
-/*
-    Database Structure
-
-    users:{
-        user:{
-            user_info:{
-                name:
-                last-name:
-                email:
-                phone:
-                location
-            },
-            work_exp:[
-                job1:{
-                    company:
-                    title:
-                    location:
-                    date:
-                    bullet_points: [
-                        "", "",""
-                    ]
-                }
-                job2: {...}
-                job3: {...}
-            ],
-            education: [
-                degree1:{
-                    degree: 
-                    school:
-                    date:
-                }
-                degree2: {...}
-                degree3: {...}
-                degree4: {...}
-            ]
-        }
-    }
-*/
-
-/*
-    Database Functions
-
-    main:
-        createUser()
-
-    
-    user_info: 
-        update() functions to change the info
-
-    work_exp: 
-        update() functions
-        addJob() to add new job experiences
-        remJob() will delete the selected job 
-        addBullet() to add new descriptions
-        remBullet() to delete selected description
-
-    education:
-        update() function
-        addDegree() to add new education field
-        remDegree() to remove education field
-*/

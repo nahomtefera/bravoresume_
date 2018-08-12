@@ -6,12 +6,12 @@ import vfsFonts from './vfs_fonts';
 export default (items) => {
     const {vfs} = vfsFonts.pdfMake;
     pdfMake.vfs = vfs;
-    var user, work_exp, education;
+    let user, work_exp, education;
 
     user = items.user_info;
-    work_exp = items.work_experience;
+    work_exp = items.work_exp;
     education = items.education;
-    
+
     // We add new font OpenSans
     pdfMake.fonts = {
         OpenSans: {
@@ -93,57 +93,22 @@ export default (items) => {
             // We pass the name inside
             {
                 alignment: "center",
-                margin: [0, 25, 0, 0],
+                margin: [0, 25, 0, 30],
                 table: {
                     // headers are automatically repeated if the table spans over multiple pages
                     // you can declare how many rows should be treated as headers
                     headerRows: 1,
                     widths: ["*", 'auto', "*"],
                     body: [
-                        [{ text: "", border: [false, false, false, false]}, { text: (user.user_name || "Name") + " " + (user.user_last_name || "Last Name"), font:"OpenSans", bold: true, fontSize: 27, margin:[16, 0, 16, 0]}, { text: " ", border: [false, false, false, false]}],                    
+                        [{ text: "", border: [false, false, false, false]}, { text: (user.name || "Name") + " " + (user.last_name || "Last Name"), font:"OpenSans", bold: true, fontSize: 27, margin:[16, 0, 16, 0]}, { text: " ", border: [false, false, false, false]}],                    
                     ]
                 }
             },
             {
-                text: (user.user_position || "FRONT END DEVELOPER"),
-                fontSize: 13,   
-                color: '#000',
-                font: 'Roboto',
-                alignment: 'center',
-                margin: [ 0, 7, 0, 30],
-            },
-            {
-                margin: [ 0, -150, 0, 25],                
-                canvas: [
-                    {
-                        type: 'rect',
-                        x: 11, y: 150, w: 480, h:0.5,                        
-                        color: '#8b8b8b',
-                    },                 
-                ],
-            },
-            // {
-            //     text: ("P R O F I L E"),
-            //     fontSize: 15,   
-            //     bold:true,
-            //     color: '#000',
-            //     font: 'OpenSans',
-            //     alignment: 'center',
-            //     margin: [ 0, 0, 0, 5],
-            // },
-            // {
-            //     text: (user.user_profile || "Brief description of who you are, it shouldn't be more than 2 lines and should describe you as much as possible"),
-            //     fontSize: 12, 
-            //     alignment: "justify",  
-            //     color: '#000',
-            //     font: 'OpenSans',
-            //     margin: [ 0, 0, 0, 0],
-            // },
-            {
                 style: 'tableExample',
                 margin: [-40, -65, 0, 0],
                 table: {
-                    widths: [225, 315], 
+                    widths: [160, 340], 
                     body: [
                         [{
                             // style: 'right',
@@ -152,9 +117,9 @@ export default (items) => {
                                 body: [
                                     // We will First push CONTACT info and the EDUCATION
                                     [{text: "C O N T A C T", bold: true, fontSize:14, color: "#151515", alignment: "left", margin:[50, 60, 0, 5] }],
-                                    [{text: user.user_email_address || "youremail@domain.com", alignment: "left", margin:[50, 0, 0, 0]}],
-                                    [{text: user.user_phone_number || "000-000-0000", alignment: "left", margin:[50, 0, 0, 0] }],
-                                    [{text: user.user_home_address || "Home Address", alignment: "left", margin:[50, 0, 0, 0] }],
+                                    [{text: user.email || "youremail@domain.com", alignment: "left", fontSize: 9, margin:[50, 0, 0, 0]}],
+                                    [{text: user.phone || "000-000-0000", alignment: "left", fontSize: 9, margin:[50, 0, 0, 0] }],
+                                    [{text: user.location || "Home Address", alignment: "left",fontSize: 9,  margin:[50, 0, 0, 0] }],
                                     // EDUCATION will be pushed here
                                     [{text: "E D U C A T I O N", bold: true, alignment: "left", fontSize:14, margin:[50, 20, 0, 5] }]
                                 ]
@@ -164,7 +129,7 @@ export default (items) => {
                         },
                         {
                             table: {
-                                widths: ['270'],
+                                widths: ['320'],
                                 body: [
                                     // WORK experience will be pushed here
                                     [{text: "W O R K   E X P E R I E N C E", bold: true, fontSize:14, margin:[15, 60, 0, 5] }]
@@ -193,17 +158,17 @@ export default (items) => {
     // Into one of the nested tables
     var eduColumn = ()=>{
         if(education.length===0) {
-            docDefinition.content[3].table.body[0][0].table.body.push(
-                [{text: 'Degree', style: 'tableHeader',bold: true, alignment: "left", margin:[50, 0, 0, 0]}],
-                [{text: 'Institution', alignment: "left", margin:[50, 0, 0, 0]}],
-                [{text: "Year - Year ", alignment: "left", margin:[50, 0, 0, 15]}]
+            docDefinition.content[1].table.body[0][0].table.body.push(
+                [{text: 'Degree', style: 'tableHeader',bold: true, alignment: "left", fontSize: 9, margin:[50, 0, 0, 0]}],
+                [{text: 'Institution', alignment: "left", fontSize: 9, margin:[50, 0, 0, 0]}],
+                [{text: "Year - Year ", alignment: "left", fontSize: 9, margin:[50, 0, 0, 10]}]
             )         
         }else{
             education.map((school)=>{
-                docDefinition.content[3].table.body[0][0].table.body.push(
-                    [{text: school.degree || "Degree or Certificate", alignment: "left", style: 'tableHeader',bold: true, margin:[50, 0, 0, 15]}],
-                    [{text: (school.school_name || "Institution"), alignment: "left", margin:[50, 0, 0, 15]} ],
-                    [{text: school.year || "Year - Year", alignment: "left", margin: [50, 0, 0, 15]}]
+                docDefinition.content[1].table.body[0][0].table.body.push(
+                    [{text: school.degree || "Degree or Certificate", alignment: "left", style: 'tableHeader',bold: true, fontSize: 9, margin:[50, 0, 0, 0]}],
+                    [{text: (school.school || "Institution"), alignment: "left", fontSize: 9, margin:[50, 0, 0, 0]} ],
+                    [{text: school.date || "Year - Year", alignment: "left", fontSize: 9, margin: [50, 0, 0, 10]}]
                 )
             })
         }
@@ -216,17 +181,20 @@ export default (items) => {
     // Into the other nested table
     var workColumn = ()=>{
         if(work_exp.length===0) {
-            docDefinition.content[3].table.body[0][1].table.body.push(
+            docDefinition.content[1].table.body[0][1].table.body.push(
                 [{text: 'Job Title - Company', style: 'tableHeader',bold: true, margin: [15, 0, 0, 0] }],
                 [{text:'Location  Year - Year', margin: [15, 0, 0, 0]}],
                 [{text:"Brifely escribe your job responsibilities, accomplishments and technologies you have used.", margin: [15, 0, 0, 15]}]            
             )         
         }else{
             work_exp.map((job)=>{
-                docDefinition.content[3].table.body[0][1].table.body.push(
-                    [{text: (job.job_title || "Degree or Certificate") + " - " + (job.job_company || "Institution"), style: 'tableHeader',bold: true, margin: [15, 0, 0, 0]}],
-                    [{text: (job.job_location || "Location") + "  " + (job.job_date || "Year - Year"), margin: [15, 0, 0, 0] }],
-                    [{text: job.job_description || "Describe your job responsibilities, accomplishments and technologies you have used. It's highly recommended that you use bullet points to describe your experience.", margin: [15, 0, 0, 15]}]
+                docDefinition.content[1].table.body[0][1].table.body.push(
+                    [{text: (job.title || "Degree or Certificate") + " - " + (job.company || "Institution"), style: 'tableHeader',bold: true, fontSize: 10, margin: [15, 0, 0, 0]}],
+                    [{text: (job.location || "Location") + "  " + (job.date || "Year - Year"), fontSize: 10, margin: [15, 0, 0, 0] }],
+                    [{
+                        ul: job.bullet_points.map((bullet)=>{return bullet.description}),
+                        fontSize: 10, margin: [25, 0, 0, 0]
+                    }],                
                 )
             })
         }
@@ -234,5 +202,9 @@ export default (items) => {
 
     workColumn()
 
-    pdfMake.createPdf(docDefinition).download((user.user_last_name||"LastName") + "_" +(user.user_name||"Name") + ".pdf");    
+    pdfMake.createPdf(docDefinition).getDataUrl(function (outDoc) {
+        // console.log(outDoc)
+        document.getElementById('pdfV').src = outDoc;
+    });
+    // .download((user.last_name||"LastName") + "_" +(user.name||"Name") + ".pdf");    
 }

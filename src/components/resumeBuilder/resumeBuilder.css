@@ -239,9 +239,9 @@ button{
     margin-bottom: 8em;
     border: 1px solid #eee; */
     width: 80%;
-    position: fixed;
-    /* right: 50%; */
-    left: 10%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
     top: 5vh;
     /* max-width: 95%; */
     height: 90vh;
