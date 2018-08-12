@@ -1,3 +1,7 @@
+.resume-builder-container {
+    margin-bottom: 20em;
+}
+
 .resume-builder-section {
     width: 900px;
     max-width: 95%;
@@ -227,12 +231,23 @@ button{
 /* Preview */
 
 #pdfV {
-    width: 808px;
+    /* width: 305px;
     max-width: 95%;
-    height: 1207px;
+    height: 480px;
     display: block;
     margin: 0 auto;
     margin-bottom: 8em;
+    border: 1px solid #eee; */
+    width: 80%;
+    position: fixed;
+    /* right: 50%; */
+    left: 10%;
+    top: 5vh;
+    /* max-width: 95%; */
+    height: 90vh;
+    /* display: block; */
+    /* margin: 0 auto; */
+    /* margin-bottom: 8em; */
     border: 1px solid #eee;
 }
 

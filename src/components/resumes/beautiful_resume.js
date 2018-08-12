@@ -209,7 +209,11 @@ export default (items) => {
                 docDefinition.content[6].table.body[0][1].table.body.push(
                     [{text: (job.title || "Degree or Certificate") + " - " + (job.company || "Institution"), style: 'tableHeader',bold: true, margin: [40, 0, 0, 0]}],
                     [{text: (job.location || "Location") + "  " + (job.date || "Year - Year"), margin: [40, 0, 0, 0] }],
-                    // [{text: job.job_description || "Describe your job responsibilities, accomplishments and technologies you have used. It's highly recommended that you use bullet points to describe your experience.", margin: [40, 0, 0, 15]}]
+                    [{
+                        ul: job.bullet_points.map((bullet)=>{return bullet.description}),
+                        margin: [40, 0, 0, 0]
+                    }],
+                    // [{text: "Describe your job responsibilities, accomplishments and technologies you have used. It's highly recommended that you use bullet points to describe your experience.", margin: [40, 0, 0, 15]}]
                 )
             })
         }
@@ -217,6 +221,7 @@ export default (items) => {
 
     workColumn()
     pdfMake.createPdf(docDefinition).getDataUrl(function (outDoc) {
+        // console.log(outDoc)
         document.getElementById('pdfV').src = outDoc;
     });
     // .download((user.last_name||"LastName") + "_" +(user.name||"Name") + ".pdf");    

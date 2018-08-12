@@ -30,10 +30,15 @@ class ResumeBuilder extends Component {
     }
 
     previewResume(){
+        let currentWorkExp = this.state.work_exp;
         let work_exp = [];
+        let bullet_points = [];
         let education = [];
-        for(var job in this.state.work_exp) {
-            work_exp.push(this.state.work_exp[job])
+        for(var job in currentWorkExp) {
+            currentWorkExp[job]['bullet_points'] = Object.values(currentWorkExp[job]['bullet_points']);
+
+            console.log(currentWorkExp[job])
+            work_exp.push(currentWorkExp[job])
         }
         for(var degree in this.state.education) {
             education.push(this.state.education[degree])
@@ -120,7 +125,7 @@ class ResumeBuilder extends Component {
 
                     }
 
-                    < iframe id='pdfV'> </ iframe>
+                    <embed id='pdfV'/>
 
                 </div>
             
