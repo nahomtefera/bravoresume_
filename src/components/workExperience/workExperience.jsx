@@ -84,26 +84,29 @@ class WorkExperience extends Component {
 
     render() {
         return(
-            <div className="work-experience-container resume-builder-section">
-                <h1 className="resume-builder-section-title"> <object type="image/svg+xml" className="resume-builder-section-title-icon" data={require('../images/travel-case.svg')}></object> Work Experience</h1>
-                
-                {
-                    this.state.jobs.length > 0 
-                        ? this.state.jobs.map((job)=>{
-                            return <div className="job-outer-container" key={job.id} id={job.id}>
-                                <button className="rem-button" onClick={this.remJob}>Remove Job</button>
-                                <Job userId={this.props.userId} update={this.props.update} job_info={job}/>
-                            </div>
-                          })
-                        : <button className="add-info" onClick={this.addJob}>Add new Job</button>  
-                }
+            <div>
+                <div className="work-experience-container resume-builder-section">
+                    <h1 className="resume-builder-section-title"> <object type="image/svg+xml" className="resume-builder-section-title-icon" data={require('../images/travel-case.svg')}></object> Work Experience</h1>
+                    
+                    {
+                        this.state.jobs.length > 0 
+                            ? this.state.jobs.map((job)=>{
+                                return <div className="job-outer-container" key={job.id} id={job.id}>
+                                    <button className="rem-button" onClick={this.remJob}>Remove Job</button>
+                                    <Job userId={this.props.userId} update={this.props.update} job_info={job}/>
+                                </div>
+                            })
+                            : <button className="add-info" onClick={this.addJob}>Add new Job</button>  
+                    }
+                </div>
+
                 {
                     this.state.jobs.length > 0 
                         ? <button className="add-info" onClick={this.addJob}>Add new Job</button>
                         : ""
                 }
-                
             </div>
+
         )
     }
 

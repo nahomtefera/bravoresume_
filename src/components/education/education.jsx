@@ -80,28 +80,31 @@ class Education extends Component {
 
     render() {
         return(
-            <div className="education-container resume-builder-section">
-                <h1 className="resume-builder-section-title"><object type="image/svg+xml" className="resume-builder-section-title-icon" data={require('../images/education.svg')}></object>Education</h1>
-                
-                <div className="resume-builder-section-inner-container">
-                   {
-                        this.state.degrees.length > 0
-                            ? this.state.degrees.map((degree)=>{
-                                return <div key={degree.id}  id={degree.id}>
-                                    <button className="rem-button" onClick={this.remDegree}>Remove Degree</button>
-                                    <Degree userId={this.props.userId} update={this.props.update} degree_info={degree} />
-                                </div>
-                              })
-                            : <button style={{marginLeft: "1em"}} className="add-info" onClick={this.addDegree}>Add Degree</button>
-                   }
+            <div>
+                <div className="education-container resume-builder-section">
+                    <h1 className="resume-builder-section-title"><object type="image/svg+xml" className="resume-builder-section-title-icon" data={require('../images/education.svg')}></object>Education</h1>
+                    
+                    <div className="resume-builder-section-inner-container">
+                    {
+                            this.state.degrees.length > 0
+                                ? this.state.degrees.map((degree)=>{
+                                    return <div key={degree.id}  id={degree.id}>
+                                        <button className="rem-button" onClick={this.remDegree}>Remove Degree</button>
+                                        <Degree userId={this.props.userId} update={this.props.update} degree_info={degree} />
+                                    </div>
+                                })
+                                : <button style={{marginLeft: "1em"}} className="add-info" onClick={this.addDegree}>Add Degree</button>
+                    }
+                    </div>
                 </div>
-                   {
-                        this.state.degrees.length > 0
-                            ? <button className="add-info" onClick={this.addDegree}>Add new Degree</button>
-                            : ""
-                   }
+                {
+                    this.state.degrees.length > 0
+                        ? <button className="add-info" onClick={this.addDegree}>Add new Degree</button>
+                        : ""
+                }
                 
             </div>
+            
         )
     }
 

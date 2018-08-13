@@ -48,7 +48,7 @@ export default (items) => {
             // We pass the name inside
             {
                 alignment: "center",
-                margin: [0, 25, 0, 30],
+                margin: [0, 0, 0, 30],
                 table: {
                     // headers are automatically repeated if the table spans over multiple pages
                     // you can declare how many rows should be treated as headers

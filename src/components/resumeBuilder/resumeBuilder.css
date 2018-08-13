@@ -6,6 +6,7 @@
     width: 900px;
     max-width: 95%;
     margin: 2em auto;
+    margin-bottom: 0;
     -webkit-box-shadow: 0 0 1px hsla(0,0%,63%,.54);
     box-shadow: 0 0 1px hsla(0,0%,63%,.54);
     border-radius: 5px;
@@ -67,7 +68,7 @@
 }
 
 .job-container {
-    padding-bottom: 0;
+    padding-bottom: 2em;
     padding-top: 0;
 }
 
@@ -154,21 +155,24 @@ li::before {
     border: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 100%;
     display: block;
-    margin: 0 auto;
-    font-size: 19px;
+    width: 900px;
+    max-width: 95%;
+    margin: 0em auto;
+    font-size: 16px;
     font-weight: 300;
     font-family: Roboto;
-    color: #b5b4b4;
-    margin-top: 2em;
+    color: #808080;
+    margin-top: 1em;
+    margin-bottom: 3em;
     border: 1px solid #f1f1f1;
     padding: 10px 8px;
     border-radius: 5px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    letter-spacing: 2px;
-    background: #fafafa;
+    background: #fefefe;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .add-info:hover {
