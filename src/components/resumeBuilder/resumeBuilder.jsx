@@ -4,6 +4,7 @@ import './resumeBuilder.css';
 import UserInfo from '../userInfo/userInfo';
 import WorkExperience from '../workExperience/workExperience';
 import Education from '../education/education';
+import Projects from '../projects/projects';
 // Firebase
 import firebase from 'firebase/app';
 // React-router
@@ -25,6 +26,7 @@ class ResumeBuilder extends Component {
             user_info: [],
             work_exp: [],
             education: [],
+            projects:[],
             showResumeTemplates: false
         }
 
@@ -110,7 +112,8 @@ class ResumeBuilder extends Component {
                     <UserInfo update={this.update} userId={this.props.userId} user_info={this.state.user_info}/>
                     <WorkExperience update={this.update} userId={this.props.userId} work_exp={this.state.work_exp}/>
                     <Education update={this.update} userId={this.props.userId} education={this.state.education}/>
-                    
+                    <Projects update={this.update} userId={this.props.userId} projects={this.state.projects}/>
+
                     {
                         this.state.showResumeTemplates === true
                             ?
