@@ -6,10 +6,11 @@ import vfsFonts from './vfs_fonts';
 export default (items) => {
     const {vfs} = vfsFonts.pdfMake;
     pdfMake.vfs = vfs;
-    let user, work_exp, education;
+    let user, work_exp, education, projects;
 
     user = items.user_info;
     work_exp = items.work_exp;
+    projects = items.projects;
     education = items.education;
 
     // We add new font OpenSans
@@ -55,13 +56,18 @@ export default (items) => {
                     headerRows: 1,
                     widths: ["*", 'auto', "*"],
                     body: [
-                        [{ text: "", border: [false, false, false, false]}, { text: (user.name || "Name") + " " + (user.last_name || "Last Name"), font:"OpenSans", bold: true, fontSize: 27, margin:[16, 0, 16, 0]}, { text: " ", border: [false, false, false, false]}],                    
+                        [{ text: "", border: [false, false, false, false]}, { text: (user.name || "Name") + " " + (user.last_name || "Last Name"), font:"OpenSans", bold: true, fontSize: 27, margin:[16, 0, 16, 0]}, { text: " ", border: [false, false, false, false]}],
                     ]
                 }
             },
-            // [{text: user.email || "youremail@domain.com", alignment: "left", fontSize: 9, margin:[50, 0, 0, 0]}],
-            // [{text: user.phone || "000-000-0000", alignment: "left", fontSize: 9, margin:[50, 0, 0, 0] }],
-            // [{text: user.location || "Home Address", alignment: "left",fontSize: 9,  margin:[50, 0, 0, 0] }],
+            {
+                columns: [
+                    {alignment: 'center', fontSize: 10, bold: true, text: user.location},
+                    {alignment: 'center', fontSize: 10, bold: true, text: user.email},
+                    {alignment: 'center', fontSize: 10, bold: true, text: user.phone}
+                ]
+            }
+
         ],
         styles: {
             right: {
@@ -74,22 +80,23 @@ export default (items) => {
     // That will push the work information
     // Into the other nested table
     var workColumn = ()=>{
-        docDefinition.content.push([{text: "W O R K   E X P E R I E N C E", bold: true, fontSize:14, margin:[15, 15, 0, 5] }])
+        docDefinition.content.push([{text: "Work Experience", fontSize:14, margin:[0, 15, 0, 0] }])
 
         if(work_exp.length===0) {
             docDefinition.content.push(
-                [{text: 'Job Title - Company', style: 'tableHeader',bold: true, margin: [15, 0, 0, 0] }],
-                [{text:'Location  Year - Year', margin: [15, 0, 0, 0]}],
-                [{text:"Brifely escribe your job responsibilities, accomplishments and technologies you have used.", margin: [15, 0, 0, 15]}]            
+                [{text: 'No experience', style: 'tableHeader',bold: true, margin: [15, 0, 0, 0] }],        
             )         
         }else{
             work_exp.map((job)=>{
                 docDefinition.content.push(
-                    [{text: (job.title || "Degree or Certificate") + " - " + (job.company || "Institution"), style: 'tableHeader',bold: true, fontSize: 10, margin: [20, 6, 0, 0]}],
-                    [{text: (job.location || "Location") + "  " + (job.date || "Year - Year"), fontSize: 10, margin: [20, 0, 0, 0] }],
+                    [{columns: [
+                        {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 0], bold: true, text: `${job.company} | ${job.title}`},
+                        {alignment: 'right', fontSize: 10, margin:[0, 6, 0, 0], bold: true, text: job.date},
+                    ]}],
+                    [{text: job.location, fontSize: 10, margin: [0, 0, 0, 0] }],
                     [{
                         ul: job.bullet_points.map((bullet)=>{return bullet.description}),
-                        fontSize: 10, margin: [30, 0, 0, 0]
+                        fontSize: 10, margin: [20, 0, 0, 2]
                     }],                
                 )
             })
@@ -98,22 +105,52 @@ export default (items) => {
 
     workColumn()
 
+    // Now we will create another function
+    // That will push the work information
+    // Into the other nested table
+    var projectColumn = ()=>{
+        docDefinition.content.push([{text: "Projects", fontSize:14, margin:[0, 15, 0, 0] }])
+
+        if(projects.length===0) {
+            docDefinition.content.push(
+                [{text: 'No projects', style: 'tableHeader', margin: [0, 0, 0, 0] }],      
+            )         
+        }else{
+            projects.map((project)=>{
+                docDefinition.content.push(
+                    [{columns: [
+                        {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 0], bold: true, text: `${project.company} | ${project.title}`},
+                        {alignment: 'right', fontSize: 10, margin:[0, 6, 0, 0], bold: true, text: project.date},
+                    ]}],
+                    [{text: project.location, fontSize: 10, margin: [0, 0, 0, 4] }],
+                    [{
+                        ul: project.bullet_points.map((bullet)=>{return bullet.description}),
+                        fontSize: 10, margin: [20, 0, 0, 6]
+                    }],                
+                )
+            })
+        }
+    }
+
+    projectColumn()
+
     // We are going to create a function
     // That will push the education info
     // Into one of the nested tables
     var eduColumn = ()=>{
-        docDefinition.content.push([{text: "E D U C A T I O N", bold: true, alignment: "left", fontSize:14, margin:[15, 15, 0, 5] }])
+        docDefinition.content.push([{text: "Education", alignment: "left", fontSize:14, margin:[0, 15, 0, 5] }])
         if(education.length===0) {
             docDefinition.content.push(
-                [{text: 'Degree', style: 'tableHeader',bold: true, alignment: "left", fontSize: 9, margin:[20, 0, 0, 0]}],
-                [{text: 'Institution', alignment: "left", fontSize: 9, margin:[20, 0, 0, 0]}],
-                [{text: "Year - Year ", alignment: "left", fontSize: 9, margin:[20, 0, 0, 10]}]
+                [{text: 'No Education', style: 'tableHeader',bold: true, alignment: "left", fontSize: 10, margin:[0, 0, 0, 0]}],
             )         
         }else{
             education.map((school)=>{
                 docDefinition.content.push(
-                    [{text: `${school.degree}, ${school.date}` || "Degree or Certificate", alignment: "left", style: 'tableHeader',bold: true, fontSize: 9, margin:[20, 0, 0, 0]}],
-                    [{text: school.school || "School", alignment: "left", fontSize: 9, margin: [20, 0, 0, 5]}]
+                    [{columns: [
+                        {alignment: 'left', fontSize: 10, margin:[0, 0, 0, 0], bold: true, text: school.degree},
+                        {alignment: 'right', fontSize: 10, bold: true, text: school.date},
+                    ]}],
+                    [{text: `${school.school}` || "Degree or Certificate", alignment: "left", style: 'tableHeader', fontSize: 10, margin:[0, 0, 0, 5]}],
                 )
             })
         }

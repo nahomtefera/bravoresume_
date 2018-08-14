@@ -38,6 +38,8 @@ class ResumeBuilder extends Component {
     previewResume(resumeTemplate){
 
         let currentWorkExp = this.state.work_exp;
+        let currentProjects = this.state.projects;
+        let projects= [];
         let work_exp = [];
         let education = [];
         for(var job in currentWorkExp) {
@@ -47,6 +49,12 @@ class ResumeBuilder extends Component {
             console.log(currentWorkExp[job])
             work_exp.push(currentWorkExp[job])
         }
+        for(var project in currentProjects) {
+            // Object.values will convert the object into an array of objects
+            currentProjects[project]['bullet_points'] = Object.values(currentProjects[project]['bullet_points']);
+
+            projects.push(currentProjects[project])
+        }
         for(var degree in this.state.education) {
             education.push(this.state.education[degree])
         }
@@ -54,7 +62,8 @@ class ResumeBuilder extends Component {
         let resumeInfo = {
             "user_info": this.state.user_info, 
             "work_exp": work_exp,
-            "education": education
+            "education": education,
+            "projects": projects
         }
         console.log(resumeInfo)
         resumeTemplate(resumeInfo)
@@ -72,7 +81,8 @@ class ResumeBuilder extends Component {
                 loading: false,
                 user_info: db.user_info,
                 work_exp: db.work_exp,
-                education: db.education
+                education: db.education,
+                projects: db.projects
             })
         })
     }

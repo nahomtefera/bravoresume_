@@ -12,11 +12,13 @@ class WorkExperience extends Component {
 
         console.log(this.props)
         this.state = {
-            jobs: work_exp || []
+            jobs: work_exp || [],
+            showJob: null
         }
 
         this.addJob = this.addJob.bind(this);
         this.remJob = this.remJob.bind(this);
+        this.toggleJob = this.toggleJob.bind(this);
     }
     
     componentWillMount(){
@@ -28,7 +30,8 @@ class WorkExperience extends Component {
         }
 
         this.setState({
-            jobs: newJobs
+            jobs: newJobs,
+            showJob: newJobs[0].id
         })
     }
 
@@ -57,7 +60,8 @@ class WorkExperience extends Component {
 
         this.props.update()
         this.setState({
-            jobs: prevJobs
+            jobs: prevJobs,
+            showJob: timestamp
         })
     }
     
@@ -77,9 +81,15 @@ class WorkExperience extends Component {
         this.props.update()
         
         this.setState({
-            jobs: newJobs
+            jobs: newJobs,
+            showJob: newJobs[newJobs.length -1].id
         })
  
+    }
+
+    toggleJob(el) {
+        let id = el.target.id;
+        this.setState({showJob: id})
     }
 
     render() {
@@ -87,11 +97,18 @@ class WorkExperience extends Component {
             <div>
                 <div className="work-experience-container resume-builder-section">
                     <h1 className="resume-builder-section-title"> <object type="image/svg+xml" className="resume-builder-section-title-icon" data={require('../images/travel-case.svg')}></object> Work Experience</h1>
-                    
+                    <div className="bullet-nav-container">
+                        {this.state.jobs.length > 0 
+                            ? this.state.jobs.map((job)=>{
+                                return <span onClick={this.toggleJob} className={this.state.showJob == job.id ? "bullet-nav-item-selected" : "bullet-nav-item"} key={`job-${job.id}`} id={job.id} update={this.props.update} >•</span>
+                            })
+                            : ""
+                        } 
+                    </div>
                     {
                         this.state.jobs.length > 0 
                             ? this.state.jobs.map((job)=>{
-                                return <div className="job-outer-container" key={job.id} id={job.id}>
+                                return <div className={this.state.showJob == job.id ? "job-outer-container" : "hide"} key={job.id} id={job.id}>
                                     <button className="rem-button" onClick={this.remJob}>Remove Job</button>
                                     <Job userId={this.props.userId} update={this.props.update} job_info={job}/>
                                 </div>

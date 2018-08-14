@@ -95,6 +95,29 @@
     color: #414344;
 }
 
+.bullet-nav-container {
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+.bullet-nav-item {
+    font-size: 2em;
+    margin: 0 10px;
+    font-size: 2.2em;
+    color: #aaa;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.bullet-nav-item-selected {
+    font-size: 2em;
+    margin: 0 10px;
+    font-size: 2.2em;
+    color: #2196f3;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
 .work-experience-bullet-list {
     list-style: none;
     margin-bottom: 0;
