@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 // COMPONENTS
 import LandingPage from './components/landingPage/landingPage';
-import ResumeBuilder from './components/resumeBuilder/resumeBuilder'
+import ResumeBuilder from './components/resumeBuilder/resumeBuilder';
+import JobApplications from './components/jobApplications/jobApplications';
 // Firebase 
 import firebase from 'firebase/app';
 import './components/firebase/';
@@ -177,9 +178,22 @@ class App extends Component {
                 }
                 return(
                   <div>
-                    {/* <Navbar isLandingPage={true} authUser={this.state.authUser}/> */}
                     <ResumeBuilder userId={this.state.authUser.uid} />
                   </div>
+                )}
+              }
+            />
+            {/* Job-Applications */}
+            <Route  
+              exact path="/job-applications"
+              render={() =>{
+                // Going to /home page will redirect to landing page
+                if (this.state.authUser == null) {
+                  console.log(this.state)
+                  return <Redirect to='/' />
+                }
+                return(
+                    <JobApplications userId={this.state.authUser.uid} />
                 )}
               }
             />

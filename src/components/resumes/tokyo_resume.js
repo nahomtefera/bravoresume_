@@ -159,9 +159,11 @@ export default (items) => {
     eduColumn()
 
 
-    pdfMake.createPdf(docDefinition).getDataUrl(function (outDoc) {
-        // console.log(outDoc)
-        document.getElementById('pdfV').src = outDoc;
-    });
+    pdfMake.createPdf(docDefinition).download((user.last_name||"LastName") + "_" +(user.name||"Name") + ".pdf");   
+    
+    // .getDataUrl(function (outDoc) {
+    //     // console.log(outDoc)
+    //     document.getElementById('pdfV').src = outDoc;
+    // });
     // .download((user.last_name||"LastName") + "_" +(user.name||"Name") + ".pdf");    
 }

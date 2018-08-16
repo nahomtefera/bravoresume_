@@ -16,13 +16,7 @@ svg {
 }
 
 .stripe-polygon {
-    fill: #F44336;
-}
-
-.intro-text {
-    font-family: Roboto;
-    color: white;
-    text-align: center;
+    fill: #5f9cc4;
 }
 
 .intro-text-title {
@@ -41,11 +35,15 @@ svg {
     font-size: 2em;
     line-height: 40px;
     letter-spacing: 1.4px;
+    font-family: Roboto;
+    color: white;
+    text-align: center;
 }
 
 .intro-buttons {
     padding: 0.6em .7em;
-    color: #F44336;
+    margin: 0 20px;
+    color: #5f9cc4;
     font-family: Lato;
     font-weight: 300;
     font-size: 1.25em;
