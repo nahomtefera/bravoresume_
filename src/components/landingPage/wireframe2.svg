@@ -1,0 +1,65 @@
+<svg width="737" height="751" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#ffffff" id="canvas_background" height="753" width="739" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect rx="17" id="svg_3" height="162" width="733" y="2.293954" x="2.04708" stroke-width="1.5" stroke="#DDDDDD" fill="#ffffff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_5" y2="42.293954" x2="735.200543" y1="42.293954" x1="2.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <rect rx="17" id="svg_8" height="162" width="733" y="2.293954" x="2.04708" stroke-width="1.5" stroke="#DDDDDD" fill="#fefefe"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_9" y2="42.293954" x2="735.200543" y1="42.293954" x1="2.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_11" y2="227.110086" x2="735.200543" y1="227.110086" x1="2.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <rect rx="17" id="svg_12" height="258" width="733" y="187.110086" x="1.04708" stroke-width="1.5" stroke="#DDDDDD" fill="#fefefe"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_13" y2="227.110086" x2="735.200543" y1="227.110086" x1="2.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <ellipse ry="8" rx="8" id="svg_19" cy="251.678636" cx="327.078785" stroke-width="1.5" stroke="#7fa599" fill="#7fa599"/>
+  <ellipse ry="8" rx="8" id="svg_21" cy="251.678636" cx="356.147669" stroke-width="1.5" stroke="#DDDDDD" fill="#DDDDDD"/>
+  <ellipse ry="8" rx="8" id="svg_22" cy="251.678636" cx="385.164905" stroke-width="1.5" stroke="#DDDDDD" fill="#DDDDDD"/>
+  <rect rx="17" id="svg_23" height="162" width="733" y="491.124887" x="2.04708" stroke-width="1.5" stroke="#DDDDDD" fill="#ffffff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_24" y2="531.124887" x2="735.200543" y1="531.124887" x1="2.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <rect rx="17" id="svg_25" height="258" width="733" y="491.124887" x="2.04708" stroke-width="1.5" stroke="#DDDDDD" fill="#fefefe"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_26" y2="531.124887" x2="735.200543" y1="531.124887" x1="2.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <ellipse ry="8" rx="8" id="svg_27" cy="555.693437" cx="355.097454" stroke-width="1.5" stroke="#7fa599" fill="#7fa599"/>
+  <ellipse ry="8" rx="8" id="svg_28" cy="555.693437" cx="384.166338" stroke-width="1.5" stroke="#DDDDDD" fill="#DDDDDD"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_30" y2="295.678636" x2="582.070889" y1="295.678636" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_32" y2="313.678636" x2="585.055619" y1="313.678636" x1="58.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_33" y2="331.678636" x2="582.050889" y1="331.678636" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_35" y2="295.678636" x2="582.070889" y1="295.678636" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_36" y2="313.678636" x2="585.055619" y1="313.678636" x1="58.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_37" y2="331.678636" x2="582.050889" y1="331.678636" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_38" y2="347.193639" x2="582.070889" y1="347.193639" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_39" y2="365.193639" x2="585.055619" y1="365.193639" x1="58.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_40" y2="383.193639" x2="582.050889" y1="383.193639" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_41" y2="595.739" x2="582.070889" y1="595.739" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_42" y2="613.739" x2="585.055619" y1="613.739" x1="58.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_43" y2="631.739" x2="582.050889" y1="631.739" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_44" y2="647.254003" x2="582.070889" y1="647.254003" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_45" y2="665.254003" x2="585.055619" y1="665.254003" x1="58.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_46" y2="683.254003" x2="582.050889" y1="683.254003" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_53" y2="295.678636" x2="582.070889" y1="295.678636" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_54" y2="313.678636" x2="585.055619" y1="313.678636" x1="58.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_55" y2="331.678636" x2="582.050889" y1="331.678636" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_56" y2="295.678636" x2="582.070889" y1="295.678636" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_57" y2="313.678636" x2="585.055619" y1="313.678636" x1="58.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_58" y2="331.678636" x2="582.050889" y1="331.678636" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_59" y2="295.678636" x2="582.070889" y1="295.678636" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_60" y2="313.678636" x2="585.055619" y1="313.678636" x1="58.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_61" y2="331.678636" x2="582.050889" y1="331.678636" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_62" y2="80.371019" x2="582.070889" y1="80.371019" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_63" y2="98.371019" x2="585.055619" y1="98.371019" x1="58.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_64" y2="116.371019" x2="582.050889" y1="116.371019" x1="57.04708" stroke-width="1.5" stroke="#DDDDDD" fill="none"/>
+  <rect stroke="#7fa599" rx="4" id="svg_66" height="24.380953" width="60.952381" y="407.273875" x="612.689946" stroke-width="1.5" fill="#7fa599"/>
+  <text font-weight="normal" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="13" id="svg_68" y="424.035779" x="629.832794" stroke-width="0" stroke="#DDDDDD" fill="#ffffff">Add</text>
+  <rect stroke="#7fa599" rx="4" id="svg_69" height="24.380953" width="60.952381" y="708.890086" x="612.689946" stroke-width="1.5" fill="#7fa599"/>
+  <text font-weight="normal" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="13" id="svg_70" y="725.651989" x="629.832794" stroke-width="0" stroke="#DDDDDD" fill="#ffffff">Add</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="21" id="svg_71" y="31.654826" x="42.213746" stroke-width="0" stroke="#529D94" fill="#669686">Info</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="21" id="svg_72" y="214.511974" x="42.213746" stroke-width="0" stroke="#529D94" fill="#669686">Work Experience</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="21" id="svg_73" y="519.273875" x="42.213746" stroke-width="0" stroke="#529D94" fill="#669686">Education</text>
+  <ellipse ry="8" rx="8" id="svg_74" cy="251.678636" cx="415.655973" stroke-width="1.5" stroke="#DDDDDD" fill="#DDDDDD"/>
+  <path id="svg_76" d="m-28.773797,132.650833" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#DDDDDD" fill="#ffffff"/>
+ </g>
+</svg>

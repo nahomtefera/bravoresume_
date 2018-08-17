@@ -38,9 +38,8 @@ class JobApplications extends Component {
     var prevJobs = this.state.jobs;
     var self = this;
 
-    setTimeout(function(){ 
-      self.setState({loading:false})
-    }, 1500);
+    // setTimeout(function(){ 
+    // }, 1500);
 
 
     // DataSnapshot
@@ -77,7 +76,8 @@ class JobApplications extends Component {
       
       self.setState({
         jobs: prevJobs,
-        num_of_jobs: snap.val().id
+        num_of_jobs: snap.val().id,
+        loading: false
       })
     })
 

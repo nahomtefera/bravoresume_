@@ -1,0 +1,88 @@
+<svg width="544" height="277" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="279" width="546" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#dedede" id="svg_1" height="16.628753" width="518.998432" y="4.914028" x="19.143864" stroke-width="0.5" fill="#fefefe"/>
+  <text style="cursor: move;" stroke="#d3d3d3" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="10" id="svg_7" y="16.829529" x="29.489258" stroke-width="0" fill="#878787">Front-end Developer</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="8" id="svg_8" y="16.317654" x="125.381201" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#999999">at</text>
+  <text stroke="#d3d3d3" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="10" id="svg_10" y="17.370068" x="138.106242" stroke-width="0" fill="#878787">Bravoresume</text>
+  <rect stroke="#d3d3d3" id="svg_11" height="61.621419" width="106.486144" y="25.805679" x="38.644932" fill-opacity="null" stroke-width="0.5" fill="#fafafa"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="10" id="svg_13" y="38.778609" x="48.37463" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#6b6b6b">Recruiter</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_16" y2="47.42723" x2="133.842106" y1="47.42723" x1="49.455708" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_17" y2="56.07585" x2="133.842106" y1="56.07585" x1="49.455708" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_18" y2="64.183932" x2="133.842106" y1="64.183932" x1="49.455708" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_19" y2="72.832553" x2="133.842106" y1="72.832553" x1="49.455708" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#d3d3d3" id="svg_21" height="61.621419" width="106.486144" y="25.805679" x="164.079052" fill-opacity="null" stroke-width="0.5" fill="#fafafa"/>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="10" id="svg_22" y="38.778609" x="173.808751" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#6b6b6b">Firtst Interview</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_23" y2="47.42723" x2="259.276226" y1="47.42723" x1="174.889828" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_24" y2="56.07585" x2="259.276226" y1="56.07585" x1="174.889828" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_25" y2="64.183932" x2="259.276226" y1="64.183932" x1="174.889828" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_26" y2="72.832553" x2="259.276226" y1="72.832553" x1="174.889828" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#d3d3d3" id="svg_35" height="61.621419" width="106.486144" y="25.805679" x="291.631344" fill-opacity="null" stroke-width="0.5" fill="#fafafa"/>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="10" id="svg_36" y="38.778609" x="301.361042" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#6b6b6b">Skype Interview</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_37" y2="47.42723" x2="386.828518" y1="47.42723" x1="302.44212" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_38" y2="56.07585" x2="386.828518" y1="56.07585" x1="302.44212" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_39" y2="64.183932" x2="386.828518" y1="64.183932" x1="302.44212" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_40" y2="72.832553" x2="386.828518" y1="72.832553" x1="302.44212" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#d3d3d3" id="svg_41" height="61.621419" width="106.486144" y="25.805679" x="417.065464" fill-opacity="null" stroke-width="0.5" fill="#fafafa"/>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="10" id="svg_42" y="38.778609" x="426.795163" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#6b6b6b">On-site Interview</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_43" y2="47.42723" x2="512.262638" y1="47.42723" x1="427.87624" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_44" y2="56.07585" x2="512.262638" y1="56.07585" x1="427.87624" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_45" y2="64.183932" x2="512.262638" y1="64.183932" x1="427.87624" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_46" y2="72.832553" x2="512.262638" y1="72.832553" x1="427.87624" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#dedede" id="svg_47" height="61.621419" width="106.486144" y="25.805679" x="38.644932" stroke-width="0.5" fill="#fefefe"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="7" id="svg_48" y="38.778609" x="48.37463" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#898989">Recruiter</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_49" y2="47.42723" x2="133.842106" y1="47.42723" x1="49.455708" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_50" y2="56.07585" x2="133.842106" y1="56.07585" x1="49.455708" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_51" y2="64.183932" x2="133.842106" y1="64.183932" x1="49.455708" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_52" y2="72.832553" x2="133.842106" y1="72.832553" x1="49.455708" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#dedede" id="svg_53" height="61.621419" width="106.486144" y="25.805679" x="164.079052" stroke-width="0.5" fill="#fefefe"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="7" id="svg_54" y="38.778609" x="173.808751" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#898989">Firtst Interview</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_55" y2="47.42723" x2="259.276226" y1="47.42723" x1="174.889828" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_56" y2="56.07585" x2="259.276226" y1="56.07585" x1="174.889828" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_57" y2="64.183932" x2="259.276226" y1="64.183932" x1="174.889828" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_58" y2="72.832553" x2="259.276226" y1="72.832553" x1="174.889828" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#dedede" id="svg_59" height="61.621419" width="106.486144" y="25.805679" x="291.631344" stroke-width="0.5" fill="#fefefe"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="7" id="svg_60" y="38.778609" x="301.361042" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#898989">Skype Interview</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_61" y2="47.42723" x2="386.828518" y1="47.42723" x1="302.44212" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_62" y2="56.07585" x2="386.828518" y1="56.07585" x1="302.44212" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_63" y2="64.183932" x2="386.828518" y1="64.183932" x1="302.44212" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_64" y2="72.832553" x2="386.828518" y1="72.832553" x1="302.44212" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#dedede" id="svg_65" height="61.621419" width="106.486144" y="25.805679" x="417.065464" stroke-width="0.5" fill="#fefefe"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="7" id="svg_66" y="38.778609" x="426.795163" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#898989">On-site Interview</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_67" y2="47.42723" x2="512.262638" y1="47.42723" x1="427.87624" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_68" y2="56.07585" x2="512.262638" y1="56.07585" x1="427.87624" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_69" y2="64.183932" x2="512.262638" y1="64.183932" x1="427.87624" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_70" y2="72.832553" x2="512.262638" y1="72.832553" x1="427.87624" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#dedede" id="svg_71" height="38" width="106.486144" y="102.253226" x="38.644932" stroke-width="0.5" fill="#fefefe"/>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="7" id="svg_72" y="115.226157" x="48.37463" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#898989">Job Type</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_73" y2="123.874778" x2="133.842106" y1="123.874778" x1="49.455708" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#dedede" id="svg_77" height="38" width="106.486144" y="102.253226" x="164.079052" stroke-width="0.5" fill="#fefefe"/>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="7" id="svg_78" y="115.226157" x="173.808751" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#898989">Benefits</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_79" y2="123.874778" x2="259.276226" y1="123.874778" x1="174.889828" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#dedede" id="svg_83" height="38" width="106.486144" y="102.253226" x="291.631344" stroke-width="0.5" fill="#fefefe"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="7" id="svg_84" y="115.226157" x="301.361042" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#898989">Offer</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_85" y2="123.874778" x2="386.828518" y1="123.874778" x1="302.44212" fill-opacity="null" stroke-opacity="null" stroke-width="3.5" stroke="#d3d3d3" fill="none"/>
+  <rect stroke="#d3d3d3" id="svg_89" height="18.918851" width="45.405245" y="107.118071" x="450.03833" stroke-width="0.5" fill="#fefefe"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="9" id="svg_90" y="119.61483" x="459.768029" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#898989">Notes</text>
+  <path stroke="#898989" id="svg_100" d="m514.743995,17.332005l3.554845,-3.554826l-3.554845,-3.554851l2.031774,-2.031555l5.587051,5.586406l-5.587051,5.58814" stroke-width="0" fill="#898989"/>
+  <rect stroke="#dedede" id="svg_102" height="16.628753" width="518.998432" y="163.570877" x="19.143864" stroke-width="0.5" fill="#fefefe"/>
+  <text stroke="#d3d3d3" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="10" id="svg_103" y="175.486378" x="29.489258" stroke-width="0" fill="#878787">Quality Analyst</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="8" id="svg_104" y="174.974503" x="101.635619" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#999999">at</text>
+  <text stroke="#d3d3d3" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="10" id="svg_105" y="176.026917" x="112.932132" stroke-width="0" fill="#878787">Apple</text>
+  <path stroke="#898989" id="svg_106" d="m514.743995,175.98886l3.554845,-3.554825l-3.554845,-3.554852l2.031774,-2.031555l5.587051,5.586407l-5.587051,5.588139" stroke-width="0" fill="#898989"/>
+  <rect stroke="#dedede" id="svg_117" height="16.628753" width="518.998432" y="202.144062" x="19.143864" stroke-width="0.5" fill="#fefefe"/>
+  <text stroke="#d3d3d3" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="10" id="svg_118" y="214.059563" x="29.489258" stroke-width="0" fill="#878787">Customer Service Representive</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="8" id="svg_119" y="213.547688" x="175.825631" stroke-opacity="null" stroke-width="0" stroke="#d3d3d3" fill="#999999">at</text>
+  <text stroke="#d3d3d3" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="10" id="svg_120" y="214.600102" x="187.571947" stroke-width="0" fill="#878787">Playstation</text>
+  <path stroke="#898989" id="svg_121" d="m514.8551,214.546047l3.777022,-3.777001l-3.777022,-3.77703l2.15876,-2.158526l5.93624,5.935556l-5.93624,5.937396" stroke-width="0" fill="#898989"/>
+  <path id="svg_174" d="m480.103394,253.083424l8.340674,0l0,-8.340675l8.555948,0l0,8.340675l8.340675,0l0,8.555949l-8.340675,0l0,8.340674l-8.555948,0l0,-8.340674l-8.340674,0l0,-8.555949z" stroke-width="0" stroke="#898989" fill="#79d1a3"/>
+  <path id="svg_175" d="m4.922691,168.601764l2.078071,-2.078071l2.207503,2.207484l2.207503,-2.207484l2.07809,2.078071l-2.207503,2.207503l2.207503,2.207503l-2.07809,2.07809l-2.207503,-2.207503l-2.207503,2.207503l-2.078071,-2.07809l2.207484,-2.207503l-2.207484,-2.207503z" stroke-width="0" stroke="#f79b9b" fill="#f79b9b"/>
+  <path id="svg_177" d="m4.922691,208.60054l2.078071,-2.078071l2.207503,2.207484l2.207502,-2.207484l2.078091,2.078071l-2.207503,2.207502l2.207503,2.207503l-2.078091,2.07809l-2.207502,-2.207503l-2.207503,2.207503l-2.078071,-2.07809l2.207485,-2.207503l-2.207485,-2.207502z" stroke-width="0" stroke="#f79b9b" fill="#f79b9b"/>
+  <path id="svg_178" d="m4.922691,9.5526l2.078071,-2.078071l2.207503,2.207484l2.207502,-2.207484l2.078091,2.078071l-2.207503,2.207502l2.207503,2.207503l-2.078091,2.07809l-2.207502,-2.207503l-2.207503,2.207503l-2.078071,-2.07809l2.207485,-2.207503l-2.207485,-2.207502z" stroke-width="0" stroke="#f79b9b" fill="#f79b9b"/>
+ </g>
+</svg>

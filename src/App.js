@@ -142,7 +142,7 @@ class App extends Component {
               render={() => 
                 <div>
                   {/* <Navbar isLandingPage={true} authUser={this.state.authUser}/> */}
-                  <h1 style={{color: "#fff"}} className="resume-builder-title">bravoresume</h1>
+                  <h1 style={{color: "#607d8b"}} className="resume-builder-title">bravoresume</h1>
                   <div className="sign-in-container"> 
                     {/* <Navbar authUser={this.state.authUser}/> */}
                     {
