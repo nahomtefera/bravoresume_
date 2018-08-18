@@ -12,6 +12,8 @@
     border-radius: 5px;
     overflow: hidden;
     position: relative;
+    -webkit-animation: slideRight 1.5s;
+    animation: slideRight 1.5s;
 }
 
 .resume-builder-section:hover {

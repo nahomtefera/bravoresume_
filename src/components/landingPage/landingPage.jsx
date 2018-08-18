@@ -72,7 +72,7 @@ export default class LandingPage extends Component{
                     </div>
 
                     <div className="intro-resume-builder-img">
-                        <img src={require('./job-tracker-5.svg')} className="job-tracker-img" alt="wireframe"/>
+                        <img src={require('./job-tracker-8.svg')} className="job-tracker-img" alt="wireframe"/>
 
                     </div>
 
