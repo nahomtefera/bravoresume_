@@ -44,14 +44,22 @@ class ResumeBuilder extends Component {
         let education = [];
         for(var job in currentWorkExp) {
             // Object.values will convert the object into an array of objects
-            currentWorkExp[job]['bullet_points'] = Object.values(currentWorkExp[job]['bullet_points']);
+            if(currentWorkExp[job]['bullet_points']){
+                currentWorkExp[job]['bullet_points'] = Object.values(currentWorkExp[job]['bullet_points']);
+            } else {
+                currentWorkExp[job]['bullet_points'] = []
+            }
 
             console.log(currentWorkExp[job])
             work_exp.push(currentWorkExp[job])
         }
         for(var project in currentProjects) {
             // Object.values will convert the object into an array of objects
-            currentProjects[project]['bullet_points'] = Object.values(currentProjects[project]['bullet_points']);
+            if(currentProjects[project]['bullet_points']){
+                currentProjects[project]['bullet_points'] = Object.values(currentProjects[project]['bullet_points']);
+            } else {
+                currentProjects[project]['bullet_points'] = [];
+            }
 
             projects.push(currentProjects[project])
         }
