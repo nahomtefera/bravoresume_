@@ -15,7 +15,7 @@
 .job-app .job-main-container {
     position: relative;
     margin-top: 3.5em;
-    width: 1150px;
+    width: 900px;
     max-width: 95vw;
     -webkit-animation: slideRight 1s;    
     animation: slideRight 1s;
@@ -24,7 +24,6 @@
 .job-app .card-shadow {
     position: relative;
     margin: 20px;
-    min-height: 210px;
     margin-top: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -32,8 +31,6 @@
     vertical-align: top;
     -webkit-box-shadow: 0px 0px 1px 0px rgb(208, 208, 208);
     box-shadow: 0px 0px 1px 0px rgb(208, 208, 208);
-    -webkit-animation: slideRight 1s;
-    animation: slideRight 1s;
     color: #303136;
 }
 
@@ -51,8 +48,6 @@
 .show-notes-button {
     position: relative;
     display: inline-block;
-    -webkit-animation: slideRight 1s;
-    animation: slideRight 1s;
     font-weight: 400;
     max-height: 23px;
     text-transform: uppercase;
@@ -137,8 +132,6 @@
     top: -25px;
     margin-left: 0px;
     cursor: pointer;
-    -webkit-animation: slideRight 1s;
-    animation: slideRight 1s;
     z-index: 9;
     color: #cc3535;
     font-family: Lato;
@@ -166,11 +159,10 @@
 }
 
 .expand-job-container {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    width: 1150px;
+    width: 900px;
     max-width: 100%;
+    box-sizing: border-box;
     margin: 0 auto;
 }
 
@@ -199,12 +191,12 @@
 .job-info-inner {
     position: relative;
     width: 100%;
+    box-sizing: border-box;
     padding: 10px 20px;
     border: 2px solid #f9f9f9;
     border-top: none;
     margin-bottom: 20px;
-    -webkit-animation: slideRight 1s;
-    animation: slideRight 1s;
+
 }
 
 .job-info-inner input {
@@ -224,6 +216,7 @@
 
 .checkbox-container {
     margin: 0 20px;
+    display: inline-block;
 }
 
 .offer-container, .benefits-container, .type-container {
