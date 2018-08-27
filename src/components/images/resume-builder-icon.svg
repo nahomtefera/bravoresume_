@@ -1,0 +1,34 @@
+<svg width="70" height="83" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="85" width="72" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#474747" rx="4" id="svg_1" height="80.826445" width="67.603303" y="1.086779" x="1.363635" stroke-width="0.8" fill="#fff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_2" y2="7.202481" x2="68.693472" y1="7.202481" x1="1.694214" stroke-width="0.8" stroke="#474747" fill="none"/>
+  <line stroke="#bcbcbc" stroke-linecap="null" stroke-linejoin="null" id="svg_3" y2="3.896696" x2="23.182903" y1="3.896696" x1="5.165288" stroke-width="1.6" fill="none"/>
+  <ellipse ry="2.892562" rx="2.892562" id="svg_4" cy="14.061985" cx="35.000001" fill-opacity="null" stroke-width="0.8" stroke="#727272" fill="none"/>
+  <ellipse ry="2.892562" rx="2.892562" id="svg_5" cy="14.061985" cx="43.100861" fill-opacity="null" stroke-width="0.8" stroke="#727272" fill="none"/>
+  <ellipse ry="2.892562" rx="2.892562" id="svg_6" cy="14.061985" cx="26.900828" stroke-width="0.8" stroke="#ededed" fill="#666666"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_8" y2="22.243803" x2="57.277174" y1="22.243803" x1="6.818181" stroke-opacity="null" stroke-width="0.8" stroke="#bcbcbc" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_9" y2="25.714877" x2="57.277174" y1="25.714877" x1="6.818181" stroke-opacity="null" stroke-width="0.8" stroke="#bcbcbc" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_10" y2="29.847108" x2="57.277174" y1="29.847108" x1="6.818181" stroke-opacity="null" stroke-width="0.8" stroke="#bcbcbc" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_11" y2="33.318182" x2="57.277174" y1="33.318182" x1="6.818181" stroke-opacity="null" stroke-width="0.8" stroke="#bcbcbc" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_12" y2="36.623967" x2="57.277174" y1="36.623967" x1="6.818181" stroke-opacity="null" stroke-width="0.8" stroke="#bcbcbc" fill="none"/>
+  <ellipse ry="2.892562" rx="2.892562" id="svg_13" cy="48.45208" cx="35.000001" fill-opacity="null" stroke-width="0.8" stroke="#727272" fill="none"/>
+  <ellipse ry="2.892562" rx="2.892562" id="svg_14" cy="48.45208" cx="43.100861" fill-opacity="null" stroke-width="0.8" stroke="#727272" fill="none"/>
+  <ellipse ry="2.892562" rx="2.892562" id="svg_15" cy="48.45208" cx="26.900828" stroke-width="0.8" stroke="#ededed" fill="#666666"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_16" y2="56.633897" x2="57.277174" y1="56.633897" x1="6.818181" stroke-opacity="null" stroke-width="0.8" stroke="#bcbcbc" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_17" y2="60.104971" x2="57.277174" y1="60.104971" x1="6.818181" stroke-opacity="null" stroke-width="0.8" stroke="#bcbcbc" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_18" y2="64.237203" x2="57.277174" y1="64.237203" x1="6.818181" stroke-opacity="null" stroke-width="0.8" stroke="#bcbcbc" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_19" y2="67.708277" x2="57.277174" y1="67.708277" x1="6.818181" stroke-opacity="null" stroke-width="0.8" stroke="#bcbcbc" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="71.014062" x2="57.277174" y1="71.014062" x1="6.818181" stroke-opacity="null" stroke-width="0.8" stroke="#bcbcbc" fill="none"/>
+  <rect rx="1" id="svg_21" height="4.132231" width="8.925619" y="40.42562" x="53.595038" stroke-width="0.8" stroke="#f4f4f4" fill="#666666"/>
+  <rect rx="1" id="svg_22" height="4.132231" width="8.925619" y="74.831202" x="53.595038" stroke-width="0.8" stroke="#f4f4f4" fill="#666666"/>
+ </g>
+</svg>

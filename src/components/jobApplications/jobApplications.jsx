@@ -256,7 +256,7 @@ class JobApplications extends Component {
 
     return (
     <div>
-        <Link to="/"><h1 className="resume-builder-title">bravoresume</h1></Link>
+
         <div className="job-app">
             <div className="app-wrapper">
                 {this.state.jobs.map((job)=>{

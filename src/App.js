@@ -178,6 +178,18 @@ class App extends Component {
                 }
                 return(
                   <div>
+                    {/* Nav */}
+                    <Link to="/"><h1 className="resume-builder-title">bravoresume</h1></Link>
+                    <div className="nav-container">
+                        <Link to="/resume-builder">
+                            <h3 className="nav-link nav-link-active">Resume Builder</h3>
+                        </Link>
+                        <Link to="/job-applications">
+                            <h3 className="nav-link">Job Tracker</h3>
+                        </Link>
+                    </div>
+
+                    {/* Resume Builder Component */}
                     <ResumeBuilder userId={this.state.authUser.uid} />
                   </div>
                 )}
@@ -193,7 +205,21 @@ class App extends Component {
                   return <Redirect to='/' />
                 }
                 return(
+                  <div>
+                    {/* Nav */}
+                    <Link to="/"><h1 className="resume-builder-title">bravoresume</h1></Link>
+                    <div className="nav-container">
+                      <Link to="/resume-builder">
+                        <h3 className="nav-link">Resume Builder</h3>
+                      </Link>
+                      <Link to="/job-applications">
+                        <h3 className="nav-link nav-link-active">Job Tracker</h3>
+                      </Link>
+                    </div>
+
+                    {/* Job Tracker Component */}
                     <JobApplications userId={this.state.authUser.uid} />
+                  </div>
                 )}
               }
             />

@@ -2,6 +2,29 @@
     margin-bottom: 20em;
 }
 
+.nav-container {
+    width: 900px;
+    max-width: 95%;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.nav-link {
+    color: #b7b6b6;
+    display: inline-block;
+    font-family: Lato;
+    font-weight: 400;
+    margin: 0 2em;
+}
+
+.nav-link-active {
+    color: #5580af; 
+}
+
+.nav-icon {
+    width: 30px;
+}
+
 .resume-builder-section {
     width: 900px;
     max-width: 95%;
