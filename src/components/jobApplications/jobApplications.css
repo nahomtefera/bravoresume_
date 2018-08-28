@@ -79,19 +79,22 @@
 }
 
 .notes-modal {
-    margin-top: -30px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    vertical-align: top;
+    /* vertical-align: top; */
     -webkit-box-shadow: 0px 0px 500px 1000px rgba(19, 19, 19, 0.8);
     box-shadow: 0px 0px 500px 1000px rgba(19, 19, 19, 0.8);
-    position: relative;
-    width: 100%;
-    top: 0;
+    position: fixed;
+    width: 86%;
+    max-width: 100%;
+    top: 3em;
+    left: 50%;
+    /* right: -50%; */
+    margin-left: -43%;
     background: white;
-    min-height: 760px;
-    min-width: 50vw;
-    -webkit-animation: slideRight 1s;    
+    max-height: 80vh;
+    overflow: scroll;
+    -webkit-animation: slideRight 1s;
     animation: slideRight 1s;
     z-index: 10;
 }
@@ -106,8 +109,12 @@
 
 .notes {
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 700px;
+    font-family: Lato;
+    font-weight: 300;
+    color: #3f3f3f;
     resize: none;
     outline: none;
     border: none;
@@ -142,8 +149,10 @@
     color: #cc3535;
 }
 
-.rem-job img {
-    width: 19px;
+.job-tracker-rem-job {
+    width: 15px;
+    margin-left: 5px;
+    margin-right: 15px
 }
 
 .expand-job-icon {
@@ -231,7 +240,8 @@
     margin-top: 0;
     margin-bottom: 0;
     padding: 10px;
-    padding-left: 20px;
+    cursor: pointer;
+    padding-left: 5px;
 }
 
 /* .job-main-container:nth-child(even) .field-title{

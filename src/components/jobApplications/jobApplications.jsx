@@ -133,7 +133,7 @@ class JobApplications extends Component {
   }
 
   expand_info(el) {
-    let parent_id = el.target.parentNode.parentNode.parentNode.id;
+    let parent_id = el.target.parentNode.parentNode.id;
     let prevState = this.state.jobs;
 
     for(let i=0; i<prevState.length; i++) {
@@ -266,20 +266,20 @@ class JobApplications extends Component {
 
 
                       {/* Job Info */}
-                      <div className={job.showNotes ? "fadeOut" : "job-info-container card-shadow container"}>
+                      <div onClick={this.expand_info} className={job.showNotes ? "fadeOut" : "job-info-container card-shadow container"}>
                           {/* Rem job */}
-                          <div className={job.showNotes ? "fadeOut" :"rem-job"}> 
-                          {/* <img src={rem_icon} onClick={this.remJob} alt="remove-job" /> */}
-                          <img src={require('../images/trash.svg')} onClick={this.remJob} />
+                          <div className={job.showNotes ? "fadeOut" :"rem-job"}>                           
                           </div>
-                          <h3 className="field-title">{job.title != "" && job.company != "" ? <div><span style={{fontWeight:"400", color:"#3c6da2"}}>{job.title}</span>  at <span style={{fontWeight:"400", color:"#3c6da2"}}>{job.company}</span></div> : "Job Info"}</h3>
 
-                          {/* Expand Job */}
-                          <div className={job.showNotes ? "fadeOut" :"expand-job-icon"}> 
-                          <img onClick={this.expand_info} src={job.expand_info 
-                            ? require('../images/cheveron-up.svg') 
-                            : require('../images/cheveron-down.svg')} alt="expand-job" />
-                          </div>
+                          <h3 className="field-title">
+                            <img className="job-tracker-rem-job" src={require('../images/trash.svg')} onClick={this.remJob} />
+                            {job.title != "" && job.company != "" 
+                              ? <div style={{display: "inline-block"}}>
+                                  <span style={{fontWeight:"400", color:"#3c6da2"}}>{job.title}</span>  at 
+                                  <span style={{fontWeight:"400", color:"#3c6da2"}}> {job.company}</span>
+                                </div> 
+                              
+                              : "Job Info"}</h3>
                           
                       </div>
 

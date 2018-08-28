@@ -67,7 +67,7 @@ export default class LandingPage extends Component{
 
                     <div className="intro-resume-builder-text">
                         <h5>Track job applications</h5>
-                        <p>You can download multiple resumes completely free and as many times as you want, you just have to chose the one you like the most.</p>
+                        <p>Keep track of your job applications, interviews, offers and more.</p>
                     </div>
 
                     <div className="intro-resume-builder-img">

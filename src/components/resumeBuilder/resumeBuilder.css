@@ -12,8 +12,8 @@
 .nav-link {
     color: #b7b6b6;
     display: inline-block;
-    font-family: Roboto;
-    font-weight: 300;
+    font-family: Lato;
+    font-weight: 400;
     margin: 0 2em;
 }
 
@@ -35,7 +35,7 @@
     border-radius: 5px;
     overflow: hidden;
     position: relative;
-    -webkit-animation: slideRight 1.5s;
+    -webkit-animation: slideRight 0.8s;
     animation: slideRight 1.5s;
 }
 
