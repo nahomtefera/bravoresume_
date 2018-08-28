@@ -15,6 +15,7 @@ import structured_resume from '../resumes/structured_resume';
 import madrid_resume from '../resumes/madrid_resume';
 import tokyo_resume from '../resumes/tokyo_resume';
 import sanFrancisco from '../resumes/sanFrancisco';
+import newYork from '../resumes/newYork';
 
 
 
@@ -143,7 +144,7 @@ class ResumeBuilder extends Component {
                                     <div className="template-section-container">
                                         <img onClick={()=>{this.previewResume(tokyo_resume)}} className="resume-template-img" src={require('../landingPage/resume-template-1.svg')} alt=""/>
                                         <img onClick={()=>{this.previewResume(sanFrancisco)}} className="resume-template-img" src={require('../landingPage/resume-template-2.svg')} alt="beautiful resume"/>
-                                        {/* <img onClick={()=>{this.previewResume(structured_resume)}} className="resume-template-img" src={require('../landingPage/resume-template-3.svg')} alt=""/> */}
+                                        <img onClick={()=>{this.previewResume(newYork)}} className="resume-template-img" src={require('../landingPage/resume-template-4.svg')} alt=""/>
                                         {/* <img onClick={()=>{this.previewResume(madrid_resume)}} className="resume-template-img" src={require('../landingPage/resume-template-4.svg')} alt=""/> */}
                                         {/* <img className="resume-template-img" src="http://bravoresume.com/static/media/clean_resume.78baf65b.JPG" alt=""/> */}
                                     </div>
