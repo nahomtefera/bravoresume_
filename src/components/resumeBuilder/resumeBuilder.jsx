@@ -142,10 +142,10 @@ class ResumeBuilder extends Component {
                                 <div className="resume-builder-section template-section">
                                     <div style={{paddingTop: "10px", paddingLeft: "25px", paddingBottom: "15px", position: "absolute", right: "18px"}}><span style={{color: "tomato", cursor: "pointer"}} onClick={this.toggleResumeTemplates}>X</span></div>
                                     <div className="template-section-container">
-                                        <img onClick={()=>{this.previewResume(tokyo_resume)}} className="resume-template-img" src={require('../landingPage/resume-template-1.svg')} alt=""/>
-                                        <img onClick={()=>{this.previewResume(sanFrancisco)}} className="resume-template-img" src={require('../landingPage/resume-template-2.svg')} alt="beautiful resume"/>
-                                        <img onClick={()=>{this.previewResume(newYork)}} className="resume-template-img" src={require('../landingPage/resume-template-4.svg')} alt=""/>
-                                        {/* <img onClick={()=>{this.previewResume(madrid_resume)}} className="resume-template-img" src={require('../landingPage/resume-template-4.svg')} alt=""/> */}
+                                        <img onClick={()=>{this.previewResume(tokyo_resume)}} className="resume-template-img" src={require('../landingPage/images/resume-template-1.svg')} alt=""/>
+                                        <img onClick={()=>{this.previewResume(sanFrancisco)}} className="resume-template-img" src={require('../landingPage/images/resume-template-2.svg')} alt="beautiful resume"/>
+                                        <img onClick={()=>{this.previewResume(newYork)}} className="resume-template-img" src={require('../landingPage/images/resume-template-4.svg')} alt=""/>
+                                        {/* <img onClick={()=>{this.previewResume(madrid_resume)}} className="resume-template-img" src={require('../landingPage/images/resume-template-4.svg')} alt=""/> */}
                                         {/* <img className="resume-template-img" src="http://bravoresume.com/static/media/clean_resume.78baf65b.JPG" alt=""/> */}
                                     </div>
                                 </div>

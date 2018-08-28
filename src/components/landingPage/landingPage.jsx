@@ -42,7 +42,7 @@ export default class LandingPage extends Component{
                     </div>
 
                     <div className="intro-resume-builder-img">
-                        <img src={require('./wireframe4.svg')} className="wireframe-img" alt="wireframe"/>
+                        <img src={require('./images/wireframe4.svg')} className="wireframe-img" alt="wireframe"/>
                     </div>
 
                 </div>
@@ -54,11 +54,10 @@ export default class LandingPage extends Component{
                     </div>
                     <br/>
                     <div className="intro-resume-builder-img">
-                        {/* <img src={require('./download-wireframe-4.svg')} className="wireframe-img" alt="wireframe"/> */}
-                        <img src={require('./resume-template-1.svg')} className="wireframe-img" alt="wireframe"/>
-                        <img src={require('./resume-template-2.svg')} className="wireframe-img" alt="wireframe"/>
-                        <img src={require('./resume-template-3.svg')} className="wireframe-img" alt="wireframe"/>
-                        <img src={require('./resume-template-4.svg')} className="wireframe-img" alt="wireframe"/>
+                        <img src={require('./images/resume-template-1.svg')} className="wireframe-img" alt="wireframe"/>
+                        <img src={require('./images/resume-template-2.svg')} className="wireframe-img" alt="wireframe"/>
+                        <img src={require('./images/resume-template-3.svg')} className="wireframe-img" alt="wireframe"/>
+                        <img src={require('./images/resume-template-4.svg')} className="wireframe-img" alt="wireframe"/>
 
                     </div>
 
@@ -72,7 +71,7 @@ export default class LandingPage extends Component{
                     </div>
 
                     <div className="intro-resume-builder-img">
-                        <img src={require('./job-tracker-8.svg')} className="job-tracker-img" alt="wireframe"/>
+                        <img src={require('./images/job-tracker-8.svg')} className="job-tracker-img" alt="wireframe"/>
 
                     </div>
 
