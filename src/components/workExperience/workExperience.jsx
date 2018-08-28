@@ -10,7 +10,6 @@ class WorkExperience extends Component {
         super(props);
         let work_exp = this.props.work_exp;
 
-        console.log(this.props)
         this.state = {
             jobs: work_exp || [],
             showJob: null
@@ -100,7 +99,7 @@ class WorkExperience extends Component {
                     <div className="bullet-nav-container">
                         {this.state.jobs.length > 0 
                             ? this.state.jobs.map((job)=>{
-                                return <span onClick={this.toggleJob} className={this.state.showJob == job.id ? "bullet-nav-item-selected" : "bullet-nav-item"} key={`job-${job.id}`} id={job.id} update={this.props.update} >•</span>
+                                return <span onClick={this.toggleJob} className={this.state.showJob == job.id ? "bullet-nav-item-selected" : "bullet-nav-item"} key={`job-${job.id}`} id={job.id}>•</span>
                             })
                             : ""
                         } 

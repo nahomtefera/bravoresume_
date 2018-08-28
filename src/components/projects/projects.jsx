@@ -9,7 +9,6 @@ class Projects extends Component {
         super(props);
         let projects = this.props.projects;
 
-        console.log(this.props)
         this.state = {
             projects: projects || [],
             showProject: null

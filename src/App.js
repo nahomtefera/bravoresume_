@@ -10,8 +10,22 @@ import { database } from './components/firebase/';
 // Firebase auth ui
 import StyledFriebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 // react-router
-import { BrowserRouter, Redirect, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Router, Redirect, Route, Link } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory'
+// Styles
 import './App.css';
+
+// Google Analytics
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-77359878-3'); //Unique Google Analytics tracking number
+
+const history = createHistory()
+history.listen((location, action) => {
+  // console.log("location: ", location)
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
+});
+
 
 
 class App extends Component {
@@ -81,7 +95,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log(this.state)
     // Everytime user signs-in or out
     // We will update the state
     // Set it to null if users signs-out
@@ -124,7 +137,8 @@ class App extends Component {
         </div>
         
       :
-        <BrowserRouter>
+        <Router history={history}>
+          {/* Sing-out button */}
           <div className="App">
             {
               this.state.authUser !== null 
@@ -136,7 +150,7 @@ class App extends Component {
                   </span>
                 : null
             }
-            {/* Main Page that users and guests will see without signing-in */}
+            {/* Landing Page that users and guests will see without signing-in */}
             <Route  
               exact path="/"
               render={() => 
@@ -173,7 +187,6 @@ class App extends Component {
               render={() =>{
                 // Going to /home page will redirect to landing page
                 if (this.state.authUser === null) {
-                  console.log(this.state)
                   return <Redirect to='/' />
                 }
                 return(
@@ -201,7 +214,6 @@ class App extends Component {
               render={() =>{
                 // Going to /home page will redirect to landing page
                 if (this.state.authUser == null) {
-                  console.log(this.state)
                   return <Redirect to='/' />
                 }
                 return(
@@ -224,7 +236,7 @@ class App extends Component {
               }
             />
           </div>
-        </BrowserRouter>
+        </Router>
     );
   }
 }

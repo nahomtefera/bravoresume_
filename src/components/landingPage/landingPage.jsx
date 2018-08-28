@@ -28,7 +28,7 @@ export default class LandingPage extends Component{
                                         <button className="intro-buttons">Resume Builder</button>
                                     </Link>
                                     <Link to="/job-applications"> 
-                                        <button className="intro-buttons">Job Applications</button>
+                                        <button className="intro-buttons">Job Tracker</button>
                                     </Link>
                                 </div>
                             : <button onClick={this.props.toggleSignIn} className="intro-buttons">Sign-up / Sign-in</button>
