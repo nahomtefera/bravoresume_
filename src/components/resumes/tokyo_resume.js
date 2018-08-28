@@ -45,26 +45,28 @@ export default (items) => {
            
             };
         },
+        pageSize: {height: (279.4 / 0.35277), width: (216 / 0.35277)},
+
         content: [
             // We pass the name inside
             {
                 alignment: "center",
-                margin: [0, 0, 0, 30],
+                margin: [0, -18, 0, 10],
                 table: {
                     // headers are automatically repeated if the table spans over multiple pages
                     // you can declare how many rows should be treated as headers
                     headerRows: 1,
                     widths: ["*", 'auto', "*"],
                     body: [
-                        [{ text: "", border: [false, false, false, false]}, { text: (user.name || "Name") + " " + (user.last_name || "Last Name"), font:"OpenSans", bold: true, fontSize: 27, margin:[16, 0, 16, 0]}, { text: " ", border: [false, false, false, false]}],
+                        [{ text: "", border: [false, false, false, false]}, { text: (user.name || "Name") + " " + (user.last_name || "Last Name"), font:"OpenSans", bold: true, fontSize: 25, margin:[8, 0, 8, 0]}, { text: " ", border: [false, false, false, false]}],
                     ]
                 }
             },
             {
                 columns: [
-                    {alignment: 'center', fontSize: 10, bold: true, text: user.location},
-                    {alignment: 'center', fontSize: 10, bold: true, text: user.email},
-                    {alignment: 'center', fontSize: 10, bold: true, text: user.phone}
+                    {alignment: 'center', fontSize: 10, text: user.location},
+                    {alignment: 'center', fontSize: 10, text: user.email},
+                    {alignment: 'center', fontSize: 10, text: user.phone}
                 ]
             }
 
@@ -80,7 +82,7 @@ export default (items) => {
     // That will push the work information
     // Into the other nested table
     var workColumn = ()=>{
-        docDefinition.content.push([{text: "Work Experience", fontSize:14, margin:[0, 15, 0, 0] }])
+        docDefinition.content.push([{text: "PROFESSIONAL EXPERIENCE", fontSize:12, bold:true, margin:[0, 15, 0, 0] }])
 
         if(work_exp.length===0) {
             docDefinition.content.push(
@@ -90,13 +92,15 @@ export default (items) => {
             work_exp.map((job)=>{
                 docDefinition.content.push(
                     [{columns: [
-                        {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 0], bold: true, text: `${job.company} | ${job.title}`},
-                        {alignment: 'right', fontSize: 10, margin:[0, 6, 0, 0], bold: true, text: job.date},
+                        {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 6], bold: true, text: `${job.company} | ${job.title} | ${job.location}`},
+                        {alignment: 'right', fontSize: 10, margin:[0, 6, 0, 0], text: job.date},
                     ]}],
-                    [{text: job.location, fontSize: 10, margin: [0, 0, 0, 0] }],
+                    // [{text: job.location, fontSize: 10, bold: true, margin: [0, 0, 0, 5] }],
                     [{
+                        type: 'circle',
                         ul: job.bullet_points.map((bullet)=>{return bullet.description}),
-                        fontSize: 10, margin: [20, 0, 0, 2]
+                        fontSize: 10.3, margin: [20, 0, 0, 6],
+                        color: "#2a2a2a"
                     }],                
                 )
             })
@@ -105,40 +109,12 @@ export default (items) => {
 
     workColumn()
 
-    // Now we will create another function
-    // That will push the work information
-    // Into the other nested table
-    var projectColumn = ()=>{
-        docDefinition.content.push([{text: "Projects", fontSize:14, margin:[0, 15, 0, 0] }])
-
-        if(projects.length===0) {
-            docDefinition.content.push(
-                [{text: 'No projects', style: 'tableHeader', margin: [0, 0, 0, 0] }],      
-            )         
-        }else{
-            projects.map((project)=>{
-                docDefinition.content.push(
-                    [{columns: [
-                        {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 0], bold: true, text: `${project.company} | ${project.title}`},
-                        {alignment: 'right', fontSize: 10, margin:[0, 6, 0, 0], bold: true, text: project.date},
-                    ]}],
-                    [{text: project.location, fontSize: 10, margin: [0, 0, 0, 4] }],
-                    [{
-                        ul: project.bullet_points.map((bullet)=>{return bullet.description}),
-                        fontSize: 10, margin: [20, 0, 0, 6]
-                    }],                
-                )
-            })
-        }
-    }
-
-    projectColumn()
 
     // We are going to create a function
     // That will push the education info
     // Into one of the nested tables
     var eduColumn = ()=>{
-        docDefinition.content.push([{text: "Education", alignment: "left", fontSize:14, margin:[0, 15, 0, 5] }])
+        docDefinition.content.push([{text: "EDUCATION", alignment: "left", fontSize:12, bold:true, margin:[0, 15, 0, 5] }])
         if(education.length===0) {
             docDefinition.content.push(
                 [{text: 'No Education', style: 'tableHeader',bold: true, alignment: "left", fontSize: 10, margin:[0, 0, 0, 0]}],
@@ -150,7 +126,7 @@ export default (items) => {
                         {alignment: 'left', fontSize: 10, margin:[0, 0, 0, 0], bold: true, text: school.degree},
                         {alignment: 'right', fontSize: 10, bold: true, text: school.date},
                     ]}],
-                    [{text: `${school.school}` || "Degree or Certificate", alignment: "left", style: 'tableHeader', fontSize: 10, margin:[0, 0, 0, 5]}],
+                    [{text: `${school.school}` || "Degree or Certificate", alignment: "left", style: 'tableHeader', fontSize: 10.3, margin:[0, 0, 0, 5]}],
                 )
             })
         }
@@ -158,12 +134,38 @@ export default (items) => {
 
     eduColumn()
 
+    // Now we will create another function
+    // That will push the work information
+    // Into the other nested table
+    var projectColumn = ()=>{
+        docDefinition.content.push([{text: "PROJECTS", fontSize:12, bold:true, margin:[0, 15, 0, 0] }])
+
+        if(projects.length===0) {
+            docDefinition.content.push(
+                [{text: 'No projects', style: 'tableHeader', margin: [0, 0, 0, 0] }],      
+            )         
+        }else{
+            projects.map((project)=>{
+                docDefinition.content.push(
+                    [{columns: [
+                        {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 6], bold: true, text: `${project.company} | ${project.title} | ${project.location}`},
+                        {alignment: 'right', fontSize: 10, margin:[0, 6, 0, 0], text: project.date},
+                    ]}],
+                    // [{text: project.location, bold: true, fontSize: 10, margin: [0, 0, 0, 5] }],
+                    [{
+                        type: 'circle',
+                        ul: project.bullet_points.map((bullet)=>{return bullet.description}),
+                        fontSize: 10.3, margin: [20, 0, 0, 6],
+                        color: "#2a2a2a"
+                    }],                
+                )
+            })
+        }
+    }
+
+    projectColumn()
+
 
     pdfMake.createPdf(docDefinition).download((user.last_name||"LastName") + "_" +(user.name||"Name") + ".pdf");   
     
-    // .getDataUrl(function (outDoc) {
-    //     // console.log(outDoc)
-    //     document.getElementById('pdfV').src = outDoc;
-    // });
-    // .download((user.last_name||"LastName") + "_" +(user.name||"Name") + ".pdf");    
 }
