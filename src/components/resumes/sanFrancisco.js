@@ -21,13 +21,19 @@ export default (items) => {
         },
         JosefinSans: {
             normal: "Josefin-Thin.ttf",
+            bold: "Josefin-Thin.ttf",
         },
         Roboto: {
             normal: "Roboto-Regular.ttf",
             bold: "Roboto-Medium.ttf"
         },
         DancingScript: {
-            normal: "DancingScript-Regular.ttf"
+            normal: "DancingScript-Regular.ttf",
+            bold: "DancingScript-Regular.ttf"
+        },
+        Merriweather: {
+            normal: "Merriweather-Regular.ttf",
+            bold: "Merriweather-Bold.ttf"
         }
     }   
     // We create the object that will store what we want to print
@@ -50,23 +56,22 @@ export default (items) => {
         content: [
             // We pass the name inside
             {
-                alignment: "center",
-                margin: [0, -18, 0, 10],
-                table: {
-                    // headers are automatically repeated if the table spans over multiple pages
-                    // you can declare how many rows should be treated as headers
-                    headerRows: 1,
-                    widths: ["*", 'auto', "*"],
-                    body: [
-                        [{ text: "", border: [false, false, false, false]}, { color: "#434343", text: (user.name || "Name") + " " + (user.last_name || "Last Name"), fontStyle: "Roboto", bold: true, fontSize: 25, margin:[8, 0, 8, 0]}, { text: " ", border: [false, false, false, false]}],
-                    ]
-                }
-            },
-            {
                 columns: [
-                    {alignment: 'center', fontSize: 10, text: user.location},
-                    {alignment: 'center', fontSize: 10, text: user.email},
-                    {alignment: 'center', fontSize: 10, text: user.phone}
+                    {alignment: 'left', fontSize: 10, color: "#434343", font: "Merriweather", text: [ (user.name + " "|| "Name"), {text: (user.last_name || "Last Name"), bold: true}], fontSize: 33, margin: [0, -18, 0, 10]},
+                    {
+                        alignment: "left", 
+                        type:'none', 
+                        width: 150,
+                        margin: [0, -18, 0, 10],
+                        fontSize: 10.3,
+                        color: '#2d2d2d',
+                        ul:[
+                            user.location,
+                            user.email,
+                            user.phone
+                        ]
+                    },
+
                 ]
             }
 
@@ -82,7 +87,7 @@ export default (items) => {
     // That will push the work information
     // Into the other nested table
     var workColumn = ()=>{
-        docDefinition.content.push([{text: "PROFESSIONAL EXPERIENCE", color: "#434343", fontSize:12, bold:true, margin:[0, 15, 0, 0] }])
+        docDefinition.content.push([{text: "PROFESSIONAL EXPERIENCE", fontSize:12, color: "#434343", bold:true, margin:[0, 15, 0, 0] }])
 
         if(work_exp.length===0) {
             docDefinition.content.push(
