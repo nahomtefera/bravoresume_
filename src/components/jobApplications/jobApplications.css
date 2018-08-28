@@ -93,7 +93,7 @@
     min-width: 50vw;
     -webkit-animation: slideRight 1s;    
     animation: slideRight 1s;
-    z-index: 1;
+    z-index: 10;
 }
 
 .notes-modal .field-title {
@@ -143,7 +143,7 @@
 }
 
 .rem-job img {
-    width: 16px;
+    width: 19px;
 }
 
 .expand-job-icon {
@@ -171,9 +171,7 @@
 }
 
 .add-job {
-    position: absolute;
-    right: 1em;
-    margin-top: 1em;
+    text-align: right;
     cursor: pointer;
     color: #4caf50cc;
     font-size: 4em;
