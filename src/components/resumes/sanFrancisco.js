@@ -128,10 +128,17 @@ export default (items) => {
             education.map((school)=>{
                 docDefinition.content.push(
                     [{columns: [
-                        {alignment: 'left', fontSize: 10, margin:[0, 0, 0, 0], bold: true, text: school.degree},
-                        {alignment: 'right', fontSize: 10, bold: true, text: school.date},
-                    ]}],
-                    [{text: `${school.school}` || "Degree or Certificate", alignment: "left", style: 'tableHeader', fontSize: 10.3, margin:[0, 0, 0, 5]}],
+                        {
+                            width: "*",
+                            text: [{text: school.degree + " | ", fontSize: 10, bold:true}, {text: school.school, fontSize: 10, bold:false}], 
+                            alignment: 'left', 
+                        },
+                        {
+                            width: 100,
+                            text: school.date, alignment: 'right', fontSize: 10,
+                            margin:[0, 0, 0, 5]
+                        },
+                    ]}]
                 )
             })
         }

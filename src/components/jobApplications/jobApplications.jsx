@@ -315,7 +315,7 @@ class JobApplications extends Component {
 
 
                           {/* Skype Interview */}
-                          <div className={job.showNotes ? "fadeOut" : "skype-interview-container card-shadow container"}>
+                          {/* <div className={job.showNotes ? "fadeOut" : "skype-interview-container card-shadow container"}>
                           <h3 className="field-title">Skype Interview</h3>
                           <input className="skype_interview_date" placeholder="Date" value={job.skype_interview_date} onChange={this.handleChange} />
                           <input className="skype_interview_time" placeholder="Time" value={job.skype_interview_time} onChange={this.handleChange} />
@@ -327,12 +327,12 @@ class JobApplications extends Component {
                               <label>Thanks Email</label>
                               <input type="checkbox" onChange={this.handleCheckbox} className="skype_interview_thanks" checked={job.skype_interview_thanks ? "checked" : ""} />
                           </div>
-                          </div>
+                          </div> */}
 
 
 
                           {/* On Site Interview */}
-                          <div className={job.showNotes ? "fadeOut" : "onsite-interview-container card-shadow container"}>
+                          {/* <div className={job.showNotes ? "fadeOut" : "onsite-interview-container card-shadow container"}>
                           <h3 className="field-title">On Site Interview</h3>
                           <input className="onsite_interview_date" placeholder="Date" value={job.onsite_interview_date} onChange={this.handleChange} />
                           <input className="onsite_interview_time" placeholder="Time" value={job.onsite_interview_time} onChange={this.handleChange} />
@@ -345,7 +345,7 @@ class JobApplications extends Component {
                               <input type="checkbox" onChange={this.handleCheckbox} className="onsite_interview_thanks" checked={job.onsite_interview_thanks ? "checked" : ""} />
                           </div>
                           </div>
-                          <br/>
+                          <br/> */}
 
                           {/* Benefits */}
                           <div className={job.showNotes ? "fadeOut" : "type-container card-shadow container"}>
