@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import LandingPage from './components/landingPage/landingPage';
 import ResumeBuilder from './components/resumeBuilder/resumeBuilder';
 import JobApplications from './components/jobApplications/jobApplications';
+import Footer from './components/footer/footer';
 // Firebase 
 import firebase from 'firebase/app';
 import './components/firebase/';
@@ -235,6 +236,8 @@ class App extends Component {
                 )}
               }
             />
+          {/* Footer */}
+              <Footer />
           </div>
         </Router>
     );

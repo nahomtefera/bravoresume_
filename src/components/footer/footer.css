@@ -1,0 +1,14 @@
+.footer-container {
+    background: #f9f9f9;
+    margin: 0;
+    padding: 4em 0 3.5em 0;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 1.2em;
+    font-family: Roboto;
+    font-weight: 300;
+    color: #464242;
+    margin: 0;
+}
