@@ -40,55 +40,75 @@ export default (items) => {
     // Once created we will first pass the user info
     var docDefinition = {
         // We will now start passing the information
-        background: function() {
-            // you can apply any logic and return any valid pdfmake element
-        
-            return { 
-                canvas: [
-                    
-                    
-                ],
-           
-            };
-        },
         pageSize: {height: (279.4 / 0.35277), width: (216 / 0.35277)},
 
         content: [
             // We pass the name inside
             {
                 columns: [
-                    {alignment: 'center', color: "#434343", font: "Merriweather", fontSize: 33, text: [ (user.name + " "|| "Name"), {text: (user.last_name || "Last Name"), bold: true}], margin: [0, -18, 0, 10]}
+                    {alignment: 'center', color: "#434343", font: "Merriweather", fontSize: 33, text: [ (user.name + " "|| "Name"), {text: (user.last_name || "Last Name"), bold: true}], margin: [0, -10, 0, 10]}
                 ]
             },
             {
-                columns: [
-                    {alignment: 'center', fontSize: 10, text: user.location},
-                    {alignment: 'center', fontSize: 10, text: user.email},
-                    {alignment: 'center', fontSize: 10, text: user.phone}
-                ]
-            },
-            {canvas: [{ type: 'line', x1: 0, y1: 3, x2: 595-2*40, y2: 3, lineWidth: 1, color: "#cacaca"}]}
-        ],
-        styles: {
-            right: {
-                alignment: 'right'
+                margin: [-10, 25, 0, 0,],
+                style: 'tableExample',
+                table: {
+                    body: [
+                        [{
+                            // content[1].table.body[0][0].table.body
+                            table: {
+                                widths: [160], 
+                                body: [
+                                    // We will First push CONTACT info and the EDUCATION
+                                    [{text: "Contact ", bold: true}],
+                                    [{text: user.email, fontSize: 10}],
+                                    [{text: user.location, alignment: "left", fontSize: 10}],
+                                    [{text: user.phone, alignment: "left", fontSize: 10}],
+                                    // EDUCATION will be pushed here
+                                    
+                                ]
+                            },
+                            layout: 'noBorders'
+                        },
+                        // content[1].table.body[0][1].table.body
+
+                        {
+                            table: {
+                                widths: [375],
+                                body: [
+                                    // WORK experience will be pushed here
+                                    
+                                ]
+                            },
+                            layout: 'noBorders'
+
+                        }]
+                    ]
+                },
+                layout: 'noBorders'
+                
             }
-        }                
+            
+        ],
+             
     }
+
+
+
 
     // Now we will create another function
     // That will push the work information
     // Into the other nested table
     var workColumn = ()=>{
-        docDefinition.content.push([{text: ">PROFESSIONAL EXPERIENCE", fontSize:12, color: "#434343", bold:true, margin:[0, 5, 0, 0] }])
+        docDefinition.content[1].table.body[0][1].table.body.push([{text: "Professional Experience", fontSize:12, bold:true}])
 
         if(work_exp.length===0) {
-            docDefinition.content.push(
+            docDefinition.content[1].table.body[0][1].table.body.push(
                 [{text: 'No experience', style: 'tableHeader',bold: true, margin: [15, 0, 0, 0] }],        
             )         
         }else{
             work_exp.map((job)=>{
-                docDefinition.content.push(
+                docDefinition.content[1].table.body[0][1].table.body.push(
                     [{columns: [
                         {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 6], bold: true, text: `${job.company} | ${job.title} | ${job.location}`},
                         {alignment: 'right', fontSize: 10, margin:[0, 6, 0, 0], text: job.date},
@@ -102,9 +122,6 @@ export default (items) => {
                     }],                
                 )
             })
-            docDefinition.content.push(            
-                {canvas: [{ type: 'line', x1: 0, y1: -1, x2: 595-2*40, y2: -1, lineWidth: 1, color: "#cacaca"}]}
-            )
         }
     }
 
@@ -115,24 +132,20 @@ export default (items) => {
     // That will push the education info
     // Into one of the nested tables
     var eduColumn = ()=>{
-        docDefinition.content.push([{text: ">EDUCATION", color: "#434343", alignment: "left", fontSize:12, bold:true, margin:[0, 5, 0, 5] }])
+        docDefinition.content[1].table.body[0][0].table.body.push([{text: "Education", alignment: "left", fontSize:12, bold:true, margin: [0, 20, 0, 0] }])
         if(education.length===0) {
             docDefinition.content.push(
                 [{text: 'No Education', style: 'tableHeader',bold: true, alignment: "left", fontSize: 10, margin:[0, 0, 0, 0]}],
             )         
         }else{
             education.map((school)=>{
-                docDefinition.content.push(
-                    [{columns: [
-                        {alignment: 'left', fontSize: 10, margin:[0, 0, 0, 0], bold: true, text: school.degree},
-                        {alignment: 'right', fontSize: 10, bold: true, text: school.date},
-                    ]}],
-                    [{text: `${school.school}` || "Degree or Certificate", alignment: "left", style: 'tableHeader', fontSize: 10.3, margin:[0, 0, 0, 5]}],
+                docDefinition.content[1].table.body[0][0].table.body.push(
+                    [{text: school.degree, margin: [0, 5, 0, 0], fontSize:10, bold: true }],
+                    [{text: school.school , fontSize:10}],
+                    [{text: school.date, fontSize: 10}],
                 )
             });
-            docDefinition.content.push(            
-                {canvas: [{ type: 'line', x1: 0, y1: -1, x2: 595-2*40, y2: -1, lineWidth: 1, color: "#cacaca"}]}
-            )
+
         }
     }
 
@@ -142,15 +155,15 @@ export default (items) => {
     // That will push the work information
     // Into the other nested table
     var projectColumn = ()=>{
-        docDefinition.content.push([{text: ">PROJECTS", color: "#434343", fontSize:12, bold:true, margin:[0, 5, 0, 0] }])
+        docDefinition.content[1].table.body[0][1].table.body.push([{text: "Projects", fontSize:12, bold:true, margin:[0, 10, 0, 0] }])
 
         if(projects.length===0) {
-            docDefinition.content.push(
+            docDefinition.content[1].table.body[0][1].table.body.push(
                 [{text: 'No projects', style: 'tableHeader', margin: [0, 0, 0, 0] }],      
             )         
         }else{
             projects.map((project)=>{
-                docDefinition.content.push(
+                docDefinition.content[1].table.body[0][1].table.body.push(
                     [{columns: [
                         {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 6], bold: true, text: `${project.company} | ${project.title} | ${project.location}`},
                         {alignment: 'right', fontSize: 10, margin:[0, 6, 0, 0], text: project.date},

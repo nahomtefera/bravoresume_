@@ -12,10 +12,11 @@ import {Link } from 'react-router-dom';
 // Resume Templates
 import beautiful_resume from '../resumes/beautiful_resume';
 import structured_resume from '../resumes/structured_resume';
-import madrid_resume from '../resumes/madrid_resume';
-import tokyo_resume from '../resumes/tokyo_resume';
+import madrid from '../resumes/madrid';
+import tokyo from '../resumes/tokyo';
 import sanFrancisco from '../resumes/sanFrancisco';
 import newYork from '../resumes/newYork';
+import saoPaulo from '../resumes/saoPaulo';
 
 
 
@@ -142,9 +143,11 @@ class ResumeBuilder extends Component {
                                 <div className="resume-builder-section template-section">
                                     <div style={{paddingTop: "10px", paddingLeft: "25px", paddingBottom: "15px", position: "absolute", right: "18px"}}><span style={{color: "tomato", cursor: "pointer"}} onClick={this.toggleResumeTemplates}>X</span></div>
                                     <div className="template-section-container">
-                                        <img onClick={()=>{this.previewResume(tokyo_resume)}} className="resume-template-img" src={require('../landingPage/images/resume-template-1.svg')} alt=""/>
-                                        <img onClick={()=>{this.previewResume(sanFrancisco)}} className="resume-template-img" src={require('../landingPage/images/resume-template-2.svg')} alt="beautiful resume"/>
-                                        <img onClick={()=>{this.previewResume(newYork)}} className="resume-template-img" src={require('../landingPage/images/resume-template-4.svg')} alt=""/>
+                                        <img onClick={()=>{this.previewResume(sanFrancisco)}} className="resume-template-img" src={require('./images/sanFrancisco.svg')} alt="beautiful resume"/>
+                                        <img onClick={()=>{this.previewResume(newYork)}} className="resume-template-img" src={require('./images/newYork.svg')} alt=""/>
+                                        <img onClick={()=>{this.previewResume(tokyo)}} className="resume-template-img" src={require('./images/tokyo.svg')} alt=""/>
+                                        <img onClick={()=>{this.previewResume(saoPaulo)}} className="resume-template-img" src={require('./images/saoPaulo.svg')} alt=""/>
+
                                         {/* <img onClick={()=>{this.previewResume(madrid_resume)}} className="resume-template-img" src={require('../landingPage/images/resume-template-4.svg')} alt=""/> */}
                                         {/* <img className="resume-template-img" src="http://bravoresume.com/static/media/clean_resume.78baf65b.JPG" alt=""/> */}
                                     </div>

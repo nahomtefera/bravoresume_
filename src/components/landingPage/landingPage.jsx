@@ -58,7 +58,6 @@ export default class LandingPage extends Component{
                         <img src={require('./images/resume-template-2.svg')} className="wireframe-img" alt="wireframe"/>
                         <img src={require('./images/resume-template-3.svg')} className="wireframe-img" alt="wireframe"/>
                         <img src={require('./images/resume-template-4.svg')} className="wireframe-img" alt="wireframe"/>
-
                     </div>
 
                 </div>
