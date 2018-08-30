@@ -32,7 +32,7 @@ export default class LandingPage extends Component{
                                         <button className="intro-buttons">Job Tracker</button>
                                     </Link>
                                 </div>
-                            : <button onClick={this.props.toggleSignIn} className="intro-buttons">Sign-up / Sign-in</button>
+                            : <button onClick={this.props.toggleSignIn} className="intro-buttons">Sign-up | Sign-in</button>
                     }
                 </div>
                 <div className="intro-resume-builder">
