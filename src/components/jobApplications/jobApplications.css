@@ -92,8 +92,6 @@
     background: white;
     max-height: 80vh;
     overflow: scroll;
-    -webkit-animation: slideRight 1s;
-    animation: slideRight 1s;
     z-index: 10;
 }
 

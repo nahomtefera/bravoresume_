@@ -61,6 +61,7 @@ class App extends Component {
               name: data.user.displayName,
               email:data.user.email,
             });
+
             firebase.database().ref().child(`users/${data.user.uid}/user_info`)
             .update({
                 id: Date.now(),
@@ -70,6 +71,36 @@ class App extends Component {
                 name: "",
                 phone: ""
             });
+
+            firebase.database().ref().child(`users/${data.user.uid}/job_applications`).push().set({
+              id: 0,
+              title: "",
+              company: "",
+              location: "",
+              date: "",
+              contact_name: "",
+              contact_email: "",
+              contact_phone: "",
+              phone_interview_date: "",
+              phone_interview_time: "",
+              phone_interview_follow: false,
+              phone_interview_thanks: false,
+              skype_interview_date: "",
+              skype_interview_time: "",
+              skype_interview_follow: false,
+              skype_interview_thanks: false,
+              onsite_interview_date: "",
+              onsite_interview_time: "",
+              onsite_interview_follow: false,
+              onsite_interview_thanks: false,
+              benefits: "",
+              type: "",
+              offer: "",
+              notes: "",
+              expand_info: false,
+              showNotes: false
+            })
+            
           }
 
         },
@@ -85,14 +116,6 @@ class App extends Component {
       signInFlow: "popup"
     }
     this.toggleSignIn = this.toggleSignIn.bind(this)
-  }
-  
-  componentWillMount(){
-    // Loader
-    // var self = this;
-    // setTimeout(function(){ 
-    //   self.setState({loading:false}, ()=>{console.log(self.state)})
-    // }, 1500);
   }
 
   componentDidMount() {
@@ -236,8 +259,7 @@ class App extends Component {
                 )}
               }
             />
-          {/* Footer */}
-              <Footer />
+          
           </div>
         </Router>
     );

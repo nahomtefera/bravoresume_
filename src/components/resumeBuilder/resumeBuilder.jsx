@@ -5,6 +5,8 @@ import UserInfo from '../userInfo/userInfo';
 import WorkExperience from '../workExperience/workExperience';
 import Education from '../education/education';
 import Projects from '../projects/projects';
+import Footer from '../footer/footer'
+
 // Firebase
 import firebase from 'firebase/app';
 // React-router
@@ -158,7 +160,7 @@ class ResumeBuilder extends Component {
                     }
 
                     <embed id='pdfV'/>
-
+                    <Footer/>
                 </div>
             
         )

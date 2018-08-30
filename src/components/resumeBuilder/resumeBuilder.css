@@ -1,5 +1,4 @@
 .resume-builder-container {
-    margin-bottom: 20em;
 }
 
 .nav-container {
@@ -30,8 +29,8 @@
     max-width: 95%;
     margin: 2em auto;
     margin-bottom: 0;
-    -webkit-box-shadow: 0 0 1px hsla(0,0%,63%,.54);
-    box-shadow: 0 0 1px hsla(0,0%,63%,.54);
+    -webkit-box-shadow: 0 0 1px hsl(0, 0%, 69%);
+    box-shadow: 0 0 1px hsl(0, 0%, 69%);
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -40,8 +39,8 @@
 }
 
 .resume-builder-section:hover {
-    -webkit-box-shadow: 0 0 1px hsla(0, 0%, 15%, 0.54);
-    box-shadow: 0 0 1px hsla(0, 0%, 15%, 0.54);
+    -webkit-box-shadow: 0 0 1px hsla(0, 0%, 15%, 0.64);
+    box-shadow: 0 0 1px hsla(0, 0%, 15%, 0.64);
 }
 
 .resume-builder-title {
@@ -79,7 +78,7 @@
     background: #fafafa30;
     color: #5f9cc4;
     padding: 15px 30px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .resume-builder-section-inner-container {
@@ -90,6 +89,8 @@
 
 .job-outer-container {
     padding-top: 1.5em;
+    -webkit-animation: slideRight 0.8s;
+    animation: slideRight 1.5s;
 }
 
 .job-container {
@@ -181,15 +182,19 @@ li::before {
 
 .rem-button {
     border: none;
-    font-family: Lato;
+    font-family: Roboto;
     font-weight: 400;
-    color: #d44848;
+    color: #f19191;
     cursor: pointer;
     font-size: 15px;
     margin-left: 10px;
     padding-left: 1em;
     letter-spacing: 0.3px;
     display: inline-block;
+}
+
+.rem-button:hover {
+    color: #f16060;
 }
 
 .add-bullet-point {
@@ -238,6 +243,7 @@ button{
 
 .download-button-container{
     text-align: center;   
+    margin-bottom: 10em;
 }
 
 .download-button {
@@ -260,8 +266,8 @@ button{
 
 .template-section {
     overflow-x: scroll;
-
-}
+    margin-bottom: 10em;
+}  
 
 .template-section-container {
     width: 1170px;

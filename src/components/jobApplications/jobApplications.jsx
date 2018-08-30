@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './jobApplications.css';
+import Footer from '../footer/footer'
+
 // Firebase
 import firebase from 'firebase/app';
 // Icons
@@ -37,11 +39,7 @@ class JobApplications extends Component {
   componentWillMount(){
     var prevJobs = this.state.jobs;
     var self = this;
-
-    // setTimeout(function(){ 
-    // }, 1500);
-
-
+    
     // DataSnapshot
     this.db.on("child_added", snap => {
       prevJobs.unshift({
@@ -80,6 +78,12 @@ class JobApplications extends Component {
         loading: false
       })
     })
+
+    if(this.state.jobs.length === 0 ){
+      this.setState({
+        loading: false
+      })
+    }
 
     this.db.on("child_removed", snap => {
       
@@ -384,6 +388,7 @@ class JobApplications extends Component {
               })}            
             </div>
         </div>
+        <Footer/>
     </div>
     );
   }

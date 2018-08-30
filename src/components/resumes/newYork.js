@@ -40,25 +40,14 @@ export default (items) => {
     // Once created we will first pass the user info
     var docDefinition = {
         // We will now start passing the information
-        background: function() {
-            // you can apply any logic and return any valid pdfmake element
-        
-            return { 
-                canvas: [
-                    
-                    
-                ],
-           
-            };
-        },
         pageSize: {height: (279.4 / 0.35277), width: (216 / 0.35277)},
 
         content: [
             // We pass the name inside
             {
-                columns: [
-                    {alignment: 'center', color: "#434343", font: "Merriweather", fontSize: 33, text: [ (user.name + " "|| "Name"), {text: (user.last_name || "Last Name"), bold: true}], margin: [0, -18, 0, 10]}
-                ]
+                fontSize: 33, font: "Merriweather", margin: [0, -18, 0, 10], 
+                alignment: 'center', color: "#434343",                
+                text: [{text: user.name + " "}, {text: user.last_name, bold:true}]
             },
             {
                 columns: [
@@ -68,12 +57,8 @@ export default (items) => {
                 ]
             },
             {canvas: [{ type: 'line', x1: 0, y1: 3, x2: 595-2*40, y2: 3, lineWidth: 1, color: "#cacaca"}]}
-        ],
-        styles: {
-            right: {
-                alignment: 'right'
-            }
-        }                
+        ]
+
     }
 
     // Now we will create another function

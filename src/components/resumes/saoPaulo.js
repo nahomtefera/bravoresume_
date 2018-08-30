@@ -45,9 +45,9 @@ export default (items) => {
         content: [
             // We pass the name inside
             {
-                columns: [
-                    {alignment: 'center', color: "#434343", font: "Merriweather", fontSize: 33, text: [ (user.name + " "|| "Name"), {text: (user.last_name || "Last Name"), bold: true}], margin: [0, -10, 0, 10]}
-                ]
+                fontSize: 33, font: "Merriweather", margin: [0, -18, 0, 10], 
+                alignment: 'center', color: "#434343",                
+                text: [{text: user.name + " "}, {text: user.last_name, bold:true}]
             },
             {
                 margin: [-10, 25, 0, 0,],
