@@ -260,7 +260,9 @@ class JobApplications extends Component {
 
         <div className="job-app">
             <div className="app-wrapper">
-              <div className="add-job" onClick={this.addJob}> + </div>
+              <div className="add-job-container">
+                <div className="add-job" onClick={this.addJob}> + </div>
+              </div>
               {this.state.jobs.map((job)=>{
                   return (
                   <div className="job-main-container" id={job.id} key={"job-" + job.id}>
@@ -276,8 +278,9 @@ class JobApplications extends Component {
                             <img className="job-tracker-rem-job" src={require('../images/trash.svg')} onClick={this.remJob} />
                             {job.title != "" && job.company != "" 
                               ? <div style={{display: "inline-block"}}>
-                                  <span style={{fontWeight:"400", color:"#3c6da2"}}>{job.title}</span>  at 
-                                  <span style={{fontWeight:"400", color:"#3c6da2"}}> {job.company}</span>
+                                  <span style={{fontWeight:"400", color:"#5f9cc4"}}>{job.title}</span>  
+                                  <span style={{textTransform: "lowercase", color: "#434343"}}> at </span> 
+                                  <span style={{fontWeight:"400", color:"#5f9cc4"}}> {job.company}</span>
                                 </div> 
                               
                               : "Job Info"}</h3>

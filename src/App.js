@@ -270,11 +270,7 @@ class App extends Component {
                   <div>
                     {/* Nav */}
                     <Link to="/"><h1 className="resume-builder-title">bravoresume</h1></Link>
-                    {/* <div className="nav-container">
-                        <h3 className="nav-link nav-link-active">Privacy-Policy</h3>
-                    </div> */}
-
-                    {/* Job Tracker Component */}
+                    {/* Privacy Policy */}
                     <PrivacyPolicy />
                   </div>
                 )}

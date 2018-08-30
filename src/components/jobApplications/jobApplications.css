@@ -151,6 +151,10 @@
     margin-right: 15px
 }
 
+.job-tracker-rem-job:hover {
+    transform: scale(1.14)
+}
+
 .expand-job-icon {
     position: absolute;
     right: 0px;
@@ -175,8 +179,12 @@
     display: none;
 }
 
-.add-job {
+.add-job-container {
     text-align: right;
+}
+
+.add-job {
+    display: inline-block;
     cursor: pointer;
     color: #4caf50cc;
     font-size: 4em;
@@ -227,17 +235,16 @@
 }
 
 .field-title {
-    text-align: left;
-    font-weight: 300;
+    font-family: Roboto;
     font-size: 1em;
-    background: rgb(253, 253, 253);
-    color: #1f1f1f;
-    letter-spacing: 1px;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    background: #fafafa30;
+    color: #5f9cc4;
+    padding: 15px 30px;
     cursor: pointer;
-    padding-left: 5px;
 }
 
 /* .job-main-container:nth-child(even) .field-title{
