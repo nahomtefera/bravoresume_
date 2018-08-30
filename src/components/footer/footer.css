@@ -1,14 +1,26 @@
 .footer-container {
     /* background: #f9f9f9; */
     margin: 0;
-    padding: 8.5em 0 4.5em 0;
+    padding: 10em 0 0 0;
+    font-family: Roboto;
 }
 
 .footer-copyright {
     text-align: center;
     font-size: 1.2em;
-    font-family: Roboto;
     font-weight: 300;
     color: #464242;
     margin: 0;
+}
+
+.footer-links {
+    font-weight: 400;
+    color: #353535;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-links a:visited {
+    color: #353535;
 }

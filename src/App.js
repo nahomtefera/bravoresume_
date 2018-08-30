@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import LandingPage from './components/landingPage/landingPage';
 import ResumeBuilder from './components/resumeBuilder/resumeBuilder';
 import JobApplications from './components/jobApplications/jobApplications';
+import PrivacyPolicy from './components/privacyPolicy/privacyPolicy';
 import Footer from './components/footer/footer';
 // Firebase 
 import firebase from 'firebase/app';
@@ -256,6 +257,25 @@ class App extends Component {
 
                     {/* Job Tracker Component */}
                     <JobApplications userId={this.state.authUser.uid} />
+                  </div>
+                )}
+              }
+            />
+          
+            {/* Job-Applications */}
+            <Route  
+              exact path="/privacy-policy"
+              render={() =>{
+                return(
+                  <div>
+                    {/* Nav */}
+                    <Link to="/"><h1 className="resume-builder-title">bravoresume</h1></Link>
+                    {/* <div className="nav-container">
+                        <h3 className="nav-link nav-link-active">Privacy-Policy</h3>
+                    </div> */}
+
+                    {/* Job Tracker Component */}
+                    <PrivacyPolicy />
                   </div>
                 )}
               }

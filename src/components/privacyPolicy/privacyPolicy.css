@@ -1,0 +1,25 @@
+.privacy-policy-container {
+    width: 970px;
+    max-width: 90%;
+    line-height: 22px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0;
+    word-wrap: break-word;
+    color: #454545;
+    background: #FFF;
+    font-family: Roboto;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.privacy-policy-container h1, 
+.privacy-policy-container h2, 
+.privacy-policy-container h3, 
+.privacy-policy-container h4 {
+    font-weight: 400;
+    color: #353535;
+}

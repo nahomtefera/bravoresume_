@@ -167,7 +167,7 @@ li {
     text-indent: -.7em;
 }
   
-li::before {
+.work-experience-bullet-list li::before {
     content: "• ";
     color: #3f3f3f;
     vertical-align: top;}
