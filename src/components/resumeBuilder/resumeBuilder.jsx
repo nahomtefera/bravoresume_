@@ -12,8 +12,6 @@ import firebase from 'firebase/app';
 // React-router
 import {Link } from 'react-router-dom';
 // Resume Templates
-import beautiful_resume from '../resumes/beautiful_resume';
-import structured_resume from '../resumes/structured_resume';
 import madrid from '../resumes/madrid';
 import tokyo from '../resumes/tokyo';
 import sanFrancisco from '../resumes/sanFrancisco';
