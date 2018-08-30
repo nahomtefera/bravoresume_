@@ -18,15 +18,16 @@ import './App.css';
 
 // Google Analytics
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-77359878-3'); //Unique Google Analytics tracking number
-
+process.env.NODE_ENV === 'production'
+  ? ReactGA.initialize('UA-77359878-3') // Will be used on live page
+  : ReactGA.initialize('UA-124915007-1') // Will be used on dev page
+  
 const history = createHistory()
 history.listen((location, action) => {
   // console.log("location: ", location)
   ReactGA.set({ page: location.pathname });
   ReactGA.pageview(location.pathname);
 });
-
 
 
 class App extends Component {

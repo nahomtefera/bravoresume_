@@ -4,9 +4,6 @@ import Footer from '../footer/footer'
 
 // Firebase
 import firebase from 'firebase/app';
-// Icons
-import shrink_icon from './shrink_icon.png';
-import expand_icon from './expand_icon.png';
 // React-router
 import {Link } from 'react-router-dom';
 
