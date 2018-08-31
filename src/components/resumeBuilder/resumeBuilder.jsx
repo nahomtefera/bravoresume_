@@ -109,7 +109,8 @@ class ResumeBuilder extends Component {
             this.setState({
                 user_info: db.user_info,
                 work_exp: db.work_exp,
-                education: db.education
+                education: db.education,
+                projects: db.projects
             })
         })
     }

@@ -86,10 +86,17 @@ class WorkExperience extends Component {
         firebase.database().ref().child(`users/${this.props.userId}/work_exp/` + id).remove()
         this.props.update()
         
-        this.setState({
-            jobs: newJobs,
-            showJob: newJobs[newJobs.length -1].id
-        })
+        if(newJobs.length > 0) {
+            this.setState({
+                jobs: newJobs,
+                showJob: newJobs[newJobs.length -1].id
+            })
+        } else {
+            this.setState({
+                jobs: newJobs,
+                showJob: null
+            })
+        }
  
     }
 

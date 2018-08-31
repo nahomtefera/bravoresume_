@@ -88,10 +88,17 @@ class Projects extends Component {
         firebase.database().ref().child(`users/${this.props.userId}/projects/` + id).remove()
         this.props.update()
         
-        this.setState({
-            projects: newProjects,
-            showProject: newProjects[newProjects.length -1].id
-        })
+        if (newProjects.length > 0){
+            this.setState({
+                projects: newProjects,
+                showProject: (newProjects[newProjects.length -1].id)
+            })
+        } else {
+            this.setState({
+                projects: newProjects,
+                showProject: null
+            })
+        }
  
     }
 
