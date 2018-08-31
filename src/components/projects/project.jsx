@@ -39,13 +39,10 @@ class Project extends Component {
         let id = el.target.parentNode.parentNode.id;
         let prevBulletPoints = this.state.bullet_points;
         let newBulletPoints = this.state.bullet_points;
-        console.log(el.target)
         for(let i=0; i<this.state.bullet_points.length; i++) {
 
             if(prevBulletPoints[i].id == id) {
-                console.log("match", id, newBulletPoints[i])
                 newBulletPoints.splice(i, 1)
-                console.log(newBulletPoints)
             } 
 
         }

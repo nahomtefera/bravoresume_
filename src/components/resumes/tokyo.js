@@ -86,9 +86,9 @@ export default (items) => {
         if(work_exp.length===0) {
             return       
         }else{
-            work_exp.map((job)=>{
-                docDefinition.content.push([{text: "PROFESSIONAL EXPERIENCE", color: "#434343", fontSize:12, bold:true, margin:[0, 15, 0, 0] }])
+            docDefinition.content.push([{text: "PROFESSIONAL EXPERIENCE", color: "#434343", fontSize:12, bold:true, margin:[0, 15, 0, 0] }])
 
+            work_exp.map((job)=>{
                 docDefinition.content.push(
                     [{columns: [
                         {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 6], bold: true, text: `${job.company} | ${job.title} | ${job.location}`},
@@ -148,6 +148,7 @@ export default (items) => {
             return     
         }else{
             docDefinition.content.push([{text: "PROJECTS", color: "#434343", fontSize:12, bold:true, margin:[0, 15, 0, 0] }])
+
             projects.map((project)=>{
                 docDefinition.content.push(
                     [{columns: [

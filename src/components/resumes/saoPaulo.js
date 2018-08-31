@@ -104,9 +104,9 @@ export default (items) => {
         if(work_exp.length===0) {
             return      
         }else{
-            work_exp.map((job)=>{
-                docDefinition.content[1].table.body[0][1].table.body.push([{text: "Professional Experience", fontSize:12, bold:true}])
+            docDefinition.content[1].table.body[0][1].table.body.push([{text: "Professional Experience", fontSize:12, bold:true}])
 
+            work_exp.map((job)=>{
                 docDefinition.content[1].table.body[0][1].table.body.push(
                     [{columns: [
                         {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 6], bold: true, text: `${job.company} | ${job.title} | ${job.location}`},
