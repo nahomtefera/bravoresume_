@@ -4,15 +4,14 @@ import LandingPage from './components/landingPage/landingPage';
 import ResumeBuilder from './components/resumeBuilder/resumeBuilder';
 import JobApplications from './components/jobApplications/jobApplications';
 import PrivacyPolicy from './components/privacyPolicy/privacyPolicy';
-import Footer from './components/footer/footer';
 // Firebase 
 import firebase from 'firebase/app';
 import './components/firebase/';
-import { database } from './components/firebase/';
 // Firebase auth ui
 import StyledFriebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 // react-router
-import { BrowserRouter, Router, Redirect, Route, Link } from 'react-router-dom';
+import {HashRouter, Redirect, Route, Link } from 'react-router-dom';
+import { withRouter } from 'react-router'
 import createHistory from 'history/createBrowserHistory'
 // Styles
 import './App.css';
@@ -24,11 +23,11 @@ process.env.NODE_ENV === 'production'
   : ReactGA.initialize('UA-124915007-1') // Will be used on dev page
   
 const history = createHistory()
-history.listen((location, action) => {
-  // console.log("location: ", location)
-  ReactGA.set({ page: location.pathname });
-  ReactGA.pageview(location.pathname);
-});
+// history.listen((location, action) => {
+//   console.log("location: ", location)
+//   ReactGA.set({ page: location.pathname });
+//   ReactGA.pageview(location.pathname);
+// });
 
 
 class App extends Component {
@@ -50,7 +49,7 @@ class App extends Component {
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         firebase.auth.FacebookAuthProvider.PROVIDER_ID,
         // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-        firebase.auth.GithubAuthProvider.PROVIDER_ID,
+        // firebase.auth.GithubAuthProvider.PROVIDER_ID,
         // firebase.auth.EmailAuthProvider.PROVIDER_ID,
       ],
       callbacks: {
@@ -73,35 +72,6 @@ class App extends Component {
                 name: "",
                 phone: ""
             });
-
-            firebase.database().ref().child(`users/${data.user.uid}/job_applications`).push().set({
-              id: 0,
-              title: "",
-              company: "",
-              location: "",
-              date: "",
-              contact_name: "",
-              contact_email: "",
-              contact_phone: "",
-              phone_interview_date: "",
-              phone_interview_time: "",
-              phone_interview_follow: false,
-              phone_interview_thanks: false,
-              skype_interview_date: "",
-              skype_interview_time: "",
-              skype_interview_follow: false,
-              skype_interview_thanks: false,
-              onsite_interview_date: "",
-              onsite_interview_time: "",
-              onsite_interview_follow: false,
-              onsite_interview_thanks: false,
-              benefits: "",
-              type: "",
-              offer: "",
-              notes: "",
-              expand_info: false,
-              showNotes: false
-            })
             
           }
 
@@ -118,6 +88,11 @@ class App extends Component {
       signInFlow: "popup"
     }
     this.toggleSignIn = this.toggleSignIn.bind(this)
+    this.signOut = this.signOut.bind(this)
+  }
+
+  componentWillMount() {
+    console.log(history)
   }
 
   componentDidMount() {
@@ -151,6 +126,11 @@ class App extends Component {
     })
   }
 
+  signOut(){
+    firebase.auth().signOut();
+    this.setState({toggleSignIn: false})
+  }
+
   render() { 
     return (
       this.state.loading === true
@@ -163,14 +143,14 @@ class App extends Component {
         </div>
         
       :
-        <Router history={history}>
+        <HashRouter>
           {/* Sing-out button */}
           <div className="App">
             {
               this.state.authUser !== null 
                 ?
                   <span className="sign-out-button">
-                    <button type="button" onClick={()=>{firebase.auth().signOut()}} >
+                    <button type="button" onClick={()=>{this.signOut()}} >
                         Sign-Out
                     </button>
                   </span>
@@ -278,7 +258,7 @@ class App extends Component {
             />
           
           </div>
-        </Router>
+        </HashRouter>
     );
   }
 }

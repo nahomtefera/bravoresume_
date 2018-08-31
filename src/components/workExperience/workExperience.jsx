@@ -24,16 +24,21 @@ class WorkExperience extends Component {
         let jobs = this.state.jobs;
         let newJobs = []
         // loop through jobs and push them to array
-        if(jobs.length> 0) {
-            for(var id in jobs) {
-                newJobs.push(jobs[id])
-            }
-    
+        for(var id in jobs) {
+            newJobs.push(jobs[id])
+        }
+
+        if(newJobs.length > 0) {
             this.setState({
                 jobs: newJobs,
                 showJob: newJobs[0].id
             })
+        }else{
+            this.setState({
+                jobs: newJobs,
+            })
         }
+
     }
 
     addJob(){

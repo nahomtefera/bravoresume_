@@ -23,16 +23,23 @@ class Projects extends Component {
         let projects = this.state.projects;
         let newProjects = []
         // loop through projects and push them to array
-        if(projects.length > 0 ) {
-            for(var id in projects) {
-                newProjects.push(projects[id])
-            }
-    
+        for(var id in projects) {
+            newProjects.push(projects[id])
+        }
+
+        if(newProjects.length > 0) {
             this.setState({
                 projects: newProjects,
                 showProject: newProjects[0].id
+            }) 
+        }else{
+            console.log(projects)
+            this.setState({
+                projects: newProjects,
             })
         }
+
+    
 
     }
 

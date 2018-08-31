@@ -141,7 +141,7 @@ class ResumeBuilder extends Component {
                         this.state.showResumeTemplates === true
                             ?
                                 <div className="resume-builder-section template-section">
-                                    <div style={{paddingTop: "10px", paddingLeft: "25px", paddingBottom: "15px", position: "absolute", right: "18px"}}><span style={{color: "tomato", cursor: "pointer"}} onClick={this.toggleResumeTemplates}>X</span></div>
+                                    {/* <div style={{paddingTop: "10px", paddingLeft: "25px", paddingBottom: "15px", position: "absolute", right: "18px"}}><span style={{color: "tomato", cursor: "pointer"}} onClick={this.toggleResumeTemplates}>X</span></div> */}
                                     <div className="template-section-container">
                                         <img onClick={()=>{this.previewResume(sanFrancisco)}} className="resume-template-img" src={require('./images/sanFrancisco.svg')} alt="beautiful resume"/>
                                         <img onClick={()=>{this.previewResume(newYork)}} className="resume-template-img" src={require('./images/newYork.svg')} alt=""/>

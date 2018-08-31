@@ -80,14 +80,13 @@ export default (items) => {
     // That will push the work information
     // Into the other nested table
     var workColumn = ()=>{
-        docDefinition.content.push([{text: "PROFESSIONAL EXPERIENCE", fontSize:12, color: "#434343", bold:true, margin:[0, 15, 0, 0] }])
 
         if(work_exp.length===0) {
-            docDefinition.content.push(
-                [{text: 'No experience', style: 'tableHeader',bold: true, margin: [15, 0, 0, 0] }],        
-            )         
+            return
         }else{
             work_exp.map((job)=>{
+                docDefinition.content.push([{text: "PROFESSIONAL EXPERIENCE", fontSize:12, color: "#434343", bold:true, margin:[0, 15, 0, 0] }])
+
                 docDefinition.content.push(
                     [{columns: [
                         {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 6], bold: true, text: `${job.company} | ${job.title} | ${job.location}`},
@@ -112,13 +111,12 @@ export default (items) => {
     // That will push the education info
     // Into one of the nested tables
     var eduColumn = ()=>{
-        docDefinition.content.push([{text: "EDUCATION", color: "#434343", alignment: "left", fontSize:12, bold:true, margin:[0, 15, 0, 5] }])
         if(education.length===0) {
-            docDefinition.content.push(
-                [{text: 'No Education', style: 'tableHeader',bold: true, alignment: "left", fontSize: 10, margin:[0, 0, 0, 0]}],
-            )         
+            return   
         }else{
             education.map((school)=>{
+                docDefinition.content.push([{text: "EDUCATION", color: "#434343", alignment: "left", fontSize:12, bold:true, margin:[0, 15, 0, 5] }])
+
                 docDefinition.content.push(
                     [{columns: [
                         {
@@ -143,14 +141,13 @@ export default (items) => {
     // That will push the work information
     // Into the other nested table
     var projectColumn = ()=>{
-        docDefinition.content.push([{text: "PROJECTS", color: "#434343", fontSize:12, bold:true, margin:[0, 15, 0, 0] }])
 
         if(projects.length===0) {
-            docDefinition.content.push(
-                [{text: 'No projects', style: 'tableHeader', margin: [0, 0, 0, 0] }],      
-            )         
+            return
         }else{
             projects.map((project)=>{
+                docDefinition.content.push([{text: "PROJECTS", color: "#434343", fontSize:12, bold:true, margin:[0, 15, 0, 0] }])
+
                 docDefinition.content.push(
                     [{columns: [
                         {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 6], bold: true, text: `${project.company} | ${project.title} | ${project.location}`},

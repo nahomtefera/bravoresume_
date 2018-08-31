@@ -100,14 +100,13 @@ export default (items) => {
     // That will push the work information
     // Into the other nested table
     var workColumn = ()=>{
-        docDefinition.content[1].table.body[0][1].table.body.push([{text: "Professional Experience", fontSize:12, bold:true}])
 
         if(work_exp.length===0) {
-            docDefinition.content[1].table.body[0][1].table.body.push(
-                [{text: 'No experience', style: 'tableHeader',bold: true, margin: [15, 0, 0, 0] }],        
-            )         
+            return      
         }else{
             work_exp.map((job)=>{
+                docDefinition.content[1].table.body[0][1].table.body.push([{text: "Professional Experience", fontSize:12, bold:true}])
+
                 docDefinition.content[1].table.body[0][1].table.body.push(
                     [{columns: [
                         {alignment: 'left', fontSize: 10, margin:[0, 6, 0, 6], bold: true, text: `${job.company} | ${job.title} | ${job.location}`},
@@ -132,12 +131,11 @@ export default (items) => {
     // That will push the education info
     // Into one of the nested tables
     var eduColumn = ()=>{
-        docDefinition.content[1].table.body[0][0].table.body.push([{text: "Education", alignment: "left", fontSize:12, bold:true, margin: [0, 20, 0, 0] }])
         if(education.length===0) {
-            docDefinition.content.push(
-                [{text: 'No Education', style: 'tableHeader',bold: true, alignment: "left", fontSize: 10, margin:[0, 0, 0, 0]}],
-            )         
+            return
         }else{
+            docDefinition.content[1].table.body[0][0].table.body.push([{text: "Education", alignment: "left", fontSize:12, bold:true, margin: [0, 20, 0, 0] }])
+
             education.map((school)=>{
                 docDefinition.content[1].table.body[0][0].table.body.push(
                     [{text: school.degree, margin: [0, 5, 0, 0], fontSize:10, bold: true }],
@@ -155,13 +153,13 @@ export default (items) => {
     // That will push the work information
     // Into the other nested table
     var projectColumn = ()=>{
-        docDefinition.content[1].table.body[0][1].table.body.push([{text: "Projects", fontSize:12, bold:true, margin:[0, 10, 0, 0] }])
 
         if(projects.length===0) {
-            docDefinition.content[1].table.body[0][1].table.body.push(
-                [{text: 'No projects', style: 'tableHeader', margin: [0, 0, 0, 0] }],      
-            )         
+            return
         }else{
+            // Title
+            docDefinition.content[1].table.body[0][1].table.body.push([{text: "Projects", fontSize:12, bold:true, margin:[0, 10, 0, 0] }])
+
             projects.map((project)=>{
                 docDefinition.content[1].table.body[0][1].table.body.push(
                     [{columns: [

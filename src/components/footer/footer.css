@@ -21,6 +21,7 @@
     text-align: left;
 }
 
+.footer-links a,
 .footer-links a:visited {
     color: #353535;
 }
