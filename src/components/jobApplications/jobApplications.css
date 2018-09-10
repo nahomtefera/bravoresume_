@@ -206,8 +206,12 @@
     padding: 10px 20px;
     border: 2px solid #f9f9f9;
     border-top: none;
-    margin-bottom: 20px;
 
+}
+
+.job-application-nav {
+    text-align: center;
+    margin: 15px 0 40px 0;
 }
 
 .job-info-inner input {
