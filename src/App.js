@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // COMPONENTS
 import LandingPage from './components/landingPage/landingPage';
 import ResumeBuilder from './components/resumeBuilder/resumeBuilder';
+import CoverLetter from './components/coverLetter/coverLetter';
 import JobApplications from './components/jobApplications/jobApplications';
 import PrivacyPolicy from './components/privacyPolicy/privacyPolicy';
 // Firebase 
@@ -203,6 +204,9 @@ class App extends Component {
                         <Link to="/resume-builder">
                             <h3 className="nav-link nav-link-active">Resume Builder</h3>
                         </Link>
+                        <Link to="/cover-letter">
+                            <h3 className="nav-link">Cover Letter</h3>
+                        </Link>
                         <Link to="/job-applications">
                             <h3 className="nav-link">Job Tracker</h3>
                         </Link>
@@ -214,6 +218,36 @@ class App extends Component {
                 )}
               }
             />
+            {/* Cover-Letter */}
+            <Route  
+              exact path="/cover-letter"
+              render={() =>{
+                // Going to /home page will redirect to landing page
+                if (this.state.authUser === null) {
+                  return <Redirect to='/' />
+                }
+                return(
+                  <div>
+                    {/* Nav */}
+                    <Link to="/"><h1 className="resume-builder-title">bravoresume</h1></Link>
+                    <div className="nav-container">
+                        <Link to="/resume-builder">
+                            <h3 className="nav-link">Resume Builder</h3>
+                        </Link>
+                        <Link to="/cover-letter">
+                            <h3 className="nav-link nav-link-active">Cover Letter</h3>
+                        </Link>
+                        <Link to="/job-applications">
+                            <h3 className="nav-link">Job Tracker</h3>
+                        </Link>
+                    </div>
+
+                    {/* Resume Builder Component */}
+                    <CoverLetter userId={this.state.authUser.uid} />
+                  </div>
+                )}
+              }
+            />            
             {/* Job-Applications */}
             <Route  
               exact path="/job-applications"
@@ -229,6 +263,9 @@ class App extends Component {
                     <div className="nav-container">
                       <Link to="/resume-builder">
                         <h3 className="nav-link">Resume Builder</h3>
+                      </Link>
+                      <Link to="/cover-letter">
+                            <h3 className="nav-link">Cover Letter</h3>
                       </Link>
                       <Link to="/job-applications">
                         <h3 className="nav-link nav-link-active">Job Tracker</h3>
