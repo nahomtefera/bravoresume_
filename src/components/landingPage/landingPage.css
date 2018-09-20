@@ -40,20 +40,73 @@ svg {
     text-align: center;
 }
 
+.services-container {
+    max-width: 95%;
+    margin: 2em auto;
+    margin-top: 0;
+}
+
+.services-item {
+    display: inline-block;
+    width: 250px;
+    min-height: 160px;
+    padding: 2em;
+    padding-top: 0;
+    padding-bottom: 0;
+    /* -webkit-box-sizing: border-box; */
+    /* box-sizing: border-box; */
+    margin: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #ffff;
+    border: 1px solid #ededed;
+    border-radius: 6px;
+    vertical-align: top;
+}
+
+.services-item-title {
+    font-weight: 300;
+    font-family: Roboto;
+    font-size: 1.3em;
+}
+
+.services-item-info {
+    font-weight: 300;
+    font-family: Lato;
+}
+
+.services-link {
+    text-align: right;
+    margin: 2em 0 1em 0;
+}
+
 .intro-buttons {
     padding: .6em 1em;
     margin: 11px 25px;
     color: #fff;
-    font-family: Lato;
-    font-weight: 400;
+    font-family: Roboto;
+    font-weight: 300;
     font-size: 1.5em;
     background: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     outline: none;
-    border: 2px solid #42a4f5;
+    border: 1px solid #42a4f5;
     background: #42a4f5;
+}
+
+.services-buttons {
+    font-size: 1em;
+    font-family: Lato;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    color: #f50f0f;
+}
+
+.services-buttons:hover {
+    color: #ff5e5e;
 }
 
 .intro-buttons:hover {

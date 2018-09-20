@@ -24,16 +24,44 @@ export default class LandingPage extends Component{
                     {
                         this.props.userIsLogged === true 
                             ? 
-                                <div>
-                                    <Link to="/resume-builder"> 
-                                        <button className="intro-buttons">Resume Builder</button>
-                                    </Link>
-                                    <Link to="/cover-letter"> 
-                                        <button className="intro-buttons">Cover Letter</button>
-                                    </Link>
-                                    <Link to="/job-applications"> 
-                                        <button className="intro-buttons">Job Tracker</button>
-                                    </Link>
+                                <div className="services-container">
+                                    <div className="services-item">
+                                        <h3 className='services-item-title'>Resume Builder</h3>
+                                        <p className="services-item-info">
+                                            Lorem ipsum dolor sit amet consectetur, adipiscing elit dictum nam accumsan, rutrum dignissim maecenas massa.
+                                        </p>
+                                        <div className="services-link">
+                                            <Link to="/resume-builder"> 
+                                                <button className="services-buttons">Create Resume</button>
+                                            </Link>
+                                        </div>
+                                        
+                                    </div>
+                                    <div className="services-item">
+                                        <h3 className='services-item-title'>Cover Letter</h3>
+                                        <p className="services-item-info">
+                                            Lorem ipsum dolor sit amet consectetur, adipiscing elit dictum nam accumsan, rutrum dignissim maecenas massa.
+                                        </p>
+                                        <div className="services-link">
+                                            <Link to="/cover-letter"> 
+                                                <button className="services-buttons">Create Cover Letter</button>
+                                            </Link>
+                                        </div>
+                                        
+                                    </div>
+                                    <div className="services-item">
+                                        <h3 className='services-item-title'>Job Tracker</h3>
+                                        <p className="services-item-info">
+                                            Lorem ipsum dolor sit amet consectetur, adipiscing elit dictum nam accumsan, rutrum dignissim maecenas massa.
+                                        </p>
+                                        <div className="services-link">
+                                            <Link to="/job-applications"> 
+                                                <button className="services-buttons">Track Applications</button>
+                                            </Link>
+                                        </div>
+                                                                                
+                                    </div>
+
                                 </div>
                             : <button onClick={this.props.toggleSignIn} className="intro-buttons">Sign-up | Sign-in</button>
                     }
