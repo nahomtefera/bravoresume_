@@ -29,14 +29,15 @@
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
-    -webkit-box-shadow: 0px 0px 1px 0px rgb(208, 208, 208);
-    box-shadow: 0px 0px 1px 0px rgb(208, 208, 208);
+    -webkit-box-shadow: 0px 0px 1px 0px #cacaca;
+    box-shadow: 0px 0px 1px 0px #cacaca;
+    border-radius: 22px;
     color: #303136;
 }
 
 .job-app .card-shadow:hover{
-    -webkit-box-shadow: 0px 0px 2px 0px rgb(208, 208, 208);
-    box-shadow: 0px 0px 2px 0px rgb(208, 208, 208); 
+    -webkit-box-shadow: 0px 0px 6px 0px rgb(212, 227, 232);
+    box-shadow: 0px 0px 6px 0px rgb(212, 227, 232); 
 }
 
 .fadeOut {
@@ -54,15 +55,18 @@
     letter-spacing: 2px;
     cursor: pointer;
     padding: 10px 20px;
-    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 2px 1px #2196f33b;
+    box-shadow: 0px 0px 2px 1px #2196f33b;
     font-size: 1em;
     outline: none;
     background: white;
-    color: #2196f3;
+    border-radius: 7px;
+    color: #81bef3;
 }
 
 .show-notes-button:hover {
+    -webkit-box-shadow: 0px 0px 2px 1px #2196f3;
+    box-shadow: 0px 0px 2px 1px #2196f3;    
     background: #2196f3;
     color: white;    
 }
@@ -115,7 +119,7 @@
     outline: none;
     border: none;
     padding: 25px;
-    font-size: 1.4em;
+    font-size: 1em;
 }
 
 .container input{
@@ -148,7 +152,8 @@
 .job-tracker-rem-job {
     width: 15px;
     margin-left: 5px;
-    margin-right: 15px
+    margin-right: 15px;
+    margin-left: 18px;
 }
 
 .job-tracker-rem-job:hover {
@@ -173,6 +178,8 @@
     max-width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
+    padding-left: 30px;
+    padding-top: 15px;
 }
 
 .shrink-job {
@@ -214,7 +221,7 @@
     margin: 15px 0 40px 0;
 }
 
-.job-info-inner input {
+.expand-job-container input{
     border: none;
     font-size: 1em;
     outline: none;
@@ -224,9 +231,21 @@
     /* text-transform: uppercase; */
     width: 25%;
     box-sizing: border-box;
+    vertical-align: top;
+    color: #838990;
+    border: 1px solid #ededed;
+    padding: 10px;
+    margin: 0px 25px 0 0;
+    border-radius: 7px;
 }
 
-.job-info-container input::placeholder {
+.expand-job-container input:focus {
+    border-color: white;
+    box-shadow: 0 0 2px 1px #2196f33b;
+}
+
+.expand-job-container input::placeholder {
+    color: rgb(185, 185, 185)
 }
 
 .checkbox-container {
@@ -234,22 +253,42 @@
     display: inline-block;
 }
 
+.checkbox-container label {
+    color: #8e94a7;
+}
+
+.checkbox-container input:focus {
+    box-shadow: none;
+} 
+
 .offer-container, .benefits-container, .type-container {
     min-height: 0;
 }
 
-.field-title {
-    font-family: Roboto;
+.field-title, .job-details-title {
+    font-family: Lato;
     font-size: 1em;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 1px;
     margin: 0;
     background: #fafafa30;
-    color: #5f9cc4;
-    padding: 15px 30px;
+    color: #8c8c8c;
+    padding: 15px 0px;
     cursor: pointer;
 }
+
+.job-details-title {
+    font-size: 13px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-family: roboto;
+    font-weight: 400;
+    padding-left: 4px;
+    color: #b1b1b1;
+    cursor: default;
+}
+
 
 /* .job-main-container:nth-child(even) .field-title{
     background: #43a27d;
@@ -305,7 +344,7 @@
 
 @media screen and (max-width: 590px) {
 
-    .job-info-inner input {
+    .expand-job-container input{
         border: none;
         font-size: 1em;
         outline: none;
@@ -314,10 +353,14 @@
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         display: block;
-        width: 100%;
+        width: 90%;
         margin: 0;
         padding: 14px 0;
         padding-left: 20px;
+        border: 1px solid #dad9d989;
+        padding: 10px;
+        margin: 0px 25px 18px 0;
+        border-radius: 7px;
     }
 
 }
