@@ -27,14 +27,14 @@ svg {
 .intro-text-paragraph {
     width: 900px;
     margin: 1em auto;
-    margin-bottom: 2em;
+    margin-bottom: 1.3em;
     text-align: center;
     font-weight: 100;
     max-width: 100%;
     word-spacing: 4px;
     font-size: 3em;
     line-height: 1.4em;
-    letter-spacing: 1.4px;
+    letter-spacing: 1.6px;
     font-family: Roboto;
     color: #607D8B;
     text-align: center;
@@ -83,17 +83,18 @@ svg {
 .intro-buttons {
     padding: .6em 1em;
     margin: 11px 25px;
-    color: #fff;
+    color: #42a4f5;
     font-family: Roboto;
-    font-weight: 300;
-    font-size: 1.5em;
-    background: #fff;
+    font-weight: 400;
+    font-size: 1.08em;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     outline: none;
-    border: 1px solid #42a4f5;
-    background: #42a4f5;
+    box-shadow: 0 0 3px 1px #ececec;
+    background: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
 }
 
 .services-buttons {
@@ -110,8 +111,8 @@ svg {
 }
 
 .intro-buttons:hover {
-    background: white;
-    color: #42a4f5;
+    background: #42a4f5;
+    color: #fff;
 }
 
 .intro-buttons:focus {
