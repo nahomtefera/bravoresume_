@@ -16,7 +16,7 @@ svg {
 }
 
 .stripe-polygon {
-    fill: #f9f9f9;;
+    fill: #fff;;
 }
 
 .intro-text-title {
@@ -36,7 +36,7 @@ svg {
     line-height: 1.4em;
     letter-spacing: 1.6px;
     font-family: Roboto;
-    color: #607D8B;
+    color: #8f8f8f;
     text-align: center;
 }
 
@@ -91,7 +91,8 @@ svg {
     border-radius: 3px;
     cursor: pointer;
     outline: none;
-    box-shadow: 0 0 3px 1px #ececec;
+    -webkit-box-shadow: 0 0 2px 1px #dedede;
+    box-shadow: 0 0 2px 1px #dedede;
     background: #fff;
     text-transform: uppercase;
     letter-spacing: 2.2px;
