@@ -91,8 +91,8 @@ svg {
     border-radius: 3px;
     cursor: pointer;
     outline: none;
-    -webkit-box-shadow: 0 0 2px 1px #e8e8e8e0;
-    box-shadow: 0 0 2px 1px #e8e8e8e0;
+    -webkit-box-shadow: 0 0 1px 1px #e8e8e8e0;
+    box-shadow: 0 0 1px 1px #e8e8e8e0;
     background: #fff;
     text-transform: uppercase;
     letter-spacing: 2.2px;
