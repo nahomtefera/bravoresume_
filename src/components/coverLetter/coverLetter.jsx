@@ -8,7 +8,7 @@ export default class CoverLetter extends Component {
         <div className="cover-letter-container">
     
             <div className="cover-letter-construction">
-                <h2 className="construction-title">Feature is under construction, be pacient</h2>
+                <h2 className="construction-title">Feature is under construction, be patient</h2>
                 <img className="construction-image" src={require('../images/construction.png')} alt=""/>
             </div>
     
