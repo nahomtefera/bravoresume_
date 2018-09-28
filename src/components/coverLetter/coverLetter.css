@@ -1,0 +1,26 @@
+.cover-letter-construction {
+    text-align: center;
+    padding-top: 2em;
+}
+
+.construction-title {
+    font-family: Lato;
+    font-weight: 300;
+    width: 900px;
+    max-width: 90%;
+    margin: 2em auto 1em auto;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #757575;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+
+.construction-title:hover {
+    color: #393939;
+}
+
+.construction-image {
+    width: 300px;
+    max-width: 95%;
+}

@@ -11,17 +11,21 @@
 .nav-link {
     color: #b7b6b6;
     display: inline-block;
-    font-family: Roboto;
+    font-family: Lato;
     font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
     margin: 0 2em;
 }
 
 .nav-link:hover {
-    color: #5580af;
+    color: #0093db;
 }
 
 .nav-link-active {
-    color: #5580af; 
+    color: #0093db; 
+    font-weight: 400;
 }
 
 .nav-icon {
