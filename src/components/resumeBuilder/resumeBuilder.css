@@ -47,8 +47,8 @@
 }
 
 .resume-builder-section:hover {
-    -webkit-box-shadow: 0 0 1px hsla(0, 0%, 15%, 0.64);
-    box-shadow: 0 0 1px hsla(0, 0%, 15%, 0.64);
+    -webkit-box-shadow: 0 0 1px 1px hsla(0, 0%, 15%, 0.12);
+    box-shadow: 0 0 1px 1px hsla(0, 0%, 15%, 0.12);
 }
 
 .resume-builder-title {
@@ -129,7 +129,11 @@
     border-radius: 3px;
     outline: none;
     color: #414344;
-    
+}
+
+.section-input:focus {
+    -webkit-box-shadow: 0 0 0px 1px #8ecdff3b;
+    box-shadow: 0 0 0px 1px #8ecdff3b;
 }
 
 .bullet-nav-container {
