@@ -204,9 +204,9 @@ class App extends Component {
                         <Link to="/resume-builder">
                             <h3 className="nav-link nav-link-active">Resume Builder</h3>
                         </Link>
-                        <Link to="/cover-letter">
+                        {/* <Link to="/cover-letter">
                             <h3 className="nav-link">Cover Letter</h3>
-                        </Link>
+                        </Link> */}
                         <Link to="/job-applications">
                             <h3 className="nav-link">Job Tracker</h3>
                         </Link>
@@ -234,9 +234,9 @@ class App extends Component {
                         <Link to="/resume-builder">
                             <h3 className="nav-link">Resume Builder</h3>
                         </Link>
-                        <Link to="/cover-letter">
+                        {/* <Link to="/cover-letter">
                             <h3 className="nav-link nav-link-active">Cover Letter</h3>
-                        </Link>
+                        </Link> */}
                         <Link to="/job-applications">
                             <h3 className="nav-link">Job Tracker</h3>
                         </Link>
@@ -264,9 +264,9 @@ class App extends Component {
                       <Link to="/resume-builder">
                         <h3 className="nav-link">Resume Builder</h3>
                       </Link>
-                      <Link to="/cover-letter">
+                      {/* <Link to="/cover-letter">
                             <h3 className="nav-link">Cover Letter</h3>
-                      </Link>
+                      </Link> */}
                       <Link to="/job-applications">
                         <h3 className="nav-link nav-link-active">Job Tracker</h3>
                       </Link>

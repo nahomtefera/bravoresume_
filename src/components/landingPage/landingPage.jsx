@@ -28,9 +28,9 @@ export default class LandingPage extends Component{
                                     <Link to="/resume-builder">
                                         <button className="intro-buttons">Resume Builder</button>
                                     </Link>
-                                    <Link to="/cover-letter">
+                                    {/* <Link to="/cover-letter">
                                         <button className="intro-buttons">Cover Letter</button>
-                                    </Link>
+                                    </Link> */}
                                     <Link to="/job-applications">
                                         <button className="intro-buttons">Job Tracker</button>
                                     </Link>
